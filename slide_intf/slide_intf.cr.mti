@@ -1,0 +1,22 @@
+/userspace/g/gzvargas/ece551/thundercatz/slide_intf/SPI_mstr.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/g/gzvargas/ece551/thundercatz/slide_intf/SPI_mstr.sv
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module SPI_mstr
+
+Top level modules:
+	SPI_mstr
+
+} {} {}} /userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf.sv
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module slide_intf
+
+Top level modules:
+	slide_intf
+
+} {} {}} /userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf_tb.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf_tb.sv
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module A2D_intf_tb
+
+Top level modules:
+	A2D_intf_tb
+
+} {} {}}

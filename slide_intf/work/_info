@@ -1,0 +1,105 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ProgramData/App-V/2191B702-5279-4048-91BA-BCF8F2A20B49/21710E5E-1DEB-4C76-9578-9609978C17F5/Root/examples
+vA2D_intf
+Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z1 !s110 1447197989
+!i10b 1
+!s100 DiJ<GKM4nhiFi2Z1lEmbV3
+IeHG>a<XiYK16Lo`O_`a[70
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 A2D_intf_sv_unit
+S1
+Z3 d/userspace/g/gzvargas/ece551/thundercatz/slide_intf
+w1447197977
+8/userspace/g/gzvargas/ece551/thundercatz/slide_intf/A2D_intf.sv
+F/userspace/g/gzvargas/ece551/thundercatz/slide_intf/A2D_intf.sv
+L0 8
+Z4 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1447197989.236971
+!s107 /userspace/g/gzvargas/ece551/thundercatz/slide_intf/A2D_intf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/slide_intf/A2D_intf.sv|
+!i113 0
+Z5 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@a2@d_intf
+vA2D_intf_tb
+R0
+R1
+!i10b 1
+!s100 hm:lJiniB=Y3RNE1@kH2`3
+IYm0_[RRe`f_<X=3F^=WYT2
+R2
+!s105 slide_intf_tb_sv_unit
+S1
+R3
+w1447197226
+8/userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf_tb.sv
+F/userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf_tb.sv
+L0 9
+R4
+r1
+!s85 0
+31
+!s108 1447197989.468050
+!s107 /userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf_tb.sv|
+!i113 0
+R5
+n@a2@d_intf_tb
+vslide_intf
+R0
+R1
+!i10b 1
+!s100 lLS_MNI17cMHhTi`hd1S33
+I502RUL7L0YKR[G`j647zC0
+R2
+!s105 slide_intf_sv_unit
+S1
+R3
+w1447191969
+8/userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf.sv
+F/userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf.sv
+L0 8
+R4
+r1
+!s85 0
+31
+!s108 1447197989.398775
+!s107 /userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/slide_intf/slide_intf.sv|
+!i113 0
+R5
+vSPI_mstr
+R0
+R1
+!i10b 1
+!s100 ;[^nNeE;heNj6c0J2Ef2=3
+IkCIdm_iG9^[BcOzaznB3S3
+R2
+!s105 SPI_mstr_sv_unit
+S1
+R3
+w1447197131
+8/userspace/g/gzvargas/ece551/thundercatz/slide_intf/SPI_mstr.sv
+F/userspace/g/gzvargas/ece551/thundercatz/slide_intf/SPI_mstr.sv
+L0 8
+R4
+r1
+!s85 0
+31
+!s108 1447197989.550513
+!s107 /userspace/g/gzvargas/ece551/thundercatz/slide_intf/SPI_mstr.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/slide_intf/SPI_mstr.sv|
+!i113 0
+R5
+n@s@p@i_mstr
