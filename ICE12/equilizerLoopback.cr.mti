@@ -1,0 +1,29 @@
+/userspace/g/gzvargas/ece551/thundercatz/ICE12/equilizerLoopBack.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/g/gzvargas/ece551/thundercatz/ICE12/equilizerLoopBack.sv
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module equilizerLoopBack
+
+Top level modules:
+	equilizerLoopBack
+
+} {} {}} /userspace/g/gzvargas/ece551/thundercatz/ICE12/posedgeDetect.v {1 {vlog -work work -vopt -stats=none /userspace/g/gzvargas/ece551/thundercatz/ICE12/posedgeDetect.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module posedgeDetect
+
+Top level modules:
+	posedgeDetect
+
+} {} {}} /userspace/g/gzvargas/ece551/thundercatz/ICE12/codec_intf.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/g/gzvargas/ece551/thundercatz/ICE12/codec_intf.sv
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module codec_intf
+
+Top level modules:
+	codec_intf
+
+} {} {}} /userspace/g/gzvargas/ece551/thundercatz/ICE12/reset_synch.v {1 {vlog -work work -vopt -stats=none /userspace/g/gzvargas/ece551/thundercatz/ICE12/reset_synch.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  2 2014
+-- Compiling module reset_synch
+
+Top level modules:
+	reset_synch
+
+} {} {}}
