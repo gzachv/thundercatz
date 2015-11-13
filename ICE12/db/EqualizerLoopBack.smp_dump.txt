@@ -1,0 +1,7 @@
+
+State Machine - |EqualizerLoopBack|codec_intf:iCODEC_intf|state
+Name state.RUN state.WARM state.START state.IDLE 
+state.IDLE 0 0 0 0 
+state.START 0 0 1 1 
+state.WARM 0 1 0 1 
+state.RUN 1 0 0 1 

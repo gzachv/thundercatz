@@ -1,197 +1,196 @@
-/****************************************************************
- Module to implement the clock initializations for the CODEC.
- Author : Gustavo Zach Vargas 		HDL : Verilog		 
- Student ID: 903 015 5247	
- Date : 10/09/2015 							
-****************************************************************/ 
+//////////////////////////////////////////////////////////////////////
+// CODEC interface written by Viswesh Periyasamy for ECE 551
+//////////////////////////////////////////////////////////////////////
 
-module codec_intf (	lft_in, rht_in, valid, 
-			LRCLK, SCLK, MCLK, RSTn, SDin, 
-			SDout, lft_out, rht_out, clk, rst_n );
+module codec_intf(clk, rst_n, LRCLK, SCLK, MCLK, RSTn, SDout, SDin, valid, lft_in, rht_in, lft_out, rht_out);
 
-////////// Variable Declaration for interface ///////////////////
-output logic [15:0] lft_in;
-output logic [15:0] rht_in;
-output logic 	valid,
-		LRCLK,		// CODEC clock signals
-		SCLK,
-		MCLK,
-		RSTn,		// CODEC reset
-		SDin;		// Serial data to CODEC, audio data
+input  clk, rst_n, SDout;
+input [15:0] lft_out, rht_out;
 
-input SDout;			// Serial data from CODEC
-input [15:0] lft_out;
-input [15:0] rht_out;
-input clk, rst_n;		// System clock and active low reset
+output LRCLK, SCLK, MCLK, RSTn, valid, SDin;
+output [15:0] lft_in, rht_in;
 
-////////// Intermediate wire Declarations ///////////////////////
-logic ready,			// Signal to the CODEC clocks are ready
-      update;			// Signal to trigger clks to update
-logic [9:0] clk_cnt;	// Counter for each posedge clk
+reg    LRCLK, SCLK, MCLK, RSTn, SDin, valid;
 
-logic [15:0] out_shft_reg;	// The outgoing shift register
-logic [15:0] in_shft_reg;	// The incoming shift register
+// lrclk_cnt is used to scale the system clock to the desired frequency
+reg [9:0] lrclk_cnt;
+reg [10:0] rst_cnt; // handles holding RSTn high for one cycle of LRCLK
 
-logic [15:0] lft,rht;		// Left and right channel buffers
+reg [15:0] lft_in, rht_in, lft_out, rht_out, shift_out, shift_in, lft_buff, rht_buff, hold_lft, hold_rht;
 
-logic	LRCLK_rising,	
-		LRCLK_falling,
-		SCLK_rising,
-		SCLK_falling,
-		set_valid;		// Signals valid signal assertion
+logic assert_reset, LRCLK_rise, SCLK_rise, LRCLK_fall, SCLK_fall, set_valid;
 
-/////////////////////// Clock Counter  //////////////////////////
-always @(posedge clk, negedge rst_n) begin
-	if (!rst_n)
-		clk_cnt <= 10'h200;
-	else if (update)
-		clk_cnt <= clk_cnt + 1;
-	else
-		clk_cnt <= clk_cnt;
-end
+//////////////////////////////////////////////////////////////////////
+// Following section used to handle different clock signals and RSTn
+//////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////
-//////////////////////// CODEC Clocks  //////////////////////////
-/////////////////////////////////////////////////////////////////
-assign 	LRCLK	= clk_cnt[9];
-assign 	SCLK	= clk_cnt[4];
-assign 	MCLK	= clk_cnt[1];
-
-assign LRCLK_rising  = (clk_cnt == 10'h1ff);
-assign LRCLK_falling = (clk_cnt == 10'h3ff);
-assign SCLK_rising   = (clk_cnt & 10'h1f) == 5'h0f;
-assign SCLK_falling  = (clk_cnt & 10'h1f) == 5'hff;
-
-/////////// Infer CODEC Reset Flop  /////////////////////////////
-always_ff @(posedge clk, negedge rst_n) begin
-	if (!rst_n)
-		RSTn <= 1'b0;
-	else if(ready)
-		RSTn <= 1'b1;
-	else
-		RSTn <= RSTn;
-end
-
-///////////////////// Infer Valid Flop  /////////////////////////
-always @(posedge clk, negedge rst_n) begin
-	if (!rst_n)
-		valid <= 1'b0;
-	else if (set_valid)
-		valid <= 1'b1;
-	else
-		valid <= 1'b0;
-end
-
-assign set_valid = ready & (clk_cnt == 10'h1fe);
-
-////////////// Infer lft_out, rht_out Buffers  ////////////////////
-always_ff @(posedge clk) begin
-	if (set_valid) begin
-		lft <= lft_out;
-		rht <= rht_out;
-	end
-	else begin
-		lft <= lft;
-		rht <= rht;
-	end	
-end
-
-///////////////// Infer Outgoing shift reg //////////////////////
-always_ff @(posedge clk, negedge rst_n) begin
-	if (!rst_n)
-		out_shft_reg <= 16'h0000;
-	else if (LRCLK_rising)
-		out_shft_reg <= lft;
-	else if (LRCLK_falling)
-		out_shft_reg <= rht;
-	else if (SCLK_falling)
-		out_shft_reg <= {out_shft_reg[14:0], 1'b0};
-	else
-		out_shft_reg <= out_shft_reg;
-end
-
-///////////////////////// Assign SDin ///////////////////////////
-assign SDin = out_shft_reg[15];
-
-///////////////// Infer Incoming shift reg //////////////////////
-always_ff @(posedge clk, negedge rst_n) begin
-	if (!rst_n)
-		in_shft_reg <= 16'h0000;
-	else if (SCLK_rising)
-		in_shft_reg <= {in_shft_reg[14:0], SDout};
-	else
-		in_shft_reg <= in_shft_reg;
-end
-
-////////////////// Assign Channel inputs ////////////////////////
-assign lft_in = (ready & LRCLK)	 ? in_shft_reg : lft_in;
-assign rht_in = (ready & ~LRCLK) ? in_shft_reg : rht_in;
-
-///////////////////// State machine /////////////////////////////
-typedef enum reg [1:0] {IDLE, START, WARM, RUN} state_t;
+// used two states to handle holding RSTn high for one cycle of LRCLK
+typedef enum reg {RESET, CLOCK} state_t;
 state_t state, nxt_state;
 
-////////////////// Infer state flops ////////////////////////////
-always_ff @(posedge clk, negedge rst_n) begin
-	if (!rst_n)
-		state <= IDLE;
-	else
-		state <= nxt_state;
+// next state logic
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    state <= RESET;
+  else
+    state <= nxt_state;
 end
 
+// LRCLK is used for all clocks, starts with all 1's except SCLK bit
+// starts low and decrements so that LRCLK starts high 
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    lrclk_cnt <= 10'h200;
+  else
+    lrclk_cnt <= lrclk_cnt + 1;
+end
+
+// RSTn held during asynch reset as well as full LRCLK cycle
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    RSTn <= 0;
+  else if(assert_reset)
+    RSTn <= 0;
+  else
+    RSTn <= 1;
+end
+
+//////////////////////////////////////////////////////////////////////
+// END SECTION
+//////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////
+// Following section used to handle outgoing and incoming signals
+// as well as shift registers and other signals
+//////////////////////////////////////////////////////////////////////
+
+// when valid is asserted, put all of lft_out into the left buffer
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    lft_buff <= 16'h0000;
+  else if(set_valid)
+    lft_buff <= lft_out;
+end
+
+// when valid is asserted, put all of rht_out into the right buffer
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    rht_buff <= 16'h0000;
+  else if(set_valid)
+    rht_buff <= rht_out;
+end
+
+// valid should be 1 as soon as set_valid is true and stay 1
+// until SCLK falls again
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    valid <= 0;
+  else if(set_valid)
+    valid <= 1;
+  else if(SCLK_fall)
+    valid <= 0;
+end
+
+// on LRCLK rise, fill shift out reg with lft_buff
+// on LRCLK fall, fill shift out reg with rht_buff
+// otherwise, on each SCLK fall shift one bit at a time
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    shift_out <= 16'h0000;
+  else if(LRCLK_rise)
+    shift_out <= lft_buff;
+  else if(LRCLK_fall) 
+    shift_out <= rht_buff;
+  else if(SCLK_fall)
+    shift_out <= {shift_out[14:0], 1'b0};
+end
+
+// always shift in on rise of SCLK
+// capturing full right input will happen automatically
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    shift_in <= 16'h0000;
+  else if(SCLK_rise)
+    shift_in <= {shift_in[14:0], SDout};
+end
+ 
+// capture full left input into a holding register
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    hold_lft <= 16'h0000;
+  else if(LRCLK_fall)
+    hold_lft <= shift_in;
+end
+
+// capture full left input into a holding register
+always_ff@(posedge clk, negedge rst_n) begin
+  if(!rst_n)
+    hold_rht <= 16'h0000;
+  else if(LRCLK_rise)
+    hold_rht <= shift_in;
+end
+//////////////////////////////////////////////////////////////////////
+// END SECTION
+//////////////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+// Assign statements to decide when LRCLK/SCLK is rising falling
+// as well as deciding what all clocks are
+// as well as deciding when to set valid to true
+// as well as assigning the outputs lft_in and rht_in
+//////////////////////////////////////////////////////////////////////
+assign LRCLK = lrclk_cnt[9]; // LRCLK gets MSB (clk / 2^10)
+assign SCLK = lrclk_cnt[4]; // SCLK (clk / 2^5)
+assign MCLK = lrclk_cnt[1]; // MCLK (clk / 2^2)
+assign LRCLK_rise = (lrclk_cnt == 10'h1ff); // LRCLK is rising when lrclk_cnt goes from 0x1ff to 0x200
+assign LRCLK_fall = (lrclk_cnt == 10'h3ff); // LRCLK is falling when lrclk_cnt goes from 0x3ff to 0x000
+assign SCLK_rise = (lrclk_cnt[4:0] == 5'h0f); // SCLK is rising when lower 5 bits go from 0x0f to 0x10
+assign SCLK_fall = (lrclk_cnt[4:0] == 5'h1f); // SCLK is falling when lower 5 bits go from 0x1f yo 0x00
+assign set_valid = (lrclk_cnt == 10'h1ef); // set valid happens on rising of SCLK right before rising of LRCLK
+assign SDin = shift_out[15]; // SDin always MSB of shift out register
+assign lft_in = hold_lft; // lft_in gets the left holding register (only valid when valid is true)
+assign rht_in = hold_rht; // rht_in gets the shift in register (only valid when valid is true)
+//////////////////////////////////////////////////////////////////////
+// END SECTION
+//////////////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+// State machine used to hold RSTn for one clock cycle of LRCLK
+//////////////////////////////////////////////////////////////////////
 always_comb begin
-	// Default outputs //
-	ready = 0;
-	update = 0;
-	nxt_state = IDLE;
+  assert_reset = 1;
+  nxt_state = RESET;
+  case(state)
 
-	case (state)
+    RESET: begin
+      if(!rst_n)
+	nxt_state = RESET;
+      else if(lrclk_cnt == 10'h1ff) 
+	nxt_state = CLOCK;
+    end
 
-		IDLE:
-			if (rst_n) begin
-				update = 1;
-				nxt_state = START;
-			end else begin
-				update = 0;
-				nxt_state = IDLE;
-			end
+    CLOCK: begin
+      assert_reset = 0;
+      if(!rst_n)
+	nxt_state = RESET;
+      else
+	nxt_state = CLOCK;
+    end
 
-		START: 
-			if (!rst_n)
-				nxt_state = IDLE;
-			else if (!LRCLK) begin
-				update = 1;
-				nxt_state = WARM;	
-			end
-			else begin
-				update = 1;
-				nxt_state = START;
-			end
-
-		WARM: 
-			if (!rst_n)
-				nxt_state = IDLE;
-			else if (LRCLK) begin
-				ready = 1;
-				update = 1;
-				nxt_state = RUN;	
-			end
-			else begin
-				update = 1;
-				nxt_state = WARM;
-			end
-
-		RUN: 
-			if (!rst_n)
-				nxt_state = IDLE;
-			else begin
-				update = 1;
-				ready = 1;
-				nxt_state = RUN;
-			end
-
-		default:
-			nxt_state = IDLE;
-	endcase
+  endcase
 end
+//////////////////////////////////////////////////////////////////////
+// END SECTION
+//////////////////////////////////////////////////////////////////////
+
+
 endmodule
+

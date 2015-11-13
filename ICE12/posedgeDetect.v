@@ -23,6 +23,6 @@ always @(posedge clk) begin
 end
 
 // Positive edge detection //
-assign sig_edge = FF2 && ~FF3;
+assign sig_posedge = FF2 && ~FF3;
 
 endmodule
