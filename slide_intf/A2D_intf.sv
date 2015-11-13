@@ -8,6 +8,7 @@
 module A2D_intf(clk, rst_n, strt_cnv, chnnl, cnv_cmplt, 
 				res, a2d_SS_n, SCLK, MOSI, MISO);
 
+////////// Variable Declaration for interface ///////////////////
 input clk, rst_n, 		// System clock and reset
 	  strt_cnv,			// Signal conversion to start
 	  MISO;				// Master in, slave out

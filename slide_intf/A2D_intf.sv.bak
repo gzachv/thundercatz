@@ -60,22 +60,26 @@ always_comb begin
   nxt_state = IDLE;
 
   case(state)
+
     IDLE : begin
       if(strt_cnv) begin
         wrt = 1;
         nxt_state = TRANS;
       end
     end
+
     TRANS : begin
       if(done)
 			nxt_state = WAIT;
       else if (!done)
 			nxt_state = TRANS;
     end
+
     WAIT : begin
       nxt_state = READ;
       wrt = 1;
     end
+
     READ : begin
       if(done) begin
         nxt_state = IDLE;
@@ -84,6 +88,7 @@ always_comb begin
       else if (!done)
 			nxt_state = READ;
     end
+
   endcase
 end
 

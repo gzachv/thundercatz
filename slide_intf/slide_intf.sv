@@ -10,8 +10,8 @@ module slide_intf ( POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME,
 		    MISO, clk, rst_n );
 
 ////////// Variable Declaration for interface ///////////////////
-output [11:0] POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME;
-output a2d_SS_n, SCLK, MOSI;
+output logic [11:0] POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME;
+output logic a2d_SS_n, SCLK, MOSI;
 input MISO, clk, rst_n;
 
 ////////// Intermediate wire Declarations ///////////////////////
@@ -37,6 +37,67 @@ always_ff @(posedge clk, negedge rst_n) begin
 		chnnl <= chnnl + 1;
 	else
 		chnnl <= chnnl;
+end
+
+////////////////// Infer Output flops ///////////////////////////
+////////////////// POT_LP flop //////////////////////////////////
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n)
+		POT_LP <= 12'h000;
+	else if (potLP_en)
+		POT_LP <= res;
+	else
+		POT_LP <= POT_LP;
+end
+
+////////////////// POT_B1 flop //////////////////////////////////
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n)
+		POT_B1 <= 12'h000;
+	else if (potB1_en)
+		POT_B1 <= res;
+	else
+		POT_B1 <= POT_B1;
+end
+
+////////////////// POT_B2 flop //////////////////////////////////
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n)
+		POT_B2 <= 12'h000;
+	else if (potB2_en)
+		POT_B2 <= res;
+	else
+		POT_B2 <= POT_B2;
+end
+
+////////////////// POT_B3 flop //////////////////////////////////
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n)
+		POT_B3 <= 12'h000;
+	else if (potB3_en)
+		POT_B3 <= res;
+	else
+		POT_B3 <= POT_B3;
+end
+
+////////////////// POT_HP flop //////////////////////////////////
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n)
+		POT_HP <= 12'h000;
+	else if (potHP_en)
+		POT_HP <= res;
+	else
+		POT_HP <= POT_HP;
+end
+
+////////////////// Volume flop //////////////////////////////////
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n)
+		VOLUME <= 12'h000;
+	else if (volume_en)
+		VOLUME <= res;
+	else
+		VOLUME <= VOLUME;
 end
 
 ///////////////////// band local params //////////////////////////////
