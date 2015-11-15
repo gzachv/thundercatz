@@ -5,27 +5,33 @@
  Date : 11/10/2015 							
 ****************************************************************/ 
 
-module A2D_intf_tb();
+module queue_tb();
 
 reg clk, rst_n;
-reg [11:0] POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME;
+reg [15:0] count;
+reg wrt_smpl;
 
-reg  MISO;
-wire MOSI, SCLK, SS_n;
+wire w_seq;
+wire [15:0] w_smpl_out;
 
 // Instantiate DUT //
-slide_intf iDUTSlideIntf( .POT_LP(POT_LP), .POT_B1(POT_B1), .POT_B2(POT_B2), 
-			  .POT_B3(POT_B3), .POT_HP(POT_HP), .VOLUME(VOLUME),
-		    	  .a2d_SS_n(SS_n), .SCLK(SCLK), .MOSI(MOSI),
-		    	  .MISO(MISO), .clk(clk), .rst_n(rst_n) );
+slowQueue iDUT (.sequencing(w_seq), .smpl_out(w_smpl_out), 
+		.wrt_smpl(wrt_smpl), .new_smpl(count), 
+		.clk(clk), .rst_n(rst_n));
 
 initial begin
   clk = 0;
   rst_n = 0;			// assert reset
+  wrt_smpl = 0;
+  count = 0;
 
   @(posedge clk);		// wait one clock cycle
   @(negedge clk) rst_n = 1;	// deassert reset on negative edge (typically good practice)
-  MISO = 1;
+  
+  for (count = 0; count < 1021; count = count + 1) begin
+	wrt_smpl = 1;
+	@(negedge w_seq);
+  end
 
 end
 

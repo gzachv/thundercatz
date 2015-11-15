@@ -10,65 +10,64 @@ cModel Technology
 dI:/ece551/thundercatz/slide_intf
 vA2D_intf_tb
 Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-!s110 1447437118
+!s110 1447608834
 !i10b 1
 !s100 5Ge>RZ<jm?I_OOF<7Gim_0
 IL]g`jl:UMH7aQ^GT>@m^i3
 Z1 V`JN@9S9cnhjKRR_L]QIcM3
-!s105 queue_tb_sv_unit
+Z2 !s105 queue_tb_sv_unit
 S1
-Z2 dI:/ece551/thundercatz/circularQueues
+Z3 dI:/ece551/thundercatz/circularQueues
 w1447436466
 8I:/ece551/thundercatz/circularQueues/queue_tb.sv
 FI:/ece551/thundercatz/circularQueues/queue_tb.sv
 L0 8
-Z3 OE;L;10.3c;59
+Z4 OE;L;10.3c;59
 r1
 !s85 0
 31
-!s108 1447437117.951000
+!s108 1447608834.882000
 !s107 I:/ece551/thundercatz/circularQueues/queue_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/circularQueues/queue_tb.sv|
 !i113 0
-Z4 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@a2@d_intf_tb
 vdualPort1024x16
-Z5 !s110 1447437117
+R1
+r1
+!s85 0
+31
 !i10b 1
 !s100 4RQcbHh?A:d1>bbne?_2N2
 IQEgRzTSdgYFgP?bc]e5^D1
-R1
-R2
+R3
 w1447436021
 8I:/ece551/thundercatz/circularQueues/dualPort1024x16.v
 FI:/ece551/thundercatz/circularQueues/dualPort1024x16.v
 L0 1
-R3
-r1
-!s85 0
-31
-!s108 1447437117.315000
+R4
+!s108 1447610573.669000
 !s107 I:/ece551/thundercatz/circularQueues/dualPort1024x16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/circularQueues/dualPort1024x16.v|
 !i113 0
 Z6 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 ndual@port1024x16
 vdualPort1536x16
-R5
+Z7 !s110 1447610573
 !i10b 1
 !s100 3]>OGm1Ek;Zn>BVc;g:_i2
 I0z10oOHJNVF;?oNXVM_Oo1
 R1
-R2
+R3
 w1447436022
 8I:/ece551/thundercatz/circularQueues/dualPort1536x16.v
 FI:/ece551/thundercatz/circularQueues/dualPort1536x16.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-!s108 1447437117.097000
+!s108 1447610573.466000
 !s107 I:/ece551/thundercatz/circularQueues/dualPort1536x16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/circularQueues/dualPort1536x16.v|
 !i113 0
@@ -76,25 +75,70 @@ R6
 ndual@port1536x16
 vfastQueue
 R0
-R5
+R7
 !i10b 1
 !s100 D3aYQEX597V8ECYVL>YZJ3
 Ia@JkL>K=KjN7PSh_R66Hb0
 R1
 !s105 fastQueue_sv_unit
 S1
-R2
+R3
 w1447437115
 8I:/ece551/thundercatz/circularQueues/fastQueue.sv
 FI:/ece551/thundercatz/circularQueues/fastQueue.sv
 L0 8
-R3
+R4
 r1
 !s85 0
 31
-!s108 1447437117.559000
+!s108 1447610573.887000
 !s107 I:/ece551/thundercatz/circularQueues/fastQueue.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/circularQueues/fastQueue.sv|
 !i113 0
-R4
+R5
 nfast@queue
+vqueue_tb
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 g3fR@gm?cF:1Edm;^P4Jc0
+ImXIfbL]A`?POLo@chSj^`1
+R2
+S1
+R3
+w1447609586
+8I:\ece551\thundercatz\circularQueues\queue_tb.sv
+FI:\ece551\thundercatz\circularQueues\queue_tb.sv
+L0 8
+R4
+!s108 1447610574.356000
+!s107 I:\ece551\thundercatz\circularQueues\queue_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\ece551\thundercatz\circularQueues\queue_tb.sv|
+!i113 0
+R5
+vslowQueue
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 oU>3cH@VX`kPg>dI42Fi41
+IYgaF7eXWV9jA[E5IWiC7B1
+!s105 slowQueue_sv_unit
+S1
+R3
+w1447610560
+8I:\ece551\thundercatz\circularQueues\slowQueue.sv
+FI:\ece551\thundercatz\circularQueues\slowQueue.sv
+L0 7
+R4
+!s108 1447610574.121000
+!s107 I:\ece551\thundercatz\circularQueues\slowQueue.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\ece551\thundercatz\circularQueues\slowQueue.sv|
+!i113 0
+R5
+nslow@queue
