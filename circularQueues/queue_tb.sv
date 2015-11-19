@@ -32,7 +32,7 @@ initial begin
   @(posedge clk);		// wait one clock cycle
   @(negedge clk) rst_n = 1;	// deassert reset on negative edge (typically good practice)
 
-  for (count = 0; count < 1020; count = count + 1) begin
+  for (count = 0; count < 1533; count = count + 1) begin
 	wrt_smpl = 1;
 	@(negedge w_seq);
   end
@@ -42,7 +42,7 @@ initial begin
   wrt_smpl = 0;
   @(posedge clk);
 
-  for (count = 0; count < 1021; count = count + 1) begin
+  for (count = 512; count < 1533; count = count + 1) begin
 
 	@(posedge clk);
 
