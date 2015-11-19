@@ -1,36 +1,29 @@
-I:/ece551/thundercatz/circularQueues/queue_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/circularQueues/queue_tb.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+{C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/fastQueue_tb.sv} {1 {vlog -work work -sv -stats=none {C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue_tb.sv}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fastQueue_tb
+
+Top level modules:
+	fastQueue_tb
+
+} {} {}} {C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/queue_tb.sv} {1 {vlog -work work -sv -stats=none {C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\queue_tb.sv}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module queue_tb
 
 Top level modules:
 	queue_tb
 
-} {} {}} I:/ece551/thundercatz/circularQueues/slowQueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/circularQueues/slowQueue.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module slowQueue
-
-Top level modules:
-	slowQueue
-
-} {} {}} I:/ece551/thundercatz/circularQueues/dualPort1536x16.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/circularQueues/dualPort1536x16.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module dualPort1536x16
-
-Top level modules:
-	dualPort1536x16
-
-} {} {}} I:/ece551/thundercatz/circularQueues/dualPort1024x16.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/circularQueues/dualPort1024x16.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+} {} {}} {C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1024x16.v} {1 {vlog -work work -stats=none {C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1024x16.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module dualPort1024x16
 
 Top level modules:
 	dualPort1024x16
 
-} {} {}} I:/ece551/thundercatz/circularQueues/fastQueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/circularQueues/fastQueue.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module fastQueue
+} {} {}} {C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1536x16.v} {1 {vlog -work work -stats=none {C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1536x16.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dualPort1536x16
 
 Top level modules:
-	fastQueue
+	dualPort1536x16
 
 } {} {}}

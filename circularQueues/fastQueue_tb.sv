@@ -1,4 +1,3 @@
-
 /****************************************************************
  Module to implement the pot sliders interface testbench.
  Authors : ThunderCatz 		HDL : System Verilog		 
@@ -6,7 +5,7 @@
  Date : 11/10/2015 							
 ****************************************************************/ 
 
-module queue_tb();
+module fastQueue_tb();
 
 reg clk, rst_n;
 reg [15:0] count;
@@ -14,6 +13,8 @@ reg wrt_smpl;
 
 wire w_seq;
 wire [15:0] w_smpl_out;
+
+reg status;	// Flag to represent status of test
 
 // Instantiate DUT //
 fastQueue ifastQ (.sequencing(w_seq), .smpl_out(w_smpl_out), 
@@ -26,10 +27,12 @@ initial begin
   wrt_smpl = 0;
   count = 0;
 
+  status = 1;
+
   @(posedge clk);		// wait one clock cycle
   @(negedge clk) rst_n = 1;	// deassert reset on negative edge (typically good practice)
 
-  for (count = 0; count < 1020; count = count + 1) begin
+  for (count = 0; count < 1531; count = count + 1) begin
 	wrt_smpl = 1;
 	@(negedge w_seq);
   end
@@ -39,15 +42,22 @@ initial begin
   wrt_smpl = 0;
   @(posedge clk);
 
-  for (count = 0; count < 1021; count = count + 1) begin
+  for (count = 0; count < 1531; count = count + 1) begin
 
 	@(posedge clk);
 
-	if (w_smpl_out == count)
+	if (w_smpl_out == count) 
 		$display("PASS\n");
-	else
+	else begin
 		$display("FAIL: Expected: %h, Read: %h\n", count, w_smpl_out);
+		status = 0;
+	end
   end
+
+  if (status)
+		$display("All Tests Passed. Test Successful.\n");
+  else
+		$display("***************Test Failed***************\n");
 
   $stop;
 end

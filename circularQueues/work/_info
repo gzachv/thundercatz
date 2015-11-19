@@ -9,136 +9,169 @@ z2
 cModel Technology
 dI:/ece551/thundercatz/slide_intf
 vA2D_intf_tb
-Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
 !s110 1447608834
 !i10b 1
 !s100 5Ge>RZ<jm?I_OOF<7Gim_0
 IL]g`jl:UMH7aQ^GT>@m^i3
-Z1 V`JN@9S9cnhjKRR_L]QIcM3
-Z2 !s105 queue_tb_sv_unit
+V`JN@9S9cnhjKRR_L]QIcM3
+Z0 !s105 queue_tb_sv_unit
 S1
-Z3 dI:/ece551/thundercatz/circularQueues
+dI:/ece551/thundercatz/circularQueues
 w1447436466
-Z4 8I:/ece551/thundercatz/circularQueues/queue_tb.sv
-Z5 FI:/ece551/thundercatz/circularQueues/queue_tb.sv
+8I:/ece551/thundercatz/circularQueues/queue_tb.sv
+FI:/ece551/thundercatz/circularQueues/queue_tb.sv
 L0 8
-Z6 OE;L;10.3c;59
+OE;L;10.3c;59
 r1
 !s85 0
 31
 !s108 1447608834.882000
-Z7 !s107 I:/ece551/thundercatz/circularQueues/queue_tb.sv|
-Z8 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/circularQueues/queue_tb.sv|
+!s107 I:/ece551/thundercatz/circularQueues/queue_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/circularQueues/queue_tb.sv|
 !i113 0
-Z9 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@a2@d_intf_tb
 vdualPort1024x16
-R1
+Z1 !s110 1447961386
+!i10b 1
+!s100 103[_BNQ1NDXP[QNRkloa1
+IgF`iGUGTOXlPXh2KG[0jX3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues
+Z4 w1447959157
+8C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1024x16.v
+FC:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1024x16.v
+L0 1
+Z5 OP;L;10.4a;61
 r1
 !s85 0
 31
-!i10b 1
-!s100 4RQcbHh?A:d1>bbne?_2N2
-IQEgRzTSdgYFgP?bc]e5^D1
-R3
-w1447436021
-8I:/ece551/thundercatz/circularQueues/dualPort1024x16.v
-FI:/ece551/thundercatz/circularQueues/dualPort1024x16.v
-L0 1
-R6
-!s108 1447868861.444000
-!s107 I:/ece551/thundercatz/circularQueues/dualPort1024x16.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/circularQueues/dualPort1024x16.v|
-!i113 0
-Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 !s108 1447961386.000000
+!s107 C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1024x16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1024x16.v|
+!s101 -O0
+!i113 1
+Z7 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 ndual@port1024x16
 vdualPort1536x16
-Z11 !s110 1447868861
-!i10b 1
-!s100 3]>OGm1Ek;Zn>BVc;g:_i2
-I0z10oOHJNVF;?oNXVM_Oo1
 R1
+!i10b 1
+!s100 :KXE^eiTBHL^:TzYTkhc`2
+I@Bo8G9jMk^ONkO>2Y0Kg<2
+R2
 R3
-w1447436022
-8I:/ece551/thundercatz/circularQueues/dualPort1536x16.v
-FI:/ece551/thundercatz/circularQueues/dualPort1536x16.v
+R4
+8C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1536x16.v
+FC:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1536x16.v
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-!s108 1447868861.007000
-!s107 I:/ece551/thundercatz/circularQueues/dualPort1536x16.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/circularQueues/dualPort1536x16.v|
-!i113 0
-R10
+R6
+!s107 C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1536x16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/circularQueues/dualPort1536x16.v|
+!s101 -O0
+!i113 1
+R7
 ndual@port1536x16
 vfastQueue
-R0
-R11
-!i10b 1
-!s100 5:ncW1Jk270RiUVY:o;X<2
-IZC9Y8Y08NMnN[]MJdX=7U1
+Z8 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
 R1
+!i10b 1
+!s100 O[W5P@zTnhoSE9zmoeG<<2
+IE@7F58jeRLTXMilRMG<_]2
+R2
 !s105 fastQueue_sv_unit
 S1
 R3
-w1447866376
-8I:/ece551/thundercatz/circularQueues/fastQueue.sv
-FI:/ece551/thundercatz/circularQueues/fastQueue.sv
+w1447961366
+8C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue.sv
+FC:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue.sv
 L0 7
+R5
+r1
+!s85 0
+31
 R6
-r1
-!s85 0
-31
-!s108 1447868861.834000
-!s107 I:/ece551/thundercatz/circularQueues/fastQueue.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/circularQueues/fastQueue.sv|
-!i113 0
-R9
+!s107 C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue.sv|
+!s101 -O0
+!i113 1
+Z9 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 nfast@queue
-vqueue_tb
-R0
+vfastQueue_tb
+R8
 R1
-r1
-!s85 0
-31
 !i10b 1
-!s100 EmiChD:NfiGmQlEOc2^lh2
-InMXMMXH8Oe6UCg40lXY]E2
+!s100 V2?kZ<FPGNQS>ik]LHXk80
+ILmK[MGe3;Z>J2SRe:f^@V2
 R2
+!s105 fastQueue_tb_sv_unit
 S1
 R3
-w1447868859
-R4
-R5
+w1447960275
+8C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue_tb.sv
+FC:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue_tb.sv
 L0 8
-R6
-!s108 1447868862.616000
-R7
-R8
-!i113 0
-R9
-vslowQueue
-R0
-R1
+R5
 r1
 !s85 0
 31
+R6
+!s107 C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\fastQueue_tb.sv|
+!s101 -O0
+!i113 1
+R9
+nfast@queue_tb
+vqueue_tb
+R8
+R1
 !i10b 1
-!s100 oU>3cH@VX`kPg>dI42Fi41
-IAF8mKXF3a6zMgEhJ7_f_o3
+!s100 55N6bRZ@;MzVOm4FPm]z31
+I_8;d[m0IGaPV];gzSdT_02
+R2
+R0
+S1
+R3
+w1447959798
+8C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\queue_tb.sv
+FC:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\queue_tb.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\queue_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\queue_tb.sv|
+!s101 -O0
+!i113 1
+R9
+vslowQueue
+R8
+R1
+!i10b 1
+!s100 OS`XbTS7MhS[:bR3AfTm>3
+IAA_fzkW;g]j:_K;8?NEK73
+R2
 !s105 slowQueue_sv_unit
 S1
 R3
-w1447610560
-8I:/ece551/thundercatz/circularQueues/slowQueue.sv
-FI:/ece551/thundercatz/circularQueues/slowQueue.sv
+w1447961017
+8C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\slowQueue.sv
+FC:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\slowQueue.sv
 L0 7
-R6
-!s108 1447868862.257000
-!s107 I:/ece551/thundercatz/circularQueues/slowQueue.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/circularQueues/slowQueue.sv|
-!i113 0
+R5
+r1
+!s85 0
+31
+!s108 1447961385.000000
+!s107 C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\slowQueue.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Gustavo\Google Drive\Fall 2015\ECE 551\Project\thundercatz\circularQueues\slowQueue.sv|
+!s101 -O0
+!i113 1
 R9
 nslow@queue

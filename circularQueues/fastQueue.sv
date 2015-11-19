@@ -96,8 +96,8 @@ always_comb begin
     IDLE :
     begin
       if(wrt_smpl) begin
-	qWr_en = 1;
-	inc_ptr = 1;
+		qWr_en = 1;
+		inc_ptr = 1;
         nxt_state = TRANS;
       end
     end
@@ -105,10 +105,10 @@ always_comb begin
     TRANS : 
     begin
       if (read_ptr == end_ptr)
-	nxt_state = IDLE;
+		nxt_state = IDLE;
       else begin
         sequencing = 1;
-	nxt_state = TRANS;
+		nxt_state = TRANS;
       end
     end
 
