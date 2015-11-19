@@ -1,3 +1,4 @@
+
 /****************************************************************
  Module to implement the pot sliders interface testbench.
  Authors : ThunderCatz 		HDL : System Verilog		 
@@ -15,13 +16,9 @@ wire w_seq;
 wire [15:0] w_smpl_out;
 
 // Instantiate DUT //
-slowQueue islowQ (.sequencing(w_seq), .smpl_out(w_smpl_out), 
+fastQueue ifastQ (.sequencing(w_seq), .smpl_out(w_smpl_out), 
 		.wrt_smpl(wrt_smpl), .new_smpl(count), 
 		.clk(clk), .rst_n(rst_n));
-
-//fastQueue ifastQ (.sequencing(w_seq), .smpl_out(w_smpl_out), 
-	//	.wrt_smpl(wrt_smpl), .new_smpl(count), 
-		//.clk(clk), .rst_n(rst_n));
 
 initial begin
   clk = 0;

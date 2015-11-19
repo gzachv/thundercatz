@@ -1,9 +1,16 @@
-I:/ece551/thundercatz/circularQueues/queue_tb.sv {1 {vlog -work work -vopt -sv -stats=none {I:\ece551\thundercatz\circularQueues\queue_tb.sv}
+I:/ece551/thundercatz/circularQueues/queue_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/circularQueues/queue_tb.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module queue_tb
 
 Top level modules:
 	queue_tb
+
+} {} {}} I:/ece551/thundercatz/circularQueues/slowQueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/circularQueues/slowQueue.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module slowQueue
+
+Top level modules:
+	slowQueue
 
 } {} {}} I:/ece551/thundercatz/circularQueues/dualPort1536x16.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/circularQueues/dualPort1536x16.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
