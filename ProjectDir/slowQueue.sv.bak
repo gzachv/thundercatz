@@ -27,7 +27,7 @@ logic	inc_ptr;	// Signal new ptr to increment
 /////////////// Instantiate memory module ///////////////////////
 dualPort1024x16 queue (	.clk(clk), .we(qWr_en), 
 			.waddr(new_ptr), .raddr(read_ptr),
-			.wdata(new_smpl), .rdata(smpl_out) );
+			.wdata(new_smpl), .rdata(smpl_out));
 
 /////////////////// Infer Queue full signal /////////////////////
 always_ff @(posedge clk, negedge rst_n) begin
