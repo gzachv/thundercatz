@@ -35,10 +35,10 @@ assign product = (coeff*smpl_in);
 always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n)
 		accum <= 32'h0000;
-	else if (!sequencing)
-		accum <= 32'h0000;
-	else
+	else if (sequencing)
 		accum <= accum + product;
+	else
+		accum <= accum;
 end
 
 /////////////////////// Infer index flop ////////////////////////

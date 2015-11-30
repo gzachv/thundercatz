@@ -8,7 +8,7 @@ module LP_FIR(smpl_out, sequencing, smpl_in, clk, rst_n);
 
 /********************TODO***********************/
 // NOTE: smpl_out will go to zero when sequencing is not true, will this cause
-// a noticable 'glitch' in sound.
+// a noticable 'glitch' in sound?
 
 ////////// Variable Declaration for interface ///////////////////
 output signed [15:0] smpl_out;	// The FIR scaled sample
@@ -36,7 +36,7 @@ always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n)
 		accum <= 32'h0000;
 	else if (!sequencing)
-		accum <= 32'h0000;
+		accum <= accum;
 	else
 		accum <= accum + product;
 end
