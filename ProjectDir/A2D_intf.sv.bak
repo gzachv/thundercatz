@@ -71,9 +71,9 @@ always_comb begin
 
     TRANS : begin
       if(done)
-	nxt_state = WAIT;
+			nxt_state = WAIT;
       else if (!done)
-	nxt_state = TRANS;
+			nxt_state = TRANS;
     end
 
     WAIT : begin
@@ -87,7 +87,7 @@ always_comb begin
         set_cc = 1;
       end
       else if (!done)
-	nxt_state = READ;
+			nxt_state = READ;
     end
 
   endcase

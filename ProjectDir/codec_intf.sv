@@ -5,9 +5,9 @@
  Date : 10/09/2015 							
 ****************************************************************/ 
 
-module codec_intf (	lft_in, rht_in, valid, 
-			LRCLK, SCLK, MCLK, RSTn, SDin, 
-			SDout, lft_out, rht_out, clk, rst_n );
+module codec_intf ( lft_in, rht_in, valid, 
+		    LRCLK, SCLK, MCLK, RSTn, SDin, 
+	            SDout, lft_out, rht_out, clk, rst_n );
 
 ////////// Variable Declaration for interface ///////////////////
 output logic [15:0] lft_in;
@@ -27,7 +27,7 @@ input clk, rst_n;		// System clock and active low reset
 ////////// Intermediate wire Declarations ///////////////////////
 logic ready,			// Signal to the CODEC clocks are ready
       update;			// Signal to trigger clks to update
-logic [9:0] clk_cnt;	// Counter for each posedge clk
+logic [9:0] clk_cnt;		// Counter for each posedge clk
 
 logic [15:0] out_shft_reg;	// The outgoing shift register
 logic [15:0] in_shft_reg;	// The incoming shift register
@@ -35,10 +35,10 @@ logic [15:0] in_shft_reg;	// The incoming shift register
 logic [15:0] lft,rht;		// Left and right channel buffers
 
 logic	LRCLK_rising,	
-		LRCLK_falling,
-		SCLK_rising,
-		SCLK_falling,
-		set_valid;		// Signals valid signal assertion
+	LRCLK_falling,
+	SCLK_rising,
+	SCLK_falling,
+	set_valid;		// Signals valid signal assertion
 
 /////////////////////// Clock Counter  //////////////////////////
 always @(posedge clk, negedge rst_n) begin

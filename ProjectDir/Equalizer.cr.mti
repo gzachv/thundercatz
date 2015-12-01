@@ -5,6 +5,13 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	SPI_mstr
 
+} {} {}} I:/ece551/thundercatz/ProjectDir/B2_FIR.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/B2_FIR.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module B2_FIR
+
+Top level modules:
+	B2_FIR
+
 } {} {}} I:/ece551/thundercatz/ProjectDir/reset_synch.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/reset_synch.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module reset_synch
@@ -33,13 +40,6 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	ROM_B2
 
-} {} {}} I:/ece551/thundercatz/ProjectDir/codec_intf.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/codec_intf.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module codec_intf
-
-Top level modules:
-	codec_intf
-
 } {} {}} I:/ece551/thundercatz/ProjectDir/ROM_B3.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_B3.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module ROM_B3
@@ -47,12 +47,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	ROM_B3
 
-} {} {}} I:/ece551/thundercatz/ProjectDir/digitalCore.sv {1 {vlog -work work -vopt -sv -stats=none {I:\ece551\thundercatz\ProjectDir\digitalCore.sv}
+} {} {}} I:/ece551/thundercatz/ProjectDir/HP_FIR.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/HP_FIR.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module digitalCore
+-- Compiling module HP_FIR
 
 Top level modules:
-	digitalCore
+	HP_FIR
 
 } {} {}} I:/ece551/thundercatz/ProjectDir/slide_intf.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/slide_intf.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -61,13 +61,6 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	slide_intf
 
-} {} {}} I:/ece551/thundercatz/ProjectDir/ROM_HP.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_HP.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module ROM_HP
-
-Top level modules:
-	ROM_HP
-
 } {} {}} I:/ece551/thundercatz/ProjectDir/slowQueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/slowQueue.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module slowQueue
@@ -75,26 +68,47 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	slowQueue
 
-} {} {}} I:/ece551/thundercatz/ProjectDir/Equalizer.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/Equalizer.sv
+} {} {}} I:/ece551/thundercatz/ProjectDir/ROM_HP.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_HP.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module Equalizer
+-- Compiling module ROM_HP
 
 Top level modules:
-	Equalizer
+	ROM_HP
 
-} {} {}} I:/ece551/thundercatz/ProjectDir/fastQueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/fastQueue.sv
+} {} {}} I:/ece551/thundercatz/ProjectDir/B1_FIR.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/B1_FIR.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module fastQueue
+-- Compiling module B1_FIR
 
 Top level modules:
-	fastQueue
+	B1_FIR
 
-} {} {}} I:/ece551/thundercatz/ProjectDir/band_scale.sv {1 {vlog -work work -vopt -sv -stats=none {I:\ece551\thundercatz\ProjectDir\band_scale.sv}
+} {} {}} I:/ece551/thundercatz/ProjectDir/LP_FIR.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/LP_FIR.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module band_scale
+-- Compiling module LP_FIR
 
 Top level modules:
-	band_scale
+	LP_FIR
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/B3_FIR.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/B3_FIR.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module B3_FIR
+
+Top level modules:
+	B3_FIR
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/dualPort1024x16.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/dualPort1024x16.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module dualPort1024x16
+
+Top level modules:
+	dualPort1024x16
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/dualPort1536x16.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/dualPort1536x16.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module dualPort1536x16
+
+Top level modules:
+	dualPort1536x16
 
 } {} {}} I:/ece551/thundercatz/ProjectDir/ROM_LP.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_LP.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -109,12 +123,5 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 Top level modules:
 	Equalizer_tb
-
-} {} {}} I:/ece551/thundercatz/ProjectDir/A2D_intf.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/A2D_intf.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module A2D_intf
-
-Top level modules:
-	A2D_intf
 
 } {} {}}

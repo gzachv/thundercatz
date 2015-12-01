@@ -1,10 +1,12 @@
-/******************************************************
-* Fall 2015 ECE551 Project
-* 5-channel Stereo Equalizer
-******************************************************/
-module Equalizer(clk, RST_n, LED, A2D_SS_n, A2D_MOSI, 
-		 A2D_SCLK, A2D_MISO, MCLK, SCL, LRCLK,
-		 SDout, SDin, AMP_ON, RSTn);
+/****************************************************************
+ Module to implement a 5 Channel Equalizer.
+ Author : Thundercatz			HDL : System Verilog		 
+ Student ID: 903 015 5247	
+ Date : 11/30/2015 							
+****************************************************************/ 
+module Equalizer( clk, RST_n, LED, A2D_SS_n, A2D_MOSI, 
+		  A2D_SCLK, A2D_MISO, MCLK, SCL, LRCLK,
+		  SDout, SDin, AMP_ON, RSTn );
 
 input clk,RST_n;		// 50MHz clock and asynch active low reset from push button
 output [7:0] LED;		// Active high outputs that drive LEDs
@@ -51,7 +53,7 @@ codec_intf iCS ( .clk(clk), .rst_n(rst_n), .lft_in(lft_in), .rht_in(rht_in),
 		 .LRCLK(LRCLK), .SDin(SDin), .SDout(SDout) );
 
 ///////////////////////////////////
-// Instantiate Equalizer Core //
+// Instantiate Equalizer Core   //
 /////////////////////////////////
 digitalCore iDigCore (	.lft_out(lft_out), .rht_out(rht_out),
 		   	.POT_LP(LP_gain), .POT_B1(B1_gain), .POT_B2(B2_gain),
@@ -65,8 +67,8 @@ digitalCore iDigCore (	.lft_out(lft_out), .rht_out(rht_out),
 	  
 ///////////////////////////////////////////////
 // Implement logic for delaying Amp_on until //
-// after queues are steady.   (AMP_ON)       //
-//////////////////////////////////////////////
+// after queues are steady.   (AMP_ON)      //
+/////////////////////////////////////////////
 
 
 

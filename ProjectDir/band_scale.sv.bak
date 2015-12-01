@@ -40,7 +40,7 @@ assign sat = {scale_audio[28:25]};
 
 ////////////// Saturation detection ////////////////////////////
 assign sat_neg = sat[3] & ~&sat[2:0];
-assign sat_pos = ~sat[3] & |sat[2:0];
+assign sat_pos = ~sat[3] &  |sat[2:0];
 
 ////////////// Select correct output ///////////////////////////
 assign scaled =	sat_neg ? 16'h8000		// set to most neg value

@@ -4,9 +4,9 @@
  Student ID: 903 015 5247	
  Date : 11/24/2015 							
 ****************************************************************/ 
-module digitalCore(lft_out, rht_out,
-		   POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME,
-		   lft_in, rht_in, valid, clk, rst_n);
+module digitalCore( lft_out, rht_out,
+		    POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME,
+		    lft_in, rht_in, valid, clk, rst_n );
 
 ////////// Variable Declaration for interface ///////////////////
 output signed [15:0]	lft_out,
@@ -90,7 +90,7 @@ assign lft_sum_vol = {1'b0, VOLUME * (lft_LP_scaled + lft_B1_scaled + lft_B2_sca
 assign rht_sum_vol = {1'b0, VOLUME * (rht_LP_scaled + rht_B1_scaled + rht_B2_scaled +
 			rht_B3_scaled + rht_HP_scaled)};
 
-assign lft_audio = lft_sum_vol[27:12];
-assign rht_audio = rht_sum_vol[27:12];
+assign lft_out = lft_sum_vol[27:12];
+assign rht_out = rht_sum_vol[27:12];
 
 endmodule

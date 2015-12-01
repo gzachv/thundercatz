@@ -4,9 +4,9 @@
  Student ID: 903 015 5247	
  Date : 11/24/2015 							
 ****************************************************************/ 
-module digitalCore(lft_out, rht_out,
-		   POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME,
-		   lft_in, rht_in, valid, clk, rst_n);
+module digitalCore( lft_out, rht_out,
+		    POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME,
+		    lft_in, rht_in, valid, clk, rst_n );
 
 ////////// Variable Declaration for interface ///////////////////
 output signed [15:0]	lft_out,
@@ -44,19 +44,19 @@ logic signed [15:0] lft_sum_vol, rht_sum_vol;	// Sum of scaled bands, scaled by 
 /////////////////////// Queue instantiation /////////////////////
 slowQueue iLftSlowQ (	.sequencing(lft_slow_seq), .smpl_out(lft_slow_smpl_out), 
 			.wrt_smpl(valid), .new_smpl(lft_in), 
-			.clk(clk), .rst_n(rst_n));
+			.clk(clk), .rst_n(rst_n) );
 
 fastQueue iLftFastQ (	.sequencing(lft_fast_seq), .smpl_out(lft_fast_smpl_out), 
 			.wrt_smpl(valid), .new_smpl(lft_in), 
-			.clk(clk), .rst_n(rst_n));
+			.clk(clk), .rst_n(rst_n) );
 
 slowQueue iRhtSlowQ (	.sequencing(rht_slow_seq), .smpl_out(rht_slow_smpl_out), 
 			.wrt_smpl(valid), .new_smpl(rht_in), 
-			.clk(clk), .rst_n(rst_n));
+			.clk(clk), .rst_n(rst_n) );
 
 fastQueue iRhtFastQ (	.sequencing(rht_fast_seq), .smpl_out(rht_fast_smpl_out), 
 			.wrt_smpl(valid), .new_smpl(rht_in), 
-			.clk(clk), .rst_n(rst_n));
+			.clk(clk), .rst_n(rst_n) );
 
 /////////////////////// FIR instantiation ///////////////////////
 LP_FIR iLft_LP_FIR (.smpl_out(lft_LP_smpl_out), .sequencing(lft_slow_seq), .smpl_in(lft_slow_smpl_out), .clk(clk), .rst_n(rst_n));
