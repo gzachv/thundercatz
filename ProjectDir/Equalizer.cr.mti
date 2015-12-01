@@ -1,16 +1,23 @@
-I:/ece551/thundercatz/ProjectDir/LP_FIR.sv {1 {vlog -work work -vopt -sv -stats=none {I:\ece551\thundercatz\ProjectDir\LP_FIR.sv}
+I:/ece551/thundercatz/ProjectDir/SPI_mstr.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/SPI_mstr.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module LP_FIR
+-- Compiling module SPI_mstr
 
 Top level modules:
-	LP_FIR
+	SPI_mstr
 
-} {} {}} I:/ece551/thundercatz/ProjectDir/slide_intf.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/slide_intf.sv
+} {} {}} I:/ece551/thundercatz/ProjectDir/reset_synch.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/reset_synch.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module slide_intf
+-- Compiling module reset_synch
 
 Top level modules:
-	slide_intf
+	reset_synch
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/ROM_B1.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_B1.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ROM_B1
+
+Top level modules:
+	ROM_B1
 
 } {} {}} I:/ece551/thundercatz/ProjectDir/posedgeDetect.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/posedgeDetect.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -19,12 +26,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	posedgeDetect
 
-} {} {}} I:/ece551/thundercatz/ProjectDir/Equalizer.sv {1 {vlog -work work -vopt -sv -stats=none {I:\ece551\thundercatz\ProjectDir\Equalizer.sv}
+} {} {}} I:/ece551/thundercatz/ProjectDir/ROM_B2.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_B2.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module Equalizer
+-- Compiling module ROM_B2
 
 Top level modules:
-	Equalizer
+	ROM_B2
 
 } {} {}} I:/ece551/thundercatz/ProjectDir/codec_intf.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/codec_intf.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -33,12 +40,68 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	codec_intf
 
+} {} {}} I:/ece551/thundercatz/ProjectDir/ROM_B3.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_B3.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ROM_B3
+
+Top level modules:
+	ROM_B3
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/digitalCore.sv {1 {vlog -work work -vopt -sv -stats=none {I:\ece551\thundercatz\ProjectDir\digitalCore.sv}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module digitalCore
+
+Top level modules:
+	digitalCore
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/slide_intf.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/slide_intf.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module slide_intf
+
+Top level modules:
+	slide_intf
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/ROM_HP.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_HP.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ROM_HP
+
+Top level modules:
+	ROM_HP
+
 } {} {}} I:/ece551/thundercatz/ProjectDir/slowQueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/slowQueue.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module slowQueue
 
 Top level modules:
 	slowQueue
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/Equalizer.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/Equalizer.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Equalizer
+
+Top level modules:
+	Equalizer
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/fastQueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/fastQueue.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module fastQueue
+
+Top level modules:
+	fastQueue
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/band_scale.sv {1 {vlog -work work -vopt -sv -stats=none {I:\ece551\thundercatz\ProjectDir\band_scale.sv}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module band_scale
+
+Top level modules:
+	band_scale
+
+} {} {}} I:/ece551/thundercatz/ProjectDir/ROM_LP.v {1 {vlog -work work -vopt -stats=none I:/ece551/thundercatz/ProjectDir/ROM_LP.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ROM_LP
+
+Top level modules:
+	ROM_LP
 
 } {} {}} I:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -53,17 +116,5 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 Top level modules:
 	A2D_intf
-
-} {} {}} I:/ece551/thundercatz/ProjectDir/digitalCore.sv {0 {vlog -work work -vopt -sv -stats=none {I:\ece551\thundercatz\ProjectDir\digitalCore.sv}
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module digitalCore
-** Error: I:\ece551\thundercatz\ProjectDir\digitalCore.sv(9): near "lft_in": syntax error, unexpected IDENTIFIER, expecting ')'
-
-} {4.0 5.0} {}} I:/ece551/thundercatz/ProjectDir/fastQueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/thundercatz/ProjectDir/fastQueue.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module fastQueue
-
-Top level modules:
-	fastQueue
 
 } {} {}}

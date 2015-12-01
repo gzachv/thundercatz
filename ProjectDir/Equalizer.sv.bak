@@ -37,7 +37,7 @@ reset_synch iRST(.clk(clk),.RST_n(RST_n),.rst_n(rst_n));
 ///////////////////////////////////////////
 // Instantiate Your Slide Pot Interface //
 /////////////////////////////////////////
-slide_intf iSLD ( .POT_LP(LP_gain), .POT_B1(B1_gain), .POT_B2(B2_gain), 
+slide_intf iSLD (  .POT_LP(LP_gain), .POT_B1(B1_gain), .POT_B2(B2_gain), 
 		   .POT_B3(B3_gain), .POT_HP(HP_gain), .VOLUME(volume),
 		   .a2d_SS_n(A2D_SS_n), .SCLK(A2D_SCLK), .MOSI(A2D_MOSI),
 		   .MISO(A2D_MISO), .clk(clk), .rst_n(rst_n) );		
@@ -45,24 +45,28 @@ slide_intf iSLD ( .POT_LP(LP_gain), .POT_B1(B1_gain), .POT_B2(B2_gain),
 ///////////////////////////////////////
 // Instantiate Your CODEC Interface //
 /////////////////////////////////////
-codec_intf iCS(.clk(clk), .rst_n(rst_n), .lft_in(lft_in), .rht_in(rht_in),
+codec_intf iCS( .clk(clk), .rst_n(rst_n), .lft_in(lft_in), .rht_in(rht_in),
 		.lft_out(lft_out), .rht_out(rht_out),
                 .valid(valid), .RSTn(RSTn), .MCLK(MCLK), .SCLK(SCL),
-		.LRCLK(LRCLK), .SDin(SDin), .SDout(SDout));
+		.LRCLK(LRCLK), .SDin(SDin), .SDout(SDout) );
 
 ///////////////////////////////////
-// Instantiate Equalizer Engine //
+// Instantiate Equalizer Core //
 /////////////////////////////////
-
+digitalCore iDigCore (	.lft_out(lft_out), .rht_out(rht_out),
+		   	.POT_LP(LP_gain), .POT_B1(B1_gain), .POT_B2(B2_gain),
+			.POT_B3(B3_gain), .POT_HP(HP_gain), .VOLUME(volume),
+		   	.lft_in(lft_in), .rht_in(rht_in), .valid(valid), 
+			.clk(clk), .rst_n(rst_n) );
 
 ////////////////////////////////////////////////////////////
 // Instantiate LED effect driver (optional extra credit) //
 //////////////////////////////////////////////////////////
 	  
 ///////////////////////////////////////////////
-// Implement logic for delaying Amp on till //
-// after queues are steady.   (AMP_ON)     //
-////////////////////////////////////////////
+// Implement logic for delaying Amp_on until //
+// after queues are steady.   (AMP_ON)       //
+//////////////////////////////////////////////
 
 
 

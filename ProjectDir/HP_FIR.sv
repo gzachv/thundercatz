@@ -1,10 +1,10 @@
 /****************************************************************
- Module to implement the FIR engine for Lowpass band.
+ Module to implement the FIR engine for HP band.
  Authors : ThunderCatz 		HDL : System Verilog		 
  Student ID: 903 015 5247	
  Date : 11/24/2015 							
 ****************************************************************/ 
-module LP_FIR(smpl_out, sequencing, smpl_in, clk, rst_n);
+module HP_FIR(smpl_out, sequencing, smpl_in, clk, rst_n);
 
 ////////// Variable Declaration for interface ///////////////////
 output signed [15:0] smpl_out;	// The FIR scaled sample
@@ -23,7 +23,7 @@ logic signed [31:0] accum;	// Acumulated FIR results
 logic delayed_seq;		// Sequencing signal delayed by one clk
 
 /////////////////////// ROM instantiation ///////////////////////
-ROM_LP iROM (.clk(clk), .addr(index), .dout(coeff));
+ROM_HP iROM (.clk(clk), .addr(index), .dout(coeff));
 
 /////////////////////// product assignment ///////////////////////
 assign product = (coeff*smpl_in);

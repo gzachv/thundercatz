@@ -1,0 +1,75 @@
+#########################################################################
+# 		Read in the verilog files first				#
+#########################################################################
+read_file -format sverilog {	./codec_intf.sv	}
+
+#########################################################################
+# 		Set Current Design to top level				#
+#########################################################################
+set current_design codec_intf
+
+#########################################################################
+# 		Define the clock and do not mess with it		#
+# 		Sets clock with period 2ns = 500MHz			#
+#		50% duty, starts high at 0 falls at 1 time unit		#
+#########################################################################
+create_clock -name "clk" -period 2 -waveform {0 1} {clk}
+set_dont_touch_network [find port clk]
+
+#########################################################################
+# 		Setup a pointer to all inputs except clk 		#
+#########################################################################
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+remove_from_collection $prim_inputs [find port rst_n]
+
+#########################################################################
+# 		Set input delay and drive on all inputs			#
+#########################################################################
+set_input_delay -clock clk 0.5 $prim_inputs
+
+#########################################################################
+# 	Constrian output delay and load on all outputs (0.1pF)		#
+#########################################################################
+set_output_delay -clock clk 0.75 [all_outputs]
+set_load 0.1 [all_outputs]
+
+#########################################################################
+# 		Wire load model - estimate internal parasitics		#
+#########################################################################
+set_wire_load_model -name TSMC32K_Lowk_Conservative\
+	 -library tcbn401pbwptc
+
+#########################################################################
+# 			Compile the design				#
+#########################################################################
+compile -map_effort medium
+
+#########################################################################
+# 		Set clock uncertainty and do fix hold			#
+#########################################################################
+#set_clock_uncertainty 0.15 clk
+#set_fix_hold clk
+
+#########################################################################
+# 		Flatten hierarchy					#
+#########################################################################
+ungroup -all -flatten
+
+#########################################################################
+# 		Second compliation					#
+#########################################################################
+compile -map_effort medium
+
+#########################################################################
+# 		Generate timing and area reports			#
+#########################################################################
+report_timing -delay max > max_delay.rpt
+report_timing -delay min > min_delay.rpt
+report_area > codec_intf_area.txt
+
+#########################################################################
+# 		Write out the resulting synthesized netlist		#
+#########################################################################
+write_file -format verilog codec_intf -output codec_intf.vg
+
+
