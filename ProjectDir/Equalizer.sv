@@ -28,6 +28,7 @@ wire valid_fall,valid_rise;
 wire [15:0] lft_in,rht_in;
 wire [15:0] lft_out,rht_out,lft_out_sel,rht_out_sel;
 wire [12:0] LP_gain,B1_gain,B2_gain,B3_gain,HP_gain,volume;
+wire lftQ_full, rhtQ_full;
 
 reg [10:0] del;
 
@@ -55,7 +56,8 @@ codec_intf iCS ( .clk(clk), .rst_n(rst_n), .lft_in(lft_in), .rht_in(rht_in),
 ///////////////////////////////////
 // Instantiate Equalizer Core   //
 /////////////////////////////////
-digitalCore iDigCore (	.lft_out(lft_out), .rht_out(rht_out),
+digitalCore iDigCore (	.lft_out(lft_out), .rht_out(rht_out), 
+			.lftQ_full(lftQ_full), .rhtQ_full(rhtQ_full),
 		   	.POT_LP(LP_gain), .POT_B1(B1_gain), .POT_B2(B2_gain),
 			.POT_B3(B3_gain), .POT_HP(HP_gain), .VOLUME(volume),
 		   	.lft_in(lft_in), .rht_in(rht_in), .valid(valid), 
@@ -64,12 +66,12 @@ digitalCore iDigCore (	.lft_out(lft_out), .rht_out(rht_out),
 ////////////////////////////////////////////////////////////
 // Instantiate LED effect driver (optional extra credit) //
 //////////////////////////////////////////////////////////
+assign LED = 8'h02;// Tied low for now
 	  
-///////////////////////////////////////////////
+////////////////////////////////////////////////
 // Implement logic for delaying Amp_on until //
 // after queues are steady.   (AMP_ON)      //
 /////////////////////////////////////////////
-
-
+assign AMP_ON = lftQ_full & rhtQ_full;
 
 endmodule

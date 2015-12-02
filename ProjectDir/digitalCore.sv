@@ -4,13 +4,15 @@
  Student ID: 903 015 5247	
  Date : 11/24/2015 							
 ****************************************************************/ 
-module digitalCore( lft_out, rht_out,
+module digitalCore( lft_out, rht_out, lftQ_full, rhtQ_full,
 		    POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME,
 		    lft_in, rht_in, valid, clk, rst_n );
 
 ////////// Variable Declaration for interface ///////////////////
 output signed [15:0]	lft_out,
 			rht_out;	// The equalized audio sample
+
+output lftQ_full, rhtQ_full;		// Signal the queue is full	
 
 input [11:0] 	POT_LP, POT_B1, POT_B2,
 		POT_B3, POT_HP, VOLUME; // Pot Values
@@ -42,7 +44,7 @@ logic signed [15:0] lft_LP_scaled, lft_B1_scaled,
 logic signed [15:0] lft_sum_vol, rht_sum_vol;	// Sum of scaled bands, scaled by volume
 
 /////////////////////// Queue instantiation /////////////////////
-slowQueue iLftSlowQ (	.sequencing(lft_slow_seq), .smpl_out(lft_slow_smpl_out), 
+slowQueue iLftSlowQ (	.sequencing(lft_slow_seq), .smpl_out(lft_slow_smpl_out), .isFull(lftQ_full), 
 			.wrt_smpl(valid), .new_smpl(lft_in), 
 			.clk(clk), .rst_n(rst_n) );
 
@@ -50,7 +52,7 @@ fastQueue iLftFastQ (	.sequencing(lft_fast_seq), .smpl_out(lft_fast_smpl_out),
 			.wrt_smpl(valid), .new_smpl(lft_in), 
 			.clk(clk), .rst_n(rst_n) );
 
-slowQueue iRhtSlowQ (	.sequencing(rht_slow_seq), .smpl_out(rht_slow_smpl_out), 
+slowQueue iRhtSlowQ (	.sequencing(rht_slow_seq), .smpl_out(rht_slow_smpl_out), .isFull(rhtQ_full),
 			.wrt_smpl(valid), .new_smpl(rht_in), 
 			.clk(clk), .rst_n(rst_n) );
 
