@@ -4,40 +4,58 @@
  Student ID: 903 015 5247	
  Date : 11/24/2015 							
 ****************************************************************/ 
-module B3_FIR(smpl_out, sequencing, smpl_in, clk, rst_n);
+module B3_FIR(lft_smpl_out, rht_smpl_out, sequencing, lft_smpl_in, rht_smpl_in, clk, rst_n);
 
 ////////// Variable Declaration for interface ///////////////////
-output signed [15:0] smpl_out;	// The FIR scaled sample
+output signed [15:0] lft_smpl_out;	// The FIR scaled sample (left)
+output signed [15:0] rht_smpl_out;	// The FIR scaled sample (right)
 
-input signed [15:0] smpl_in;	// The input audio sample from the queue
-input sequencing;		// Signals FIR calculation 
-input clk, rst_n;		// System clk and reset
+input signed [15:0] lft_smpl_in;	// The input audio sample from the queue (left)
+input signed [15:0] rht_smpl_in;	// The input audio sample from the queue (right)
+
+input sequencing;			// Signals FIR calculation 
+input clk, rst_n;			// System clk and reset
 
 ////////// Intermediate wire Declarations ///////////////////////
-reg [9:0] index;		// Signal to index into ROM
+reg [9:0] index;			// Signal to index into ROM
 
-wire signed [15:0] coeff;	// The FIR coefficient
-wire signed [31:0] product;	// Product of the coeff and sample
+wire signed [15:0] coeff;		// The FIR coefficient
+wire signed [31:0] lft_product;		// Product of the coeff and sample (left)
+wire signed [31:0] rht_product;		// Product of the coeff and sample (right)
 
-logic signed [31:0] accum;	// Acumulated FIR results
-logic delayed_seq;		// Sequencing signal delayed by one clk
+logic signed [31:0] lft_accum;		// Acumulated FIR results (left)
+logic signed [31:0] rht_accum;		// Acumulated FIR results (right)
+logic delayed_seq;			// Sequencing signal delayed by one clk
 
 /////////////////////// ROM instantiation ///////////////////////
 ROM_B3 iROM (.clk(clk), .addr(index), .dout(coeff));
 
 /////////////////////// product assignment ///////////////////////
-assign product = (coeff*smpl_in);
+assign lft_product = (coeff*lft_smpl_in);
+assign rht_product = (coeff*rht_smpl_in);
 
-/////////////////////// Infer accum flop ////////////////////////
+/////////////////////// Infer left accum flop ////////////////////
 always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n)
-		accum <= 32'h0000;
+		lft_accum <= 32'h0000;
 	else if (delayed_seq)
-		accum <= accum + product;
+		lft_accum <= lft_accum + lft_product;
 	else if (sequencing)
-		accum <= 32'h0000;
+		lft_accum <= 32'h0000;
 	else
-		accum <= accum;
+		lft_accum <= lft_accum;
+end
+
+/////////////////////// Infer left accum flop ////////////////////
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n)
+		rht_accum <= 32'h0000;
+	else if (delayed_seq)
+		rht_accum <= rht_accum + rht_product;
+	else if (sequencing)
+		rht_accum <= 32'h0000;
+	else
+		rht_accum <= rht_accum;
 end
 
 /////////////////////// Infer index flop ////////////////////////
@@ -53,7 +71,8 @@ always_ff @(posedge clk, negedge rst_n) begin
 end
 
 /////////////////////// smpl out assignment /////////////////////
-assign smpl_out = {accum[30:15]};
+assign lft_smpl_out = {lft_accum[30:15]};
+assign rht_smpl_out = {rht_accum[30:15]};
 
 //////////// State Machine for edge detection ///////////////////
 // used two states to handle holding RSTn high for one cycle of LRCLK
