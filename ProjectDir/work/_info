@@ -25,7 +25,7 @@ w1449007613
 FI:/ece551/thundercatz/ProjectDir/A2D_intf.sv
 L0 8
 Z3 OE;L;10.3c;59
-!s108 1449189083.510000
+!s108 1449251518.711000
 !s107 I:/ece551/thundercatz/ProjectDir/A2D_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/A2D_intf.sv|
 !i113 0
@@ -39,18 +39,18 @@ r1
 31
 !i10b 1
 !s100 ZBWWXFI^AinRHzkjdeXRG2
-I`[9bR7]AB?iDAAgO@]MT@2
+I`<]o_Bl]_@@kmaTlKl^B83
 !s105 ADC128S_sv_unit
 S1
 R2
 w1447000652
-8I:\ece551\thundercatz\ProjectDir\ADC128S.sv
-FI:\ece551\thundercatz\ProjectDir\ADC128S.sv
+8I:/ece551/thundercatz/ProjectDir/ADC128S.sv
+FI:/ece551/thundercatz/ProjectDir/ADC128S.sv
 L0 1
 R3
-!s108 1449189089.899000
-!s107 I:\ece551\thundercatz\ProjectDir\ADC128S.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\ece551\thundercatz\ProjectDir\ADC128S.sv|
+!s108 1449251525.336000
+!s107 I:/ece551/thundercatz/ProjectDir/ADC128S.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/ADC128S.sv|
 !i113 0
 R4
 n@a@d@c128@s
@@ -71,7 +71,7 @@ w1449188770
 FI:/ece551/thundercatz/ProjectDir/B1_FIR.sv
 L0 7
 R3
-!s108 1449189088.006000
+!s108 1449251523.462000
 !s107 I:/ece551/thundercatz/ProjectDir/B1_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/B1_FIR.sv|
 !i113 0
@@ -94,7 +94,7 @@ w1449188761
 FI:/ece551/thundercatz/ProjectDir/B2_FIR.sv
 L0 7
 R3
-!s108 1449189088.276000
+!s108 1449251523.727000
 !s107 I:/ece551/thundercatz/ProjectDir/B2_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/B2_FIR.sv|
 !i113 0
@@ -117,7 +117,7 @@ w1449188751
 FI:/ece551/thundercatz/ProjectDir/B3_FIR.sv
 L0 7
 R3
-!s108 1449189088.526000
+!s108 1449251523.992000
 !s107 I:/ece551/thundercatz/ProjectDir/B3_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/B3_FIR.sv|
 !i113 0
@@ -140,7 +140,7 @@ w1449008107
 FI:/ece551/thundercatz/ProjectDir/band_scale.sv
 L0 8
 R3
-!s108 1449189085.876000
+!s108 1449251520.819000
 !s107 I:/ece551/thundercatz/ProjectDir/band_scale.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/band_scale.sv|
 !i113 0
@@ -162,7 +162,7 @@ w1449008189
 FI:/ece551/thundercatz/ProjectDir/codec_intf.sv
 L0 8
 R3
-!s108 1449189083.760000
+!s108 1449251518.976000
 !s107 I:/ece551/thundercatz/ProjectDir/codec_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/codec_intf.sv|
 !i113 0
@@ -181,7 +181,7 @@ w1448207482
 FI:/ece551/thundercatz/ProjectDir/CS4272.v
 L0 11
 R3
-!s108 1449189089.589000
+!s108 1449251525.071000
 !s107 I:/ece551/thundercatz/ProjectDir/CS4272.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/CS4272.v|
 !i113 0
@@ -194,19 +194,19 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 1>CK`>R<EP6eo5VRg:j4z0
-IRS3EJ[F`L:E=TV>T39Mi=3
+!s100 5nO1<iPNC7hKCmF`cj`i93
+IGX<>;AXCW5cg8WAPQIJho2
 !s105 digitalCore_sv_unit
 S1
 R2
-w1449189078
-8I:\ece551\thundercatz\ProjectDir\digitalCore.sv
-FI:\ece551\thundercatz\ProjectDir\digitalCore.sv
+w1449249007
+8I:/ece551/thundercatz/ProjectDir/digitalCore.sv
+FI:/ece551/thundercatz/ProjectDir/digitalCore.sv
 L0 7
 R3
-!s108 1449189085.086000
-!s107 I:\ece551\thundercatz\ProjectDir\digitalCore.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\ece551\thundercatz\ProjectDir\digitalCore.sv|
+!s108 1449251520.024000
+!s107 I:/ece551/thundercatz/ProjectDir/digitalCore.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/digitalCore.sv|
 !i113 0
 R4
 ndigital@core
@@ -224,7 +224,7 @@ Z6 w1448338884
 FI:/ece551/thundercatz/ProjectDir/dualPort1024x16.v
 L0 1
 R3
-!s108 1449189089.328000
+!s108 1449251524.837000
 !s107 I:/ece551/thundercatz/ProjectDir/dualPort1024x16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/dualPort1024x16.v|
 !i113 0
@@ -244,7 +244,7 @@ R6
 FI:/ece551/thundercatz/ProjectDir/dualPort1536x16.v
 L0 1
 R3
-!s108 1449189089.068000
+!s108 1449251524.587000
 !s107 I:/ece551/thundercatz/ProjectDir/dualPort1536x16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/dualPort1536x16.v|
 !i113 0
@@ -267,7 +267,7 @@ w1449182790
 FI:/ece551/thundercatz/ProjectDir/Equalizer.sv
 L0 7
 R3
-!s108 1449189083.250000
+!s108 1449251518.351000
 !s107 I:/ece551/thundercatz/ProjectDir/Equalizer.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/Equalizer.sv|
 !i113 0
@@ -280,17 +280,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 LZ0PAb<=mfQjnUS`cMJD^1
-I7a]:T=nBdX_CZPh32?Hd<0
+!s100 5B0TmMa^XEWMjNLGJ:Sa90
+IUm[kli8n6M6ZgeWa`3WH63
 !s105 Equalizer_tb_sv_unit
 S1
 R2
-w1449181300
+w1449251506
 8I:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
 FI:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
 L0 7
 R3
-!s108 1449189082.960000
+!s108 1449251518.024000
 !s107 I:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv|
 !i113 0
@@ -313,7 +313,7 @@ w1449008409
 FI:/ece551/thundercatz/ProjectDir/fastQueue.sv
 L0 7
 R3
-!s108 1449189085.346000
+!s108 1449251520.320000
 !s107 I:/ece551/thundercatz/ProjectDir/fastQueue.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/fastQueue.sv|
 !i113 0
@@ -336,7 +336,7 @@ w1449188744
 FI:/ece551/thundercatz/ProjectDir/HP_FIR.sv
 L0 7
 R3
-!s108 1449189088.808000
+!s108 1449251524.275000
 !s107 I:/ece551/thundercatz/ProjectDir/HP_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/HP_FIR.sv|
 !i113 0
@@ -359,14 +359,14 @@ w1449188534
 FI:/ece551/thundercatz/ProjectDir/LP_FIR.sv
 L0 7
 R3
-!s108 1449189084.320000
+!s108 1449251519.540000
 !s107 I:/ece551/thundercatz/ProjectDir/LP_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/LP_FIR.sv|
 !i113 0
 R4
 n@l@p_@f@i@r
 vposedgeDetect
-!s110 1449189084
+!s110 1449251519
 !i10b 1
 !s100 _`f0ZHVbICkM67fc@N2j10
 I?bzW24X:bjF`4WbdP@26o1
@@ -380,7 +380,7 @@ R3
 r1
 !s85 0
 31
-!s108 1449189084.866000
+!s108 1449251519.790000
 !s107 I:/ece551/thundercatz/ProjectDir/posedgeDetect.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/posedgeDetect.v|
 !i113 0
@@ -400,7 +400,7 @@ w1446486658
 FI:/ece551/thundercatz/ProjectDir/reset_synch.v
 L0 8
 R3
-!s108 1449189086.141000
+!s108 1449251521.085000
 !s107 I:/ece551/thundercatz/ProjectDir/reset_synch.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/reset_synch.v|
 !i113 0
@@ -419,7 +419,7 @@ w1449004442
 FI:/ece551/thundercatz/ProjectDir/ROM_B1.v
 L0 1
 R3
-!s108 1449189087.046000
+!s108 1449251522.428000
 !s107 I:/ece551/thundercatz/ProjectDir/ROM_B1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/ROM_B1.v|
 !i113 0
@@ -439,7 +439,7 @@ Z7 w1448338680
 FI:/ece551/thundercatz/ProjectDir/ROM_B2.v
 L0 1
 R3
-!s108 1449189087.308000
+!s108 1449251522.663000
 !s107 I:/ece551/thundercatz/ProjectDir/ROM_B2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/ROM_B2.v|
 !i113 0
@@ -459,7 +459,7 @@ R7
 FI:/ece551/thundercatz/ProjectDir/ROM_B3.v
 L0 1
 R3
-!s108 1449189087.548000
+!s108 1449251522.914000
 !s107 I:/ece551/thundercatz/ProjectDir/ROM_B3.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/ROM_B3.v|
 !i113 0
@@ -479,7 +479,7 @@ R7
 FI:/ece551/thundercatz/ProjectDir/ROM_HP.v
 L0 1
 R3
-!s108 1449189087.776000
+!s108 1449251523.163000
 !s107 I:/ece551/thundercatz/ProjectDir/ROM_HP.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/ROM_HP.v|
 !i113 0
@@ -499,7 +499,7 @@ R7
 FI:/ece551/thundercatz/ProjectDir/ROM_LP.v
 L0 1
 R3
-!s108 1449189086.776000
+!s108 1449251522.179000
 !s107 I:/ece551/thundercatz/ProjectDir/ROM_LP.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/thundercatz/ProjectDir/ROM_LP.v|
 !i113 0
@@ -512,17 +512,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 <gNjjB2U6XjZRBn5zV4h60
-I<@ARnTDMPCU>MIjiV?43U3
+!s100 Y;Te:5:aHEdRl?UcVToFD1
+I5P0FcAb3MMg;:f5ETzbV[1
 !s105 slide_intf_sv_unit
 S1
 R2
-w1449187078
+w1449249648
 8I:/ece551/thundercatz/ProjectDir/slide_intf.sv
 FI:/ece551/thundercatz/ProjectDir/slide_intf.sv
 L0 8
 R3
-!s108 1449189084.070000
+!s108 1449251519.227000
 !s107 I:/ece551/thundercatz/ProjectDir/slide_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/slide_intf.sv|
 !i113 0
@@ -544,7 +544,7 @@ w1449077954
 FI:/ece551/thundercatz/ProjectDir/slowQueue.sv
 L0 7
 R3
-!s108 1449189085.626000
+!s108 1449251520.570000
 !s107 I:/ece551/thundercatz/ProjectDir/slowQueue.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/slowQueue.sv|
 !i113 0
@@ -567,7 +567,7 @@ w1442688362
 FI:/ece551/thundercatz/ProjectDir/SPI_ADC128S.sv
 L0 1
 R3
-!s108 1449189090.197000
+!s108 1449251525.648000
 !s107 I:/ece551/thundercatz/ProjectDir/SPI_ADC128S.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/SPI_ADC128S.sv|
 !i113 0
@@ -590,7 +590,7 @@ w1447197131
 FI:/ece551/thundercatz/ProjectDir/SPI_mstr.sv
 L0 8
 R3
-!s108 1449189086.465000
+!s108 1449251521.537000
 !s107 I:/ece551/thundercatz/ProjectDir/SPI_mstr.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/SPI_mstr.sv|
 !i113 0

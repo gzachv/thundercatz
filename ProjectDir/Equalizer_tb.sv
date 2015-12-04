@@ -33,6 +33,7 @@ logic rst_n;
 assign rst_n = RST_n;	// rst_n should be a synchronized version of RST_n
 
 integer fptr;		// File handle for writing output
+logic [11:0] x;		// Counter for loops
   
 //////////////////////
 // Instantiate DUT //
@@ -64,9 +65,26 @@ RST_n = 0;
 @(negedge clk);
 RST_n = 1;
 
+for (x = 0; x < 2045; x = x + 1) begin
+	@(posedge LRCLK);
+end
+
+
+for (x = 0; x < 2045; x = x + 1) begin
+	@(posedge LRCLK);
+	$fwrite( fptr,"%d,", aout_rht );
+	@(negedge LRCLK);
+	$fwrite( fptr,"%d\n", aout_lft );
+end
+
+////////// Close output file ////////////////////////
+$fclose(fptr);
+
+$stop;
+
 end
   
 always
-	#10 clk = ~clk;
+	#1 clk = ~clk;
 
 endmodule
