@@ -98,7 +98,6 @@ always_comb begin
       if(!rst_n)
 	nxt_state = RESET;
       else if(sequencing) begin
-	delayed_seq = 1; 
 	nxt_state = EDGE;
       end
     end
@@ -107,7 +106,7 @@ always_comb begin
       if(!rst_n)
 	nxt_state = RESET;
       else if (!sequencing) begin
- 	delayed_seq = 0;
+ 	delayed_seq = 1;
 	nxt_state = RESET;
       end else begin
 	delayed_seq = 1;

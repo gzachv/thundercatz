@@ -101,12 +101,12 @@ always_ff @(posedge clk, negedge rst_n) begin
 end
 
 ///////////////////// band local params //////////////////////////////
-localparam LP  = 3'b000;
-localparam B1  = 3'b001;
-localparam B2  = 3'b010;
-localparam B3  = 3'b011;
-localparam HP  = 3'b100;
-localparam VOL = 3'b111;
+localparam LP  = 3'b001;
+localparam B1  = 3'b010;
+localparam B2  = 3'b011;
+localparam B3  = 3'b100;
+localparam HP  = 3'b111;
+localparam VOL = 3'b000;
 
 ///////////////////// State machine /////////////////////////////
 typedef enum reg {IDLE, SAMPLE} state_t;

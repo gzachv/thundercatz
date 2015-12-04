@@ -29,6 +29,7 @@ wire [15:0] aout_lft,	// Left audio data
 	    aout_rht;	// Right audio data
 logic	RSTn;		// CODEC reset, active low
 
+logic rst_n;
 assign rst_n = RST_n;	// rst_n should be a synchronized version of RST_n
 
 integer fptr;		// File handle for writing output
@@ -59,7 +60,10 @@ initial begin
 fptr = $fopen("audio_out.csv","w");
 clk = 0;
 RST_n = 0;
-  
+@(posedge clk);
+@(negedge clk);
+RST_n = 1;
+
 end
   
 always

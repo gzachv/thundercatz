@@ -41,7 +41,7 @@ logic signed [15:0] lft_LP_scaled, lft_B1_scaled,
 		    rht_LP_scaled, rht_B1_scaled,
 		    rht_B2_scaled, rht_B3_scaled, rht_HP_scaled;	// Scaled samples
 
-logic signed [15:0] lft_sum_vol, rht_sum_vol;	// Sum of scaled bands, scaled by volume
+logic signed [28:0] lft_sum_vol, rht_sum_vol;	// Sum of scaled bands, scaled by volume
 
 /////////////////////// Queue instantiation /////////////////////
 slowQueue iLftSlowQ (	.sequencing(lft_slow_seq), .smpl_out(lft_slow_smpl_out), .isFull(lftQ_full), 
@@ -86,8 +86,8 @@ assign lft_sum_vol = {1'b0, VOLUME * (lft_LP_scaled + lft_B1_scaled + lft_B2_sca
 assign rht_sum_vol = {1'b0, VOLUME * (rht_LP_scaled + rht_B1_scaled + rht_B2_scaled +
 			rht_B3_scaled + rht_HP_scaled)};
 
-assign lft_out = lft_sum_vol[27:12];
-assign rht_out = rht_sum_vol[27:12];
+assign lft_out = {lft_sum_vol[27:12]};
+assign rht_out = {rht_sum_vol[27:12]};
 
 endmodule
 
