@@ -21,3 +21,9 @@ cov*/
 transcript*
 sc_dpiheader.h
 vsim.dbg
+
+# ignore synthesis outputs
+*.mr
+*.syn
+*.pvl
+work/

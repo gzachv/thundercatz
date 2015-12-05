@@ -42,6 +42,7 @@ logic signed [15:0] lft_LP_scaled, lft_B1_scaled,
 		    rht_B2_scaled, rht_B3_scaled, rht_HP_scaled;	// Scaled samples
 
 logic signed [28:0] lft_sum_vol, rht_sum_vol;	// Sum of scaled bands, scaled by volume
+logic signed [12:0] sign_vol;			// A signed version of the volume pot val
 
 /////////////////////// Queue instantiation /////////////////////
 slowQueue iLftSlowQ (	.sequencing(lft_slow_seq), .smpl_out(lft_slow_smpl_out), .isFull(lftQ_full), 
@@ -81,10 +82,11 @@ band_scale rht_B3_BS (.scaled(rht_B3_scaled), .POT(POT_B3), .audio(rht_B3_smpl_o
 band_scale rht_HP_BS (.scaled(rht_HP_scaled), .POT(POT_HP), .audio(rht_HP_smpl_out));
 
 //////////// Sum bands and scale by Volume //////////////////////
-assign lft_sum_vol = {1'b0, VOLUME * (lft_LP_scaled + lft_B1_scaled + lft_B2_scaled + 
-			lft_B3_scaled + lft_HP_scaled)};
-assign rht_sum_vol = {1'b0, VOLUME * (rht_LP_scaled + rht_B1_scaled + rht_B2_scaled +
-			rht_B3_scaled + rht_HP_scaled)};
+assign sign_vol = {1'b0, VOLUME};
+assign lft_sum_vol = sign_vol * (lft_LP_scaled + lft_B1_scaled + lft_B2_scaled + 
+			lft_B3_scaled + lft_HP_scaled);
+assign rht_sum_vol = sign_vol * (rht_LP_scaled + rht_B1_scaled + rht_B2_scaled +
+			rht_B3_scaled + rht_HP_scaled);
 
 assign lft_out = {lft_sum_vol[27:12]};
 assign rht_out = {rht_sum_vol[27:12]};

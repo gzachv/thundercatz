@@ -25,7 +25,7 @@ logic	A2D_MISO,	// INPUT, A2d master in slave out
 	SDout;		// INPUT, Serial data out
 	 
 ////////// Variable Declaration for CODEC ///////////////////////
-wire [15:0] aout_lft,	// Left audio data
+wire signed [15:0] aout_lft,	// Left audio data
 	    aout_rht;	// Right audio data
 logic	RSTn;		// CODEC reset, active low
 
@@ -34,7 +34,12 @@ assign rst_n = RST_n;	// rst_n should be a synchronized version of RST_n
 
 integer fptr;		// File handle for writing output
 logic [11:0] x;		// Counter for loops
-  
+
+logic lft_crossing,
+	rht_crossing;
+logic signed [12:0] lft_max, rht_max,
+			lft_min, rht_min; 
+
 //////////////////////
 // Instantiate DUT //
 ////////////////////
@@ -70,11 +75,9 @@ for (x = 0; x < 2045; x = x + 1) begin
 end
 
 
-for (x = 0; x < 2045; x = x + 1) begin
+for (x = 0; x < 512; x = x + 1) begin
 	@(posedge LRCLK);
-	$fwrite( fptr,"%d,", aout_rht );
-	@(negedge LRCLK);
-	$fwrite( fptr,"%d\n", aout_lft );
+	$fwrite( fptr,"%f,%f\n", aout_rht, aout_lft );
 end
 
 ////////// Close output file ////////////////////////
@@ -85,6 +88,6 @@ $stop;
 end
   
 always
-	#1 clk = ~clk;
+	#2 clk = ~clk;
 
 endmodule

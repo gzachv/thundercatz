@@ -1,5 +1,5 @@
 #########################################################################
-# 		Read in the verilog files first				#
+# 		Read in the verilog files first									#
 #########################################################################
 read_file -format sverilog {	./A2D_intf.sv\
 								./B1_FIR.sv\
@@ -12,8 +12,8 @@ read_file -format sverilog {	./A2D_intf.sv\
 								./fastQueue.sv\
 								./HP_FIR.sv\
 								./LP_FIR.sv\
-								./slide_inf.sv\
-								./slowQueue.sv\						
+								./slide_intf.sv\
+								./slowQueue.sv\
 								./SPI_mstr.sv	}
 								
 read_file -format verilog {		./dualPort1024x16.v\
@@ -33,7 +33,7 @@ set current_design Equalizer
 
 #########################################################################
 # 		Define the clock and do not mess with it						#
-# 		Sets clock with period 5ns = 200MHz								#
+# 		Sets clock with period 5ns = 200MHz, 3.33ns = 300MHz			#
 #		50% duty, starts high at 0 falls at 1 time unit					#
 #########################################################################
 create_clock -name "clk" -period 5 -waveform {0 1} {clk}

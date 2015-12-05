@@ -1,0 +1,2017 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP5 for RHEL64 -- Apr 22, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+Initializing gui preferences from file  /userspace/g/gzvargas/.synopsys_dv_prefs.tcl
+#########################################################################
+# 		Read in the verilog files first									#
+#########################################################################
+read_file -format sverilog {	./A2D_intf.sv								./B1_FIR.sv								./B2_FIR.sv								./B3_FIR.sv								./band_scale.sv								./codec_intf.sv								./digitalCore.sv								./Equalizer.sv								./fastQueue.sv								./HP_FIR.sv								./LP_FIR.sv								./slide_intf.sv								./slowQueue.sv								./SPI_mstr.sv	}
+Loading db file '/cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db'
+Loading db file '/cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tpfn45gsgv18_120a/tpfn45gsgv18tc.db'
+Loading db file '/cae/apps/data/synopsys-2015/ic_compiler/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2015/ic_compiler/libraries/syn/standard.sldb'
+  Loading link library 'tcbn40lpbwptc'
+  Loading link library 'tpfn45gsgv18tc'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/A2D_intf.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/LP_FIR.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv
+
+Statistics for case statements in always block at line 57 in file
+	'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/A2D_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            63            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 38 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 45 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cnv_cmplt_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv:74: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv:75: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 91 in file
+	'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            95            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine B1_FIR line 38 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lft_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B1_FIR line 50 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rht_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B1_FIR line 62 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      index_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B1_FIR line 83 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv:74: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv:75: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine B2_FIR line 38 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lft_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B2_FIR line 50 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rht_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B2_FIR line 62 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      index_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B2_FIR line 83 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv:74: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv:75: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine B3_FIR line 38 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lft_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B3_FIR line 50 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rht_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B3_FIR line 62 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      index_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B3_FIR line 83 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv:30: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv:36: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv:39: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv:42: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv:43: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv:46: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv:166: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 160 in file
+	'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           166            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine codec_intf line 44 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_cnt_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     clk_cnt_reg     | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine codec_intf line 66 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      RSTn_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine codec_intf line 76 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine codec_intf line 88 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rht_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       lft_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine codec_intf line 103 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  out_shft_reg_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine codec_intf line 120 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   in_shft_reg_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine codec_intf line 130 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lft_in_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine codec_intf line 139 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rht_in_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine codec_intf line 153 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv:85: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv:91: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv:92: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 87 in file
+	'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            94            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine fastQueue line 33 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     isFull_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fastQueue line 43 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     new_ptr_reg     | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fastQueue line 53 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    read_ptr_reg     | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fastQueue line 65 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     old_ptr_reg     | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fastQueue line 81 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv:74: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv:75: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine HP_FIR line 38 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lft_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine HP_FIR line 50 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rht_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine HP_FIR line 62 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      index_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine HP_FIR line 83 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LP_FIR line 38 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/LP_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lft_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LP_FIR line 50 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/LP_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rht_accum_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LP_FIR line 62 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/LP_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      index_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LP_FIR line 83 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/LP_FIR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv:135: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 123 in file
+	'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           135            |    auto/auto     |
+|           149            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine slide_intf line 31 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      chnnl_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slide_intf line 44 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     POT_LP_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slide_intf line 54 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     POT_B1_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slide_intf line 64 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     POT_B2_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slide_intf line 74 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     POT_B3_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slide_intf line 84 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     POT_HP_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slide_intf line 94 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     VOLUME_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slide_intf line 116 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slowQueue line 33 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     isFull_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slowQueue line 43 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     new_ptr_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slowQueue line 53 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    read_ptr_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slowQueue line 65 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     old_ptr_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine slowQueue line 81 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 115 in file
+	'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           124            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SPI_mstr line 37 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr line 49 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sclk_cnt_reg     | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    sclk_cnt_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr line 64 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      done_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr line 76 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      SS_n_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr line 88 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shft_reg_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr line 108 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 14 designs.
+Current design is 'A2D_intf'.
+A2D_intf B1_FIR B2_FIR B3_FIR band_scale codec_intf digitalCore Equalizer fastQueue HP_FIR LP_FIR slide_intf slowQueue SPI_mstr
+read_file -format verilog {		./dualPort1024x16.v								./dualPort1536x16.v								./posedgeDetect.v								./reset_synch.v								./ROM_B1.v								./ROM_B2.v								./ROM_B3.v								./ROM_HP.v								./ROM_LP.v	}
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/posedgeDetect.v
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/reset_synch.v
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B1.v
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v
+Compiling source file /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v
+
+Inferred memory devices in process
+	in routine posedgeDetect line 19 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/posedgeDetect.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       FF2_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       FF1_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       FF3_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine reset_synch line 20 in file
+		'/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/reset_synch.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       FF2_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       FF1_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 9 designs.
+Current design is 'dualPort1024x16'.
+dualPort1024x16 dualPort1536x16 posedgeDetect reset_synch ROM_B1 ROM_B2 ROM_B3 ROM_HP ROM_LP
+#########################################################################
+# 		Set Current Design to top level									#
+#########################################################################
+set current_design Equalizer
+Equalizer
+#########################################################################
+# 		Define the clock and do not mess with it						#
+# 		Sets clock with period 5ns = 200MHz, 3.33ns = 300MHz			#
+#		50% duty, starts high at 0 falls at 1 time unit					#
+#########################################################################
+create_clock -name "clk" -period 5 -waveform {0 1} {clk}
+1
+set_dont_touch_network [find port clk]
+1
+#########################################################################
+# 		Setup a pointer to all inputs except clk 						#
+#########################################################################
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+{RST_n A2D_MISO SDout}
+remove_from_collection $prim_inputs [find port rst_n]
+Warning: Can't find port 'rst_n' in design 'Equalizer'. (UID-95)
+{RST_n A2D_MISO SDout}
+#########################################################################
+# 		Set dont touch for dualPort mem and ROM 						#
+#########################################################################
+set_dont_touch [find design dualPort*]
+1
+set_dont_touch [find design ROM*]
+1
+#########################################################################
+# 		Set input delay and drive on all inputs							#
+#########################################################################
+set_input_delay -clock clk 0.75 $prim_inputs
+1
+set_driving_cell -lib_cell ND2D2BWP -library	tcbn401pbwptc $prim_inputs
+Error: Cannot find the specified driving cell in memory.   (UID-993)
+0
+#########################################################################
+# 	Constrian output delay and load on all outputs (0.1pF)				#
+#########################################################################
+set_output_delay -clock clk 0.75 [all_outputs]
+1
+set_load 0.1 [all_outputs]
+1
+#########################################################################
+# 		Wire load model - estimate internal parasitics					#
+#########################################################################
+set_wire_load_model -name TSMC32K_Lowk_Conservative	 -library tcbn401pbwptc
+Error: Can't find the specified library 'tcbn401pbwptc' in memory. (UID-131)
+1
+#########################################################################
+# 		Set maximum transition time										#
+#########################################################################
+set_max_transition 0.15 [current_design]	 
+1
+#########################################################################
+# 		Set clock uncertainty and do fix hold							#
+#########################################################################
+set_clock_uncertainty 0.10 clk
+1
+set_fix_hold clk
+1
+#########################################################################
+# 		Flatten hierarchy												#
+#########################################################################
+ungroup -all -flatten
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'band_scale' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'HP_FIR' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'B3_FIR' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'B2_FIR' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'B1_FIR' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'LP_FIR' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'fastQueue' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'slowQueue' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'fastQueue' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'slowQueue' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'digitalCore' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'codec_intf' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'SPI_mstr' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'slide_intf' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'reset_synch' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Updating graph... (UID-83)
+1
+#########################################################################
+# 		Second compliation												#
+#########################################################################
+compile -map_effort high
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'Equalizer'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 49 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: IO pad 'PVSS3DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS2DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS1DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2POC' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PCLAMP2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PCLAMP1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: Operating condition NCCOM set on design Equalizer has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tpfn45gsgv18tc is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Equalizer'
+Warning: The trip points for the library named tpfn45gsgv18tc differ from those in the library named tcbn40lpbwptc. (TIM-164)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'Equalizer_DW_div_uns_0'
+  Processing 'Equalizer_DW01_inc_0'
+  Processing 'Equalizer_DW_div_uns_1'
+  Processing 'Equalizer_DW01_inc_1'
+  Processing 'Equalizer_DW_div_uns_2'
+  Processing 'Equalizer_DW01_inc_2'
+  Processing 'Equalizer_DW_div_uns_3'
+  Processing 'Equalizer_DW01_inc_3'
+  Processing 'Equalizer_DW_div_uns_4'
+  Processing 'Equalizer_DW01_inc_4'
+  Processing 'Equalizer_DW_div_uns_5'
+  Processing 'Equalizer_DW01_inc_5'
+  Processing 'Equalizer_DW_div_uns_6'
+  Processing 'Equalizer_DW01_inc_6'
+  Processing 'Equalizer_DW01_cmp6_0'
+  Processing 'Equalizer_DW_div_uns_7'
+  Processing 'Equalizer_DW01_add_0'
+  Processing 'Equalizer_DW_div_uns_8'
+  Processing 'Equalizer_DW01_inc_7'
+  Processing 'Equalizer_DW_div_uns_9'
+  Processing 'Equalizer_DW01_inc_8'
+  Processing 'Equalizer_DW_div_uns_10'
+  Processing 'Equalizer_DW01_inc_9'
+  Processing 'Equalizer_DW01_cmp6_1'
+  Processing 'Equalizer_DW_div_uns_11'
+  Processing 'Equalizer_DW01_add_1'
+  Processing 'Equalizer_DW_div_uns_12'
+  Processing 'Equalizer_DW01_inc_10'
+  Processing 'Equalizer_DW01_inc_11'
+  Processing 'Equalizer_DW01_inc_12'
+  Processing 'Equalizer_DW01_cmp6_2'
+  Processing 'Equalizer_DW01_add_2'
+  Processing 'Equalizer_DW01_inc_13'
+  Processing 'Equalizer_DW01_inc_14'
+  Processing 'Equalizer_DW01_inc_15'
+  Processing 'Equalizer_DW01_cmp6_3'
+  Processing 'Equalizer_DW01_add_3'
+  Processing 'Equalizer_DW01_inc_16'
+  Processing 'Equalizer_DW01_inc_17'
+  Processing 'Equalizer_DW01_dec_0'
+  Processing 'Equalizer_DW01_inc_18'
+  Processing 'Equalizer_DW02_mult_0'
+  Processing 'Equalizer_DW01_add_4'
+  Processing 'Equalizer_DW02_mult_1'
+  Processing 'Equalizer_DW01_add_5'
+  Processing 'Equalizer_DW02_mult_2'
+  Processing 'Equalizer_DW01_add_6'
+  Processing 'Equalizer_DW02_mult_3'
+  Processing 'Equalizer_DW01_add_7'
+  Processing 'Equalizer_DW02_mult_4'
+  Processing 'Equalizer_DW01_add_8'
+  Processing 'Equalizer_DW02_mult_5'
+  Processing 'Equalizer_DW01_add_9'
+  Processing 'Equalizer_DW02_mult_6'
+  Processing 'Equalizer_DW01_add_10'
+  Processing 'Equalizer_DW02_mult_7'
+  Processing 'Equalizer_DW01_add_11'
+  Processing 'Equalizer_DW02_mult_8'
+  Processing 'Equalizer_DW01_add_12'
+  Processing 'Equalizer_DW02_mult_9'
+  Processing 'Equalizer_DW01_add_13'
+  Processing 'Equalizer_DW02_mult_10'
+  Processing 'Equalizer_DW01_add_14'
+  Processing 'Equalizer_DW02_mult_11'
+  Processing 'Equalizer_DW01_add_15'
+  Processing 'Equalizer_DW02_mult_12'
+  Processing 'Equalizer_DW01_add_16'
+  Processing 'Equalizer_DW02_mult_13'
+  Processing 'Equalizer_DW01_add_17'
+  Processing 'Equalizer_DW02_mult_14'
+  Processing 'Equalizer_DW01_add_18'
+  Processing 'Equalizer_DW02_mult_15'
+  Processing 'Equalizer_DW01_add_19'
+  Processing 'Equalizer_DW02_mult_16'
+  Processing 'Equalizer_DW01_add_20'
+  Processing 'Equalizer_DW02_mult_17'
+  Processing 'Equalizer_DW01_add_21'
+  Processing 'Equalizer_DW02_mult_18'
+  Processing 'Equalizer_DW01_add_22'
+  Processing 'Equalizer_DW02_mult_19'
+  Processing 'Equalizer_DW01_add_23'
+  Processing 'Equalizer_DW01_add_24'
+  Processing 'Equalizer_DW02_mult_20'
+  Processing 'Equalizer_DW01_add_25'
+  Processing 'Equalizer_DW01_add_26'
+  Processing 'Equalizer_DW02_mult_21'
+  Processing 'Equalizer_DW01_add_27'
+  Processing 'Equalizer_DW01_add_28'
+  Processing 'Equalizer_DW02_mult_22'
+  Processing 'Equalizer_DW01_add_29'
+  Processing 'Equalizer_DW01_add_30'
+  Processing 'Equalizer_DW02_mult_23'
+  Processing 'Equalizer_DW01_add_31'
+  Processing 'Equalizer_DW01_add_32'
+  Processing 'Equalizer_DW02_mult_24'
+  Processing 'Equalizer_DW01_add_33'
+  Processing 'Equalizer_DW01_add_34'
+  Processing 'Equalizer_DW02_mult_25'
+  Processing 'Equalizer_DW01_add_35'
+  Processing 'Equalizer_DW01_add_36'
+  Processing 'Equalizer_DW02_mult_26'
+  Processing 'Equalizer_DW01_add_37'
+  Processing 'Equalizer_DW01_add_38'
+  Processing 'Equalizer_DW02_mult_27'
+  Processing 'Equalizer_DW01_add_39'
+  Processing 'Equalizer_DW01_add_40'
+  Processing 'Equalizer_DW02_mult_28'
+  Processing 'Equalizer_DW01_add_41'
+  Processing 'Equalizer_DW01_add_42'
+  Processing 'Equalizer_DW02_mult_29'
+  Processing 'Equalizer_DW01_add_43'
+  Processing 'Equalizer_DW02_mult_30'
+  Processing 'Equalizer_DW01_add_44'
+  Processing 'Equalizer_DW01_add_45'
+  Processing 'Equalizer_DW01_add_46'
+  Processing 'Equalizer_DW01_add_47'
+  Processing 'Equalizer_DW01_add_48'
+  Processing 'Equalizer_DW02_mult_31'
+  Processing 'Equalizer_DW01_add_49'
+  Processing 'Equalizer_DW01_add_50'
+  Processing 'Equalizer_DW01_add_51'
+  Processing 'Equalizer_DW01_add_52'
+  Processing 'Equalizer_DW01_add_53'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:01:01   57598.8      1.74      48.6       7.9                                0.00  
+    0:01:02   57584.5      1.74      48.6       7.9                                0.00  
+    0:01:02   57584.5      1.74      48.6       7.9                                0.00  
+    0:01:02   57581.7      1.70      48.1       7.9                                0.00  
+    0:01:02   57581.7      1.70      48.1       7.9                                0.00  
+    0:01:09   44858.0      2.06      58.6       6.2                                0.00  
+    0:01:11   44855.7      1.98      56.4       6.2                                0.00  
+    0:01:13   44778.3      1.96      55.2       6.1                                0.00  
+    0:01:14   44800.3      1.94      54.5       6.1                                0.00  
+    0:01:14   44783.0      1.91      54.1       6.1                                0.00  
+    0:01:15   44804.2      1.90      53.3       6.1                                0.00  
+    0:01:15   44785.5      1.88      53.7       6.1                                0.00  
+    0:01:16   44803.1      1.87      53.5       6.1                                0.00  
+    0:01:16   44791.7      1.87      53.7       6.1                                0.00  
+    0:01:16   44808.4      1.87      52.7       6.1                                0.00  
+    0:01:17   44807.9      1.86      52.6       6.1                                0.00  
+    0:01:17   44807.9      1.86      52.6       6.1                                0.00  
+    0:01:17   44807.9      1.86      52.6       6.1                                0.00  
+    0:01:17   44807.9      1.86      52.6       6.1                                0.00  
+    0:01:17   44844.8      1.86      52.6       0.0                                0.00  
+    0:01:17   44848.8      1.86      52.6       0.0                                0.00  
+    0:01:17   44848.8      1.86      52.6       0.0                                0.00  
+    0:01:17   44848.8      1.86      52.6       0.0                                0.00  
+    0:01:17   44848.8      1.86      52.6       0.0                                0.00  
+    0:01:18   44878.8      1.78      52.1       0.1 iCS/rht_reg[11]/D              0.00  
+    0:01:19   44902.6      1.75      51.1       0.0 iCS/lft_reg[15]/D              0.00  
+    0:01:19   44927.3      1.72      50.4       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:20   44943.5      1.70      49.8       0.1                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:01:20   44943.5      1.70      49.8       0.1                                0.00  
+    0:01:22   45165.1      1.61      47.4       0.1 iCS/lft_reg[14]/D              0.00  
+    0:01:23   45281.0      1.57      46.4       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:25   45382.4      1.54      45.3       0.1 iCS/lft_reg[14]/D              0.00  
+    0:01:25   45420.5      1.52      45.0       0.1 iCS/lft_reg[14]/D              0.00  
+    0:01:26   45499.7      1.51      44.6       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:26   45508.2      1.51      44.5       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:27   45521.1      1.50      44.4       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:27   45538.9      1.49      44.3       0.1 iCS/lft_reg[14]/D              0.00  
+    0:01:28   45547.5      1.49      44.2       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:28   45568.4      1.48      43.8       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:28   45584.2      1.48      43.7       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:29   45580.7      1.48      43.7       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:29   45598.3      1.48      43.6       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:29   45605.0      1.47      43.5       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:30   45613.9      1.47      43.5       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:30   45642.1      1.47      43.4       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:31   45671.0      1.46      43.2       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:32   45702.1      1.46      43.1       0.1 iCS/lft_reg[14]/D              0.00  
+    0:01:32   45721.1      1.45      42.9       0.1 iCS/lft_reg[14]/D              0.00  
+    0:01:32   45737.9      1.45      42.8       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:33   45750.4      1.44      42.6       0.1 iCS/lft_reg[14]/D              0.00  
+    0:01:33   45756.9      1.44      42.6       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:34   45795.2      1.43      42.4       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:35   45830.0      1.43      42.3       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:35   45827.8      1.43      42.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:36   45862.8      1.42      42.0       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:36   45888.5      1.41      41.8       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:37   45891.5      1.41      41.7       0.1 iCS/lft_reg[15]/D              0.00  
+    0:01:37   45909.2      1.41      41.7       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:38   45949.7      1.41      41.5       0.1 iCS/rht_reg[15]/D              0.00  
+    0:01:39   45974.4      1.40      41.3       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:39   45989.9      1.40      41.1       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:40   45994.7      1.39      41.1       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:40   46012.4      1.39      40.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:41   46031.4      1.39      40.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:41   46041.1      1.38      40.8       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:41   46057.3      1.38      40.7       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:42   46067.6      1.38      40.7       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:42   46088.2      1.38      40.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:42   46096.8      1.38      40.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:43   46111.8      1.38      40.5       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:43   46112.0      1.37      40.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:44   46117.8      1.37      40.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:44   46131.6      1.37      40.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:45   46151.7      1.37      40.2       0.2 iCS/rht_reg[14]/D              0.00  
+    0:01:45   46158.2      1.36      40.1       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:46   46187.3      1.36      40.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:47   46192.8      1.36      40.0       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:47   46219.6      1.35      39.8       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:48   46231.6      1.35      39.8       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:48   46243.8      1.35      39.7       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:49   46249.8      1.35      39.7       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:49   46260.4      1.35      39.7       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:50   46282.4      1.35      39.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:50   46292.5      1.34      39.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:51   46320.7      1.34      39.3       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:52   46325.5      1.34      39.2       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:52   46338.3      1.33      39.2       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:53   46348.7      1.33      39.2       0.2 iCS/lft_reg[12]/D              0.00  
+    0:01:53   46374.7      1.33      39.1       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:53   46374.3      1.33      39.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:54   46397.6      1.33      39.0       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:55   46418.2      1.32      38.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:55   46430.6      1.32      38.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:56   46450.5      1.32      38.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:56   46462.5      1.32      38.8       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:57   46473.6      1.32      38.8       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:57   46491.8      1.31      38.7       0.2 iCS/rht_reg[14]/D              0.00  
+    0:01:58   46512.1      1.31      38.6       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:58   46524.1      1.31      38.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:01:58   46531.9      1.31      38.7       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:59   46528.5      1.31      38.7       0.2 iCS/lft_reg[15]/D              0.00  
+    0:01:59   46548.3      1.31      38.6       0.2 iCS/lft_reg[14]/D              0.00  
+    0:02:00   46562.0      1.30      38.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:00   46568.2      1.30      38.4       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:01   46579.1      1.30      38.4       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:01   46578.9      1.30      38.4       0.2 iCS/lft_reg[14]/D              0.00  
+    0:02:01   46583.2      1.30      38.4       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:01   46589.0      1.30      38.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:02   46601.2      1.30      38.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:02   46613.2      1.30      38.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:03   46616.2      1.30      38.2       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:03   46628.3      1.29      38.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:03   46628.7      1.29      38.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:04   46637.7      1.29      38.1       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:04   46652.9      1.29      38.1       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:05   46654.4      1.29      38.0       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:05   46661.0      1.29      38.0       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:05   46666.1      1.29      38.0       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:06   46688.0      1.28      37.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:07   46703.7      1.28      37.8       0.2 iCS/rht_reg[11]/D              0.00  
+    0:02:07   46716.5      1.28      37.7       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:08   46725.9      1.28      37.7       0.2 iCS/lft_reg[14]/D              0.00  
+    0:02:08   46748.6      1.28      37.6       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:09   46758.9      1.27      37.6       0.2 iCS/rht_reg[8]/D               0.00  
+    0:02:09   46788.0      1.27      37.5       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:09   46786.6      1.27      37.5       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:10   46797.2      1.27      37.5       0.2 iCS/rht_reg[11]/D              0.00  
+    0:02:11   46813.7      1.27      37.5       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:11   46827.0      1.27      37.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:11   46834.0      1.26      37.3       0.2 iCS/lft_reg[14]/D              0.00  
+    0:02:12   46835.6      1.26      37.2       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:12   46856.1      1.26      37.2       0.2 iCS/rht_reg[11]/D              0.00  
+    0:02:12   46864.2      1.26      37.2       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:13   46867.5      1.26      37.1       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:13   46873.9      1.26      37.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:14   46888.7      1.26      37.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:14   46896.1      1.25      37.0       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:15   46920.3      1.25      37.0       0.2 iCS/lft_reg[14]/D              0.00  
+    0:02:15   46937.4      1.25      36.9       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:15   46943.6      1.25      36.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:16   46969.3      1.25      36.8       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:16   46979.6      1.25      36.8       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:16   46991.5      1.25      36.7       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:17   46996.3      1.25      36.7       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:17   47007.2      1.25      36.7       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:18   47030.2      1.24      36.5       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:18   47049.8      1.24      36.5       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:19   47052.4      1.24      36.4       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:19   47070.9      1.24      36.4       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:19   47070.9      1.24      36.3       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:20   47085.0      1.24      36.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:21   47093.5      1.23      36.3       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:21   47102.0      1.23      36.2       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:21   47107.4      1.23      36.2       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:22   47138.3      1.23      36.1       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:22   47156.7      1.23      36.1       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:23   47167.1      1.23      36.1       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:23   47169.4      1.23      36.0       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:24   47183.3      1.22      35.9       0.2 iCS/rht_reg[15]/D              0.00  
+    0:02:24   47194.2      1.22      35.9       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:24   47197.1      1.22      35.9       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:25   47200.2      1.22      35.9       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:25   47200.9      1.22      35.8       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:26   47209.8      1.22      35.8       0.2 iCS/lft_reg[14]/D              0.00  
+    0:02:26   47230.2      1.22      35.8       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:27   47251.7      1.22      35.7       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:27   47277.0      1.21      35.6       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:27   47301.1      1.21      35.6       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:28   47314.4      1.21      35.6       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:28   47332.5      1.21      35.6       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:28   47360.0      1.21      35.5       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:29   47368.0      1.21      35.5       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:29   47384.6      1.21      35.5       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:30   47390.9      1.21      35.4       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:30   47401.9      1.21      35.4       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:30   47428.0      1.21      35.4       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:31   47447.5      1.20      35.4       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:31   47465.7      1.20      35.4       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:32   47476.3      1.20      35.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:32   47488.6      1.20      35.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:32   47510.7      1.20      35.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:32   47518.3      1.20      35.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:33   47519.7      1.20      35.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:33   47533.4      1.20      35.2       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:34   47545.4      1.20      35.2       0.2 iCS/lft_reg[11]/D              0.00  
+    0:02:34   47550.0      1.20      35.2       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:35   47559.2      1.20      35.2       0.2 iCS/lft_reg[11]/D              0.00  
+    0:02:35   47564.0      1.20      35.2       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:35   47572.6      1.19      35.1       0.2 iCS/rht_reg[14]/D              0.00  
+    0:02:36   47579.7      1.19      35.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:02:36   47588.0      1.19      35.1       0.2 iCS/lft_reg[11]/D              0.00  
+    0:02:37   47621.8      1.19      35.1       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:37   47624.1      1.19      35.0       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:37   47626.8      1.19      35.0       0.3 iCS/lft_reg[11]/D              0.00  
+    0:02:37   47629.9      1.19      35.0       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:38   47628.5      1.19      34.9       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:39   47637.0      1.19      34.9       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:39   47654.5      1.19      34.9       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:39   47654.8      1.19      34.9       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:40   47663.5      1.19      34.9       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:40   47670.0      1.18      34.9       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:40   47671.4      1.18      34.8       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:40   47673.9      1.18      34.8       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:40   47678.8      1.18      34.7       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:41   47679.7      1.18      34.7       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:41   47686.2      1.18      34.7       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:41   47688.5      1.18      34.7       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:41   47690.3      1.18      34.7       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:42   47693.3      1.18      34.7       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:42   47706.7      1.18      34.7       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:43   47720.3      1.18      34.6       0.3 iCS/lft_reg[15]/D              0.00  
+    0:02:43   47737.7      1.18      34.6       0.3 iCS/rht_reg[14]/D              0.00  
+    0:02:44   47751.5      1.18      34.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:44   47753.6      1.18      34.5       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:44   47765.6      1.17      34.5       0.4 iCS/lft_reg[11]/D              0.00  
+    0:02:45   47776.7      1.17      34.5       0.4 iCS/lft_reg[13]/D              0.00  
+    0:02:45   47796.3      1.17      34.4       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:46   47798.2      1.17      34.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:46   47807.9      1.17      34.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:47   47807.6      1.17      34.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:47   47808.6      1.17      34.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:48   47824.0      1.17      34.3       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:48   47834.9      1.16      34.3       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:49   47849.6      1.16      34.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:49   47857.1      1.16      34.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:50   47861.4      1.16      34.2       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:50   47865.8      1.16      34.1       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:51   47883.6      1.16      34.1       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:51   47896.5      1.16      34.1       0.4 iCS/lft_reg[13]/D              0.00  
+    0:02:51   47895.4      1.16      34.1       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:52   47898.8      1.15      34.0       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:52   47906.0      1.15      34.0       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:53   47909.9      1.15      34.0       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:53   47919.8      1.15      33.9       0.4 iCS/lft_reg[13]/D              0.00  
+    0:02:54   47929.1      1.15      33.9       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:54   47928.4      1.15      33.9       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:54   47930.5      1.15      33.9       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:54   47932.8      1.15      33.8       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:54   47935.5      1.15      33.8       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:54   47947.1      1.15      33.8       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:55   47952.6      1.15      33.7       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:55   47953.6      1.15      33.7       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:55   47954.5      1.14      33.7       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:55   47957.7      1.14      33.6       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:55   47959.1      1.14      33.6       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:56   47958.6      1.14      33.6       0.4 iCS/rht_reg[11]/D              0.00  
+    0:02:56   47961.9      1.14      33.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:56   47973.6      1.14      33.5       0.4 iCS/rht_reg[12]/D              0.00  
+    0:02:56   47978.3      1.14      33.5       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:56   47985.6      1.14      33.5       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:56   47986.6      1.14      33.5       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:56   47988.0      1.14      33.5       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:57   47988.0      1.14      33.5       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:57   47990.1      1.13      33.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:57   47988.2      1.13      33.3       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:57   47992.1      1.13      33.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:57   47994.6      1.13      33.3       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:57   47994.2      1.13      33.2       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:58   48001.6      1.13      33.2       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:58   48001.6      1.13      33.2       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:58   48005.5      1.13      33.2       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:58   48010.1      1.13      33.1       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:58   48010.3      1.13      33.1       0.4 iCS/rht_reg[14]/D              0.00  
+    0:02:58   48010.1      1.13      33.1       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:59   48027.0      1.12      33.1       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:59   48024.7      1.12      33.1       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:59   48023.0      1.12      33.1       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:59   48028.1      1.12      33.1       0.4 iCS/lft_reg[12]/D              0.00  
+    0:02:59   48027.4      1.12      33.1       0.4 iCS/lft_reg[14]/D              0.00  
+    0:02:59   48030.2      1.12      33.1       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:00   48033.2      1.12      33.0       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:00   48040.6      1.12      33.0       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:00   48043.4      1.12      33.0       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:00   48041.5      1.12      33.0       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:00   48039.9      1.12      32.9       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:01   48042.7      1.12      32.9       0.4 iCS/rht_reg[15]/D              0.00  
+    0:03:01   48041.1      1.12      32.9       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:01   48039.7      1.11      32.9       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:01   48040.2      1.11      32.9       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:01   48035.8      1.11      32.9       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:01   48035.3      1.11      32.8       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:01   48035.7      1.11      32.8       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:02   48038.5      1.11      32.8       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:02   48042.9      1.11      32.8       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:02   48046.6      1.11      32.8       0.4 iCS/rht_reg[13]/D              0.00  
+    0:03:02   48056.3      1.11      32.7       0.4 iCS/rht_reg[11]/D              0.00  
+    0:03:02   48058.6      1.11      32.7       0.4 iCS/rht_reg[13]/D              0.00  
+    0:03:03   48060.5      1.11      32.7       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:03   48060.0      1.11      32.7       0.4 iCS/rht_reg[13]/D              0.00  
+    0:03:03   48062.1      1.11      32.7       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:03   48059.3      1.11      32.7       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:03   48057.0      1.10      32.7       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:03   48061.6      1.10      32.6       0.4 iCS/lft_reg[10]/D              0.00  
+    0:03:04   48060.4      1.10      32.6       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:04   48060.4      1.10      32.6       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:04   48065.8      1.10      32.6       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:04   48065.6      1.10      32.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:04   48067.6      1.10      32.6       0.4 iCS/lft_reg[10]/D              0.00  
+    0:03:05   48067.8      1.10      32.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:05   48079.6      1.10      32.5       0.4 iCS/lft_reg[10]/D              0.00  
+    0:03:05   48078.2      1.10      32.5       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:05   48078.2      1.10      32.5       0.4 iCS/rht_reg[12]/D              0.00  
+    0:03:05   48083.3      1.10      32.5       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:05   48091.2      1.10      32.5       0.4 iCS/rht_reg[11]/D              0.00  
+    0:03:06   48091.4      1.10      32.5       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:06   48095.5      1.10      32.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:06   48098.6      1.10      32.4       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:06   48101.3      1.09      32.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:06   48103.6      1.09      32.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:06   48098.8      1.09      32.4       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:06   48101.8      1.09      32.4       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:07   48102.5      1.09      32.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:07   48103.6      1.09      32.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:07   48114.5      1.09      32.3       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:07   48121.9      1.09      32.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:08   48120.7      1.09      32.3       0.4 iCS/rht_reg[14]/D              0.00  
+    0:03:08   48120.3      1.09      32.3       0.4 iCS/rht_reg[11]/D              0.00  
+    0:03:08   48121.2      1.09      32.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:08   48122.3      1.09      32.3       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:08   48123.0      1.09      32.3       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:08   48119.6      1.09      32.3       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:09   48125.1      1.09      32.2       0.4 iCS/rht_reg[11]/D              0.00  
+    0:03:09   48136.7      1.09      32.1       0.4 iCS/rht_reg[11]/D              0.00  
+    0:03:09   48141.7      1.09      32.1       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:09   48141.5      1.09      32.1       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:45   48138.9      1.09      32.1       0.4 iCS/lft_reg[14]/D              0.00  
+    0:03:47   48137.6      1.09      32.1       0.4                                0.00  
+    0:03:49   48137.6      1.08      32.1       0.4 iCS/rht_reg[11]/D              0.00  
+    0:03:54   48136.0      1.08      32.1       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:58   48135.7      1.08      32.0       0.4 iCS/lft_reg[12]/D              0.00  
+    0:03:59   48145.9      1.08      31.9       0.4 iCS/lft_reg[14]/D              0.00  
+    0:04:00   48165.1      1.07      31.7       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:00   48166.0      1.07      31.7       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:01   48176.3      1.07      31.7       0.4 iCS/lft_reg[12]/D              0.00  
+    0:04:01   48204.7      1.07      31.7       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:02   48208.4      1.07      31.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:02   48221.6      1.07      31.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:03   48227.9      1.07      31.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:03   48240.8      1.07      31.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:03   48241.7      1.07      31.6       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:03   48239.4      1.07      31.5       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:04   48241.9      1.07      31.5       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:05   48248.4      1.07      31.5       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:05   48251.0      1.07      31.5       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:05   48251.8      1.06      31.5       0.4 iCS/lft_reg[13]/D              0.00  
+    0:04:05   48255.8      1.06      31.5       0.4 iCS/lft_reg[15]/D              0.00  
+    0:04:05   48238.5      1.06      31.5       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:06   48241.9      1.06      31.4       0.4 iCS/rht_reg[11]/D              0.00  
+    0:04:06   48244.9      1.06      31.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:06   48247.5      1.06      31.4       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:06   48247.3      1.06      31.4       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:06   48246.6      1.06      31.4       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:06   48249.3      1.06      31.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:07   48250.7      1.06      31.4       0.4 iCS/lft_reg[15]/D              0.00  
+    0:04:07   48251.8      1.06      31.4       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:07   48251.4      1.06      31.4       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:07   48251.4      1.06      31.3       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:07   48255.3      1.06      31.3       0.4 iCS/lft_reg[15]/D              0.00  
+    0:04:07   48255.1      1.06      31.3       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:07   48257.2      1.06      31.3       0.4 iCS/lft_reg[12]/D              0.00  
+    0:04:08   48258.3      1.06      31.3       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:08   48259.0      1.06      31.3       0.4 iCS/lft_reg[15]/D              0.00  
+    0:04:08   48259.9      1.06      31.3       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:08   48260.7      1.06      31.3       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:08   48259.0      1.06      31.2       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:08   48259.0      1.06      31.2       0.4 iCS/rht_reg[14]/D              0.00  
+    0:04:09   48258.5      1.05      31.2       0.4 iCS/lft_reg[15]/D              0.00  
+    0:04:09   48253.7      1.05      31.2       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:09   48253.0      1.05      31.2       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:09   48255.8      1.05      31.2       0.4 iCS/lft_reg[15]/D              0.00  
+    0:04:09   48248.9      1.05      31.2       0.4 iCS/lft_reg[15]/D              0.00  
+    0:04:09   48252.8      1.05      31.2       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:10   48256.3      1.05      31.1       0.4 iCS/lft_reg[12]/D              0.00  
+    0:04:10   48256.0      1.05      31.1       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:10   48254.4      1.05      31.1       0.4 iCS/rht_reg[15]/D              0.00  
+    0:04:10   48261.6      1.05      31.1       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:10   48259.9      1.05      31.1       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:11   48263.2      1.05      31.1       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:11   48265.0      1.05      31.0       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:11   48262.7      1.05      31.0       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:11   48261.5      1.05      31.0       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:16   48257.6      1.05      31.0       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:16   48263.4      1.05      31.0       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:17   48268.5      1.05      31.0       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:17   48273.3      1.05      31.0       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:18   48274.7      1.05      31.0       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:18   48287.0      1.04      30.9       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:19   48294.8      1.04      30.9       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:19   48306.8      1.04      30.8       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:20   48312.8      1.04      30.8       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:20   48326.0      1.04      30.8       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:21   48332.4      1.04      30.8       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:21   48334.7      1.04      30.8       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:22   48338.4      1.04      30.7       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:22   48336.2      1.04      30.7       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:23   48333.2      1.04      30.7       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:23   48340.3      1.04      30.7       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:24   48345.6      1.04      30.7       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:24   48349.5      1.04      30.7       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:25   48363.6      1.04      30.7       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:25   48374.5      1.03      30.7       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:26   48376.3      1.03      30.6       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:26   48385.1      1.03      30.6       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:27   48391.5      1.03      30.6       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:28   48408.2      1.03      30.6       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:28   48411.2      1.03      30.6       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:29   48413.3      1.03      30.5       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:29   48420.2      1.03      30.5       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:30   48422.3      1.03      30.5       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:30   48432.0      1.03      30.5       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:30   48434.5      1.03      30.5       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:31   48441.2      1.03      30.5       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:32   48455.1      1.02      30.4       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:32   48469.4      1.02      30.4       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:33   48495.9      1.02      30.4       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:33   48505.6      1.02      30.3       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:34   48510.7      1.02      30.3       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:34   48514.9      1.02      30.3       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:35   48515.6      1.02      30.3       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:35   48522.9      1.02      30.3       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:36   48527.3      1.02      30.3       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:36   48539.3      1.02      30.3       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:37   48544.8      1.02      30.2       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:38   48549.0      1.02      30.2       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:38   48554.6      1.02      30.2       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:39   48554.3      1.02      30.1       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:39   48560.3      1.02      30.1       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:39   48568.2      1.02      30.1       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:40   48567.3      1.01      30.1       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:40   48568.4      1.01      30.1       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:41   48568.9      1.01      30.1       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:41   48571.6      1.01      30.1       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:42   48570.5      1.01      30.1       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:42   48582.5      1.01      30.0       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:43   48596.4      1.01      30.0       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:43   48602.4      1.01      30.0       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:44   48605.8      1.01      30.0       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:44   48614.3      1.01      30.0       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:45   48628.2      1.01      29.9       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:45   48628.4      1.01      29.9       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:46   48634.2      1.01      29.9       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:46   48649.9      1.01      29.9       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:47   48657.3      1.01      29.9       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:47   48663.6      1.01      29.9       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:48   48665.1      1.01      29.9       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:48   48667.3      1.01      29.8       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:49   48677.8      1.01      29.8       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:49   48688.3      1.00      29.8       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:50   48688.9      1.00      29.8       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:50   48689.6      1.00      29.8       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:51   48689.6      1.00      29.8       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:51   48697.0      1.00      29.8       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:52   48702.1      1.00      29.8       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:52   48704.4      1.00      29.8       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:53   48722.0      1.00      29.8       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:53   48723.1      1.00      29.8       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:54   48724.3      1.00      29.8       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:54   48726.4      1.00      29.8       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:55   48727.0      1.00      29.7       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:56   48727.7      1.00      29.7       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:56   48727.9      1.00      29.7       0.5 iCS/rht_reg[14]/D              0.00  
+    0:04:56   48728.9      1.00      29.7       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:57   48728.7      1.00      29.7       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:57   48726.1      1.00      29.7       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:57   48726.4      1.00      29.7       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:57   48735.3      1.00      29.7       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:57   48734.2      1.00      29.7       0.5 iCS/rht_reg[11]/D              0.00  
+    0:04:57   48732.3      1.00      29.7       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:57   48735.1      1.00      29.6       0.5 iCS/lft_reg[15]/D              0.00  
+    0:04:58   48747.4      1.00      29.6       0.5 iCS/lft_reg[14]/D              0.00  
+    0:04:58   48746.6      1.00      29.6       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:58   48744.4      1.00      29.6       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:58   48743.9      1.00      29.6       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:58   48745.0      1.00      29.6       0.5 iCS/lft_reg[14]/D              0.00  
+    0:04:58   48743.9      1.00      29.6       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:59   48743.6      1.00      29.5       0.5 iCS/lft_reg[12]/D              0.00  
+    0:04:59   48743.2      1.00      29.5       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:59   48745.3      1.00      29.5       0.5 iCS/lft_reg[14]/D              0.00  
+    0:04:59   48745.0      1.00      29.5       0.5 iCS/rht_reg[15]/D              0.00  
+    0:04:59   48743.4      0.99      29.5       0.5 iCS/lft_reg[15]/D              0.00  
+    0:05:00   48745.0      0.99      29.5       0.5 iCS/rht_reg[15]/D              0.00  
+    0:05:00   48744.6      0.99      29.5       0.5 iCS/lft_reg[12]/D              0.00  
+    0:05:00   48743.7      0.99      29.5       0.5 iCS/rht_reg[8]/D               0.00  
+    0:05:00   48745.1      0.99      29.5       0.5 iCS/lft_reg[12]/D              0.00  
+    0:05:00   48746.2      0.99      29.5       0.5 iCS/lft_reg[15]/D              0.00  
+    0:05:00   48747.6      0.99      29.5       0.4 iCS/rht_reg[11]/D              0.00  
+    0:05:00   48746.7      0.99      29.5       0.4 iCS/lft_reg[15]/D              0.00  
+    0:05:00   48746.2      0.99      29.4       0.4 iCS/lft_reg[15]/D              0.00  
+    0:05:01   48746.2      0.99      29.4       0.4 iCS/rht_reg[15]/D              0.00  
+    0:05:01   48744.8      0.99      29.4       0.4 iCS/lft_reg[12]/D              0.00  
+    0:05:01   48745.8      0.99      29.4       0.4 iCS/lft_reg[15]/D              0.00  
+    0:05:01   48744.4      0.99      29.4       0.4 iCS/rht_reg[11]/D              0.00  
+    0:05:01   48743.9      0.99      29.4       0.4 iCS/lft_reg[15]/D              0.00  
+    0:05:01   48744.4      0.99      29.4       0.4 iCS/lft_reg[15]/D              0.00  
+    0:05:01   48745.8      0.99      29.4       0.4 iCS/lft_reg[15]/D              0.00  
+    0:05:02   48747.4      0.99      29.4       0.4 iCS/rht_reg[11]/D              0.00  
+    0:05:02   48748.0      0.99      29.4       0.4 iCS/rht_reg[15]/D              0.00  
+    0:05:02   48757.5      0.99      29.4       0.5 iCS/lft_reg[15]/D              0.00  
+    0:05:02   48757.8      0.99      29.4       0.5 iCS/lft_reg[15]/D              0.00  
+    0:05:02   48768.2      0.99      29.4       0.5 iCS/rht_reg[15]/D              0.00  
+    0:05:02   48771.2      0.99      29.3       0.5 iCS/lft_reg[15]/D              0.00  
+    0:05:03   48772.1      0.99      29.3       0.5 iCS/rht_reg[15]/D              0.00  
+    0:05:03   48780.2      0.99      29.3       0.6 iCS/rht_reg[15]/D              0.00  
+    0:05:03   48770.7      0.99      29.3       0.6 iCS/lft_reg[15]/D              0.00  
+    0:05:03   48770.4      0.99      29.3       0.6 iCS/lft_reg[15]/D              0.00  
+    0:05:03   48775.1      0.99      29.3       0.6 iCS/lft_reg[15]/D              0.00  
+    0:05:17   48776.9      0.99      29.3       0.6                                0.00  
+    0:05:17   48773.4      0.99      29.3       1.7                                0.00  
+    0:05:18   48765.4      0.99      29.3       3.5                                0.00  
+    0:05:18   48762.8      0.99      29.3       3.7                                0.00  
+    0:05:19   48759.8      0.99      29.3       3.8                                0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:05:19   48759.8      0.99      29.3       3.8                                0.00  
+    0:05:20   48795.2      0.99      29.3       0.0 iCS/rht_reg[15]/D              0.00  
+    0:05:20   48795.1      0.99      29.3       0.0 iCS/rht_reg[15]/D              0.00  
+    0:05:21   48801.4      0.99      29.3       0.0 iCS/rht_reg[15]/D              0.00  
+    0:05:21   48822.1      0.99      29.3       0.0 iCS/rht_reg[15]/D              0.00  
+    0:05:22   48826.3      0.99      29.3       0.0 iCS/lft_reg[15]/D              0.00  
+    0:05:22   48833.7      0.98      29.2       0.0 iCS/lft_reg[15]/D              0.00  
+    0:05:23   48849.0      0.98      29.2       0.0 iCS/lft_reg[15]/D              0.00  
+    0:05:23   48851.5      0.98      29.2       0.0 iCS/lft_reg[15]/D              0.00  
+    0:05:23   48859.6      0.98      29.2       0.1 iCS/rht_reg[15]/D              0.00  
+    0:05:24   48861.2      0.98      29.2       0.1 iCS/lft_reg[15]/D              0.00  
+    0:05:24   48869.5      0.98      29.1       0.1 iCS/rht_reg[15]/D              0.00  
+    0:05:25   48879.9      0.98      29.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:25   48888.4      0.98      29.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:26   48889.1      0.98      29.1       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:26   48895.8      0.98      29.0       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:26   48897.9      0.98      29.0       0.2 iCS/rht_reg[12]/D              0.00  
+    0:05:27   48896.3      0.98      29.0       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:28   48906.9      0.98      29.0       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:28   48915.0      0.98      29.0       0.2 iCS/lft_reg[12]/D              0.00  
+    0:05:28   48920.0      0.98      29.0       0.2 iCS/lft_reg[9]/D               0.00  
+    0:05:29   48922.4      0.97      28.9       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:30   48931.8      0.97      28.9       0.2 iCS/lft_reg[13]/D              0.00  
+    0:05:30   48941.7      0.97      28.9       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:30   48954.7      0.97      28.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:31   48954.2      0.97      28.9       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:31   48954.2      0.97      28.9       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:32   48962.3      0.97      28.8       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:33   48972.2      0.97      28.8       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:33   48980.8      0.97      28.8       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:33   48980.5      0.97      28.8       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:34   48988.4      0.97      28.8       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:34   49002.5      0.97      28.8       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:35   49005.0      0.97      28.8       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:35   49021.9      0.97      28.7       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:36   49031.6      0.97      28.7       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:36   49035.7      0.97      28.7       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:37   49044.3      0.97      28.7       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:37   49055.3      0.97      28.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:38   49066.7      0.96      28.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:38   49075.5      0.96      28.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:38   49089.5      0.96      28.6       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:39   49090.5      0.96      28.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:39   49093.0      0.96      28.6       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:40   49101.3      0.96      28.5       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:40   49103.8      0.96      28.5       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:40   49101.5      0.96      28.5       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:41   49102.0      0.96      28.5       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:41   49117.0      0.96      28.5       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:41   49126.0      0.96      28.5       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:42   49129.2      0.96      28.5       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:42   49130.0      0.96      28.5       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:43   49132.5      0.96      28.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:43   49144.3      0.96      28.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:43   49145.7      0.96      28.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:44   49149.1      0.96      28.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:44   49155.6      0.95      28.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:44   49162.2      0.95      28.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:45   49160.0      0.95      28.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:45   49164.1      0.95      28.4       0.2 iCS/rht_reg[15]/D              0.00  
+    0:05:45   49162.9      0.95      28.3       0.2 iCS/lft_reg[15]/D              0.00  
+    0:05:46   49167.1      0.95      28.3       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:46   49164.3      0.95      28.3       0.3 iCS/lft_reg[11]/D              0.00  
+    0:05:47   49176.8      0.95      28.3       0.3 iCS/lft_reg[11]/D              0.00  
+    0:05:47   49181.9      0.95      28.3       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:47   49191.4      0.95      28.3       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:48   49190.9      0.95      28.2       0.3 iCS/lft_reg[11]/D              0.00  
+    0:05:48   49193.0      0.95      28.2       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:48   49205.4      0.95      28.2       0.3 iCS/lft_reg[11]/D              0.00  
+    0:05:48   49212.6      0.95      28.2       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:48   49210.8      0.95      28.2       0.3 iCS/lft_reg[11]/D              0.00  
+    0:05:49   49221.2      0.95      28.2       0.3 iCS/lft_reg[11]/D              0.00  
+    0:05:49   49220.7      0.95      28.2       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:50   49223.5      0.95      28.1       0.3 iCS/lft_reg[13]/D              0.00  
+    0:05:50   49230.2      0.95      28.1       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:50   49231.1      0.95      28.1       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:51   49232.4      0.95      28.1       0.3 iCS/lft_reg[9]/D               0.00  
+    0:05:51   49233.1      0.95      28.1       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:51   49237.6      0.95      28.1       0.3 iCS/lft_reg[14]/D              0.00  
+    0:05:51   49237.8      0.95      28.1       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:52   49239.9      0.95      28.1       0.3 iCS/lft_reg[11]/D              0.00  
+    0:05:52   49239.9      0.95      28.1       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:52   49249.6      0.95      28.1       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:52   49254.8      0.94      28.1       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:53   49265.2      0.94      28.1       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:53   49265.5      0.94      28.0       0.3 iCS/lft_reg[15]/D              0.00  
+    0:05:54   49265.0      0.94      28.0       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:54   49267.3      0.94      28.0       0.3 iCS/lft_reg[14]/D              0.00  
+    0:05:55   49269.8      0.94      28.0       0.3 iCS/lft_reg[13]/D              0.00  
+    0:05:55   49272.8      0.94      28.0       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:55   49277.2      0.94      28.0       0.3 iCS/lft_reg[15]/D              0.00  
+    0:05:56   49276.5      0.94      27.9       0.3 iCS/lft_reg[13]/D              0.00  
+    0:05:56   49278.2      0.94      27.9       0.3 iCS/lft_reg[13]/D              0.00  
+    0:05:56   49282.3      0.94      27.9       0.3 iCS/lft_reg[14]/D              0.00  
+    0:05:57   49284.0      0.94      27.9       0.3 iCS/lft_reg[15]/D              0.00  
+    0:05:57   49289.3      0.94      27.9       0.3 iCS/lft_reg[15]/D              0.00  
+    0:05:58   49291.3      0.94      27.9       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:58   49295.7      0.94      27.9       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:58   49297.8      0.94      27.9       0.3 iCS/lft_reg[15]/D              0.00  
+    0:05:59   49307.2      0.94      27.8       0.3 iCS/rht_reg[15]/D              0.00  
+    0:05:59   49309.6      0.94      27.8       0.3 iCS/lft_reg[15]/D              0.00  
+    0:05:59   49313.7      0.94      27.8       0.3 iCS/rht_reg[8]/D               0.00  
+    0:06:00   49318.3      0.94      27.8       0.3 iCS/lft_reg[13]/D              0.00  
+    0:06:00   49321.8      0.94      27.8       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:00   49322.3      0.94      27.7       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:01   49325.3      0.94      27.7       0.3 iCS/lft_reg[13]/D              0.00  
+    0:06:01   49325.1      0.93      27.7       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:01   49328.7      0.93      27.7       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:02   49332.6      0.93      27.7       0.3 iCS/rht_reg[15]/D              0.00  
+    0:06:02   49333.8      0.93      27.6       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:03   49339.3      0.93      27.6       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:03   49342.8      0.93      27.6       0.3 iCS/lft_reg[13]/D              0.00  
+    0:06:04   49350.4      0.93      27.6       0.3 iCS/rht_reg[15]/D              0.00  
+    0:06:04   49360.1      0.93      27.6       0.3 iCS/rht_reg[15]/D              0.00  
+    0:06:05   49370.5      0.93      27.6       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:05   49380.9      0.93      27.5       0.3 iCS/rht_reg[15]/D              0.00  
+    0:06:06   49385.1      0.93      27.5       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:06   49389.4      0.93      27.5       0.3 iCS/rht_reg[15]/D              0.00  
+    0:06:06   49386.9      0.93      27.5       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:06   49394.6      0.93      27.5       0.3 iCS/rht_reg[15]/D              0.00  
+    0:06:07   49400.5      0.93      27.5       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:07   49401.3      0.93      27.5       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:07   49404.9      0.93      27.5       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:08   49404.9      0.93      27.5       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:08   49417.6      0.93      27.5       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:08   49421.8      0.93      27.5       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:09   49429.7      0.93      27.5       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:09   49435.0      0.93      27.5       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:09   49434.5      0.93      27.5       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:10   49440.0      0.92      27.4       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:10   49442.5      0.92      27.4       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:11   49452.7      0.92      27.3       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:11   49471.6      0.92      27.3       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:12   49472.4      0.92      27.3       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:12   49476.7      0.92      27.3       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:13   49480.0      0.92      27.3       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:13   49483.6      0.92      27.2       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:13   49491.3      0.92      27.2       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:13   49489.7      0.92      27.2       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:14   49493.6      0.92      27.2       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:14   49504.5      0.92      27.2       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:14   49506.5      0.92      27.2       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:15   49509.5      0.92      27.2       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:15   49513.5      0.92      27.2       0.3 iCS/lft_reg[11]/D              0.00  
+    0:06:16   49516.4      0.92      27.1       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:16   49525.7      0.92      27.1       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:17   49522.9      0.92      27.1       0.3 iCS/lft_reg[11]/D              0.00  
+    0:06:17   49517.2      0.92      27.1       0.3 iCS/lft_reg[8]/D               0.00  
+    0:06:17   49525.2      0.92      27.1       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:18   49527.1      0.92      27.1       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:18   49530.7      0.92      27.1       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:18   49529.2      0.92      27.0       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:19   49529.1      0.91      27.0       0.3 iCS/lft_reg[15]/D              0.00  
+    0:06:20   49537.9      0.91      27.0       0.3 iCS/rht_reg[12]/D              0.00  
+    0:06:21   49546.0      0.91      27.0       0.3 iCS/lft_reg[11]/D              0.00  
+    0:06:21   49546.0      0.91      27.0       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:22   49550.2      0.91      27.0       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:22   49556.1      0.91      27.0       0.3 iCS/lft_reg[14]/D              0.00  
+    0:06:22   49560.6      0.91      26.9       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:23   49559.6      0.91      26.9       0.3 iCS/lft_reg[14]/D              0.00  
+    0:06:23   49559.6      0.91      26.9       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:23   49563.1      0.91      26.9       0.3 iCS/rht_reg[14]/D              0.00  
+    0:06:24   49581.3      0.91      26.9       0.4 iCS/rht_reg[14]/D              0.00  
+    0:06:24   49588.5      0.91      26.9       0.4 iCS/rht_reg[14]/D              0.00  
+    0:06:25   49594.3      0.91      26.9       0.4 iCS/lft_reg[11]/D              0.00  
+    0:06:25   49600.2      0.91      26.9       0.4 iCS/lft_reg[11]/D              0.00  
+    0:06:25   49596.6      0.91      26.8       0.4 iCS/rht_reg[14]/D              0.00  
+    0:06:26   49599.1      0.91      26.8       0.4 iCS/lft_reg[14]/D              0.00  
+    0:06:26   49580.2      0.91      26.8       0.1 iDigCore/rht_LP_BS/mult_33/B[12]      0.00  
+    0:06:26   49576.2      0.91      26.8       0.0 iCS/lft_reg[11]/D              0.00  
+    0:06:27   49579.7      0.91      26.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:06:27   49578.3      0.91      26.8       0.0 iCS/lft_reg[14]/D              0.00  
+    0:06:28   49581.1      0.90      26.7       0.0 iCS/lft_reg[13]/D              0.00  
+    0:06:29   49582.0      0.90      26.7       0.0 iCS/rht_reg[14]/D              0.00  
+    0:06:29   49587.3      0.90      26.7       0.0 iCS/lft_reg[15]/D              0.00  
+    0:06:29   49587.5      0.90      26.7       0.0 iCS/rht_reg[14]/D              0.00  
+    0:06:30   49586.6      0.90      26.7       0.0 iCS/lft_reg[13]/D              0.00  
+    0:06:30   49588.9      0.90      26.7       0.0 iCS/lft_reg[14]/D              0.00  
+    0:06:31   49600.3      0.90      26.7       0.0                                0.00  
+    0:06:31   49599.6      0.90      26.7       0.0                                0.00  
+    0:06:32   49600.3      0.90      26.7       0.0                                0.00  
+    0:06:32   49596.4      0.90      26.6       0.0                                0.00  
+    0:06:32   49598.7      0.90      26.6       0.0                                0.00  
+    0:06:32   49600.3      0.90      26.6       0.0                                0.00  
+    0:06:32   49603.0      0.90      26.6       0.0                                0.00  
+    0:06:33   49605.8      0.90      26.6       0.0                                0.00  
+    0:06:33   49606.9      0.90      26.6       0.0                                0.00  
+    0:06:33   49606.9      0.90      26.6       0.0                                0.00  
+    0:06:34   49612.0      0.90      26.5       0.0                                0.00  
+    0:06:34   49610.7      0.90      26.5       0.0                                0.00  
+    0:06:34   49613.0      0.90      26.5       0.0                                0.00  
+    0:06:34   49613.9      0.90      26.5       0.0                                0.00  
+    0:06:35   49617.4      0.90      26.5       0.0                                0.00  
+    0:06:35   49616.0      0.90      26.5       0.0                                0.00  
+    0:06:35   49613.4      0.90      26.5       0.0                                0.00  
+    0:06:36   49605.6      0.90      26.5       0.0                                0.00  
+    0:06:36   49609.0      0.90      26.5       0.0                                0.00  
+    0:06:36   49609.7      0.90      26.5       0.0                                0.00  
+    0:06:36   49608.6      0.90      26.5       0.0                                0.00  
+    0:06:37   49608.1      0.90      26.5       0.0                                0.00  
+    0:06:37   49607.6      0.90      26.5       0.0                                0.00  
+    0:06:37   49612.7      0.90      26.4       0.0                                0.00  
+    0:06:38   49615.5      0.89      26.4       0.0                                0.00  
+    0:06:38   49616.0      0.89      26.4       0.0                                0.00  
+    0:06:38   49617.4      0.89      26.4       0.0                                0.00  
+    0:06:39   49617.1      0.89      26.4       0.0                                0.00  
+    0:06:39   49618.7      0.89      26.4       0.0                                0.00  
+    0:06:39   49622.9      0.89      26.4       0.0                                0.00  
+    0:06:39   49625.4      0.89      26.4       0.0                                0.00  
+    0:06:40   49621.5      0.89      26.4       0.0                                0.00  
+    0:06:40   49620.4      0.89      26.4       0.0                                0.00  
+    0:06:40   49621.0      0.89      26.4       0.0                                0.00  
+    0:06:41   49618.7      0.89      26.4       0.0                                0.00  
+    0:06:41   49618.7      0.89      26.3       0.0                                0.00  
+    0:06:41   49621.1      0.89      26.3       0.0                                0.00  
+    0:06:41   49622.9      0.89      26.3       0.0                                0.00  
+    0:06:42   49624.0      0.89      26.3       0.0                                0.00  
+    0:06:42   49624.7      0.89      26.3       0.0                                0.00  
+    0:06:43   49625.0      0.89      26.3       0.0                                0.00  
+    0:06:43   49625.7      0.89      26.3       0.0                                0.00  
+    0:06:43   49626.3      0.89      26.3       0.0                                0.00  
+    0:06:44   49625.2      0.89      26.3       0.0                                0.00  
+    0:06:44   49627.1      0.89      26.2       0.0                                0.00  
+    0:06:44   49630.5      0.89      26.2       0.0                                0.00  
+    0:06:44   49630.0      0.89      26.2       0.0                                0.00  
+    0:06:44   49630.0      0.89      26.1       0.0                                0.00  
+    0:06:45   49634.7      0.89      26.1       0.0                                0.00  
+    0:06:45   49639.3      0.89      26.1       0.0                                0.00  
+    0:06:45   49635.4      0.89      26.0       0.0                                0.00  
+    0:06:45   49636.0      0.89      26.0       0.0                                0.00  
+    0:06:46   49635.6      0.89      25.9       0.0                                0.00  
+    0:06:46   49639.3      0.89      25.9       0.0                                0.00  
+    0:06:46   49639.8      0.89      25.9       0.0                                0.00  
+    0:06:46   49640.9      0.89      25.9       0.0                                0.00  
+    0:06:46   49641.4      0.89      25.8       0.0                                0.00  
+    0:06:46   49642.3      0.89      25.8       0.0                                0.00  
+    0:06:46   49646.4      0.89      25.7       0.0                                0.00  
+    0:06:47   49647.8      0.89      25.7       0.0                                0.00  
+    0:06:47   49649.2      0.89      25.7       0.0                                0.00  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:06:47   49649.2      0.89      25.7       0.0                                0.00  
+    0:06:47   49649.2      0.89      25.7       0.0                                0.00  
+    0:06:48   49400.8      0.90      25.9       0.0                                0.00  
+    0:06:48   49355.7      0.90      25.9       0.0                                0.00  
+    0:06:49   49345.6      0.90      25.9       0.0                                0.00  
+    0:06:49   49337.1      0.90      25.9       0.0                                0.00  
+    0:06:49   49336.1      0.90      25.9       0.0                                0.00  
+    0:06:49   49336.1      0.90      25.9       0.0                                0.00  
+    0:06:49   49332.0      0.90      25.9       0.0                                0.00  
+    0:06:50   48945.4      0.95      27.1       0.0                                0.00  
+    0:06:51   48758.2      0.96      27.2       0.0                                0.00  
+    0:06:51   48685.9      0.95      27.2       0.0                                0.00  
+    0:06:51   48674.4      0.95      27.2       0.0                                0.00  
+    0:06:51   48671.8      0.95      27.2       0.0                                0.00  
+    0:06:51   48671.8      0.95      27.2       0.0                                0.00  
+    0:06:51   48671.8      0.95      27.2       0.0                                0.00  
+    0:06:51   48671.8      0.95      27.2       0.0                                0.00  
+    0:06:52   48684.8      0.92      26.6       0.0 iCS/lft_reg[15]/D              0.00  
+    0:06:53   48697.2      0.92      26.5       0.0 iCS/lft_reg[14]/D              0.00  
+    0:06:54   48713.2      0.91      26.5       0.0 iCS/rht_reg[11]/D              0.00  
+    0:06:55   48739.0      0.91      26.3       0.0 iCS/lft_reg[14]/D              0.00  
+    0:06:56   48741.8      0.91      26.3       0.0 iCS/lft_reg[14]/D              0.00  
+    0:06:56   48746.6      0.91      26.3       0.0 iCS/rht_reg[14]/D              0.00  
+    0:06:57   48752.7      0.90      26.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:06:57   48757.8      0.90      26.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:06:57   48763.0      0.90      26.2       0.0 iCS/rht_reg[15]/D              0.00  
+    0:06:57   48767.7      0.90      26.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:06:58   48772.1      0.90      26.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:06:58   48789.9      0.90      26.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:06:59   48805.8      0.90      26.0       0.0 iCS/rht_reg[15]/D              0.00  
+    0:07:00   48811.6      0.90      26.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:00   48814.5      0.90      26.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:01   48815.2      0.90      26.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:01   48813.4      0.90      26.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:01   48820.3      0.90      26.0       0.0 iCS/lft_reg[15]/D              0.00  
+    0:07:02   48822.8      0.90      25.9       0.0 iCS/lft_reg[15]/D              0.00  
+    0:07:02   48828.4      0.89      25.9       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:03   48833.3      0.89      26.0       0.0 iCS/rht_reg[11]/D              0.00  
+    0:07:03   48844.3      0.89      26.0       0.0 iCS/lft_reg[15]/D              0.00  
+    0:07:03   48843.2      0.89      25.9       0.0                                0.00  
+    0:07:03   48840.7      0.89      25.9       0.0                                0.00  
+    0:07:03   48838.8      0.89      25.9       0.0                                0.00  
+    0:07:04   48838.1      0.89      25.9       0.0                                0.00  
+    0:07:04   48836.3      0.89      25.9       0.0                                0.00  
+    0:07:04   48831.4      0.89      25.9       0.0                                0.00  
+    0:07:04   48830.9      0.89      25.9       0.0                                0.00  
+    0:07:04   48823.5      0.89      25.9       0.0                                0.00  
+    0:07:04   48817.8      0.89      25.9       0.0                                0.00  
+    0:07:04   48815.5      0.89      25.9       0.0                                0.00  
+    0:07:05   48808.6      0.89      25.9       0.0                                0.00  
+    0:07:05   48809.0      0.89      25.9       0.0                                0.00  
+    0:07:05   48809.5      0.89      25.9       0.0                                0.00  
+    0:07:05   48809.2      0.89      25.9       0.0                                0.00  
+    0:07:06   48809.5      0.89      25.9       0.0                                0.00  
+    0:07:06   48807.2      0.89      25.9       0.0                                0.00  
+    0:07:06   48812.0      0.89      25.9       0.0                                0.00  
+    0:07:07   48813.2      0.89      25.8       0.0                                0.00  
+    0:07:07   48813.2      0.89      25.8       0.0                                0.00  
+    0:07:07   48823.8      0.89      25.8       0.0                                0.00  
+    0:07:07   48826.1      0.89      25.8       0.0                                0.00  
+    0:07:08   48830.3      0.89      25.8       0.0                                0.00  
+    0:07:08   48830.0      0.89      25.8       0.0                                0.00  
+    0:07:08   48830.0      0.89      25.8       0.0                                0.00  
+    0:07:08   48828.9      0.89      25.8       0.0                                0.00  
+    0:07:08   48829.5      0.89      25.8       0.0                                0.00  
+    0:07:09   48829.8      0.89      25.8       0.0                                0.00  
+    0:07:09   48830.0      0.89      25.8       0.0                                0.00  
+    0:07:09   48830.0      0.89      25.8       0.0                                0.00  
+    0:07:09   48831.2      0.89      25.8       0.0                                0.00  
+    0:07:10   48832.6      0.89      25.7       0.0                                0.00  
+    0:07:10   48832.6      0.89      25.7       0.0                                0.00  
+    0:07:10   48835.1      0.89      25.7       0.0                                0.00  
+    0:07:11   48835.6      0.89      25.6       0.0                                0.00  
+    0:07:11   48833.2      0.89      25.6       0.0                                0.00  
+    0:07:11   48831.4      0.89      25.6       0.0                                0.00  
+    0:07:11   48830.5      0.89      25.6       0.0                                0.00  
+    0:07:12   48830.3      0.89      25.6       0.0                                0.00  
+    0:07:12   48830.5      0.89      25.6       0.0                                0.00  
+    0:07:12   48833.7      0.89      25.5       0.0                                0.00  
+    0:07:12   48833.9      0.89      25.5       0.0                                0.00  
+    0:07:12   48833.2      0.89      25.5       0.0                                0.00  
+    0:07:12   48832.8      0.89      25.5       0.0                                0.00  
+    0:07:12   48831.4      0.89      25.5       0.0                                0.00  
+    0:07:13   48832.6      0.89      25.5       0.0                                0.00  
+    0:07:13   48833.2      0.89      25.5       0.0                                0.00  
+    0:07:13   48831.8      0.89      25.5       0.0                                0.00  
+    0:07:13   48831.9      0.89      25.5       0.0                                0.00  
+    0:07:14   48831.9      0.89      25.5       0.0                                0.00  
+    0:07:14   48831.9      0.89      25.5       0.0                                0.00  
+    0:07:14   48834.2      0.89      25.4       0.0                                0.00  
+    0:07:14   48834.6      0.89      25.4       0.0                                0.00  
+    0:07:14   48835.1      0.89      25.4       0.0                                0.00  
+    0:07:15   48833.9      0.89      25.4       0.0                                0.00  
+    0:07:15   48833.3      0.89      25.4       0.0                                0.00  
+    0:07:15   48834.4      0.89      25.4       0.0                                0.00  
+    0:07:15   48836.7      0.89      25.3       0.0                                0.00  
+    0:07:16   48840.4      0.89      25.3       0.0                                0.00  
+    0:07:16   48838.6      0.89      25.3       0.0                                0.00  
+    0:07:16   48838.6      0.89      25.3       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:16   48839.2      0.89      25.3       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:17   48843.4      0.89      25.2       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:17   48847.6      0.89      25.2       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:18   48851.0      0.88      25.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:18   48851.3      0.88      25.2       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:18   48851.7      0.88      25.2       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:19   48852.9      0.88      25.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:19   48856.6      0.88      25.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:19   48857.7      0.88      25.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:19   48861.6      0.88      25.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:20   48864.9      0.88      25.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:20   48866.2      0.88      25.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:20   48876.0      0.88      25.2       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:21   48884.8      0.88      25.2       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:21   48888.0      0.88      25.2       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:21   48894.4      0.88      25.2       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:22   48898.4      0.88      25.2       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:22   48898.4      0.88      25.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:23   48901.3      0.88      25.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:23   48905.0      0.88      25.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:23   48909.9      0.88      25.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:24   48914.8      0.88      25.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:24   48917.1      0.88      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:24   48919.4      0.88      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:24   48922.2      0.88      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:25   48926.8      0.87      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:25   48927.2      0.87      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:26   48925.6      0.87      25.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:26   48930.9      0.87      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:27   48945.4      0.87      25.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:27   48948.7      0.87      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:28   48949.8      0.87      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:28   48952.9      0.87      25.1       0.0 iCS/lft_reg[15]/D              0.00  
+    0:07:29   48956.8      0.87      25.1       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:29   48957.9      0.87      25.1       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:30   48971.3      0.87      25.0       0.0 iCS/lft_reg[11]/D              0.00  
+    0:07:30   48971.3      0.87      25.0       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:30   48974.5      0.87      25.0       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:30   48977.5      0.87      25.0       0.0 iCS/lft_reg[15]/D              0.00  
+    0:07:31   48980.1      0.87      25.0       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:31   48980.1      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:31   48980.1      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:32   48980.1      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:32   48980.1      0.87      25.0       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:32   48982.2      0.87      25.0       0.0 iCS/lft_reg[15]/D              0.00  
+    0:07:33   48982.2      0.87      25.0       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:33   48982.2      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:33   48986.6      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:34   48990.7      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:34   48991.0      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:35   48994.6      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:35   48997.6      0.87      25.0       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:35   48998.1      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:36   48999.7      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:36   49000.2      0.87      25.0       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:36   49001.6      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:36   49002.2      0.87      25.0       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:37   49003.7      0.87      25.0       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:37   49008.5      0.87      24.9       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:37   49009.7      0.87      24.9       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:37   49014.0      0.87      24.9       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:37   49014.9      0.87      24.9       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:38   49015.9      0.87      24.9       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:38   49018.6      0.87      24.9       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:38   49022.8      0.86      24.9       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:38   49026.1      0.86      24.9       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:39   49025.8      0.86      24.9       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:39   49021.4      0.86      24.9       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:39   49024.4      0.86      24.9       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:39   49025.8      0.86      24.8       0.0 iCS/lft_reg[11]/D              0.00  
+    0:07:40   49027.2      0.86      24.8       0.0 iCS/lft_reg[11]/D              0.00  
+    0:07:40   49026.1      0.86      24.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:40   49027.9      0.86      24.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:40   49028.8      0.86      24.8       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:41   49028.8      0.86      24.8       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:41   49030.2      0.86      24.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:41   49029.9      0.86      24.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:41   49034.4      0.86      24.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:41   49036.0      0.86      24.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:42   49040.1      0.86      24.8       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:42   49041.7      0.86      24.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:42   49041.0      0.86      24.8       0.0 iCS/lft_reg[15]/D              0.00  
+    0:07:42   49044.5      0.86      24.7       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:42   49045.0      0.86      24.7       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:43   49047.8      0.86      24.7       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:43   49051.2      0.86      24.7       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:43   49052.8      0.86      24.7       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:43   49054.0      0.86      24.7       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:43   49054.5      0.86      24.8       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:44   49054.2      0.86      24.8       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:44   49056.1      0.86      24.8       0.0 iCS/lft_reg[14]/D              0.00  
+    0:07:44   49057.7      0.86      24.7       0.0 iCS/lft_reg[11]/D              0.00  
+    0:07:44   49060.7      0.86      24.7       0.0 iCS/rht_reg[14]/D              0.00  
+    0:07:45   49061.2      0.86      24.7       0.0 iCS/lft_reg[14]/D              0.00  
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#########################################################################
+# 		Generate timing and area reports								#
+#########################################################################
+report_timing -delay max > max_delay.rpt
+report_timing -delay min > min_delay.rpt
+report_area > Equalizer_area.txt
+#########################################################################
+# 		Write out the resulting synthesized netlist						#
+#########################################################################
+write_file -format verilog Equalizer -output Equalizer.vg
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_0'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_1'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_8'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_9'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_6'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_7'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_4'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_5'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_2'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_3'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_10'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_18'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_16'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_14'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_12'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_11'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_19'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_17'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_15'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_13'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_30'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_31'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_24'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_27'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_25'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_28'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_26'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_29'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_20'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_22'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_21'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Information: Writing synthetic library implementations for design 'Equalizer_DW02_mult_23'.
+	Use "write -no_implicit" to get just the design. (UID-172)
+Writing verilog file '/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.vg'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 15 nets to module Equalizer_DW02_mult_31 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 15 nets to module Equalizer_DW02_mult_30 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_13 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_15 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_17 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_19 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_11 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_12 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_14 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_16 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_18 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 8 nets to module Equalizer_DW02_mult_10 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_3 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_2 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_5 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_4 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_7 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_6 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_9 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_8 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 10 nets to module Equalizer_DW02_mult_0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 254 nets to module Equalizer using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+1
+dc_shell> 
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
