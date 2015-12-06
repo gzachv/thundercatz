@@ -69,17 +69,17 @@ B3_FIR iB3_FIR (.lft_smpl_out(lft_B3_smpl_out), .rht_smpl_out(rht_B3_smpl_out), 
 HP_FIR iHP_FIR (.lft_smpl_out(lft_HP_smpl_out), .rht_smpl_out(rht_HP_smpl_out), .sequencing(lft_fast_seq | rht_fast_seq), .lft_smpl_in(lft_fast_smpl_out), .rht_smpl_in(rht_fast_smpl_out), .clk(clk), .rst_n(rst_n));
 
 ////////////////// Band Scale instantiation /////////////////////
-band_scale lft_LP_BS (.scaled(lft_LP_scaled), .POT(POT_LP), .audio(lft_LP_smpl_out));
-band_scale lft_B1_BS (.scaled(lft_B1_scaled), .POT(POT_B1), .audio(lft_B1_smpl_out));
-band_scale lft_B2_BS (.scaled(lft_B2_scaled), .POT(POT_B2), .audio(lft_B2_smpl_out));
-band_scale lft_B3_BS (.scaled(lft_B3_scaled), .POT(POT_B3), .audio(lft_B3_smpl_out));
-band_scale lft_HP_BS (.scaled(lft_HP_scaled), .POT(POT_HP), .audio(lft_HP_smpl_out));
+band_scale lft_LP_BS (.scaled(lft_LP_scaled), .POT(POT_LP), .audio(lft_LP_smpl_out), .clk(clk));
+band_scale lft_B1_BS (.scaled(lft_B1_scaled), .POT(POT_B1), .audio(lft_B1_smpl_out), .clk(clk));
+band_scale lft_B2_BS (.scaled(lft_B2_scaled), .POT(POT_B2), .audio(lft_B2_smpl_out), .clk(clk));
+band_scale lft_B3_BS (.scaled(lft_B3_scaled), .POT(POT_B3), .audio(lft_B3_smpl_out), .clk(clk));
+band_scale lft_HP_BS (.scaled(lft_HP_scaled), .POT(POT_HP), .audio(lft_HP_smpl_out), .clk(clk));
 
-band_scale rht_LP_BS (.scaled(rht_LP_scaled), .POT(POT_LP), .audio(rht_LP_smpl_out));
-band_scale rht_B1_BS (.scaled(rht_B1_scaled), .POT(POT_B1), .audio(rht_B1_smpl_out));
-band_scale rht_B2_BS (.scaled(rht_B2_scaled), .POT(POT_B2), .audio(rht_B2_smpl_out));
-band_scale rht_B3_BS (.scaled(rht_B3_scaled), .POT(POT_B3), .audio(rht_B3_smpl_out));
-band_scale rht_HP_BS (.scaled(rht_HP_scaled), .POT(POT_HP), .audio(rht_HP_smpl_out));
+band_scale rht_LP_BS (.scaled(rht_LP_scaled), .POT(POT_LP), .audio(rht_LP_smpl_out), .clk(clk));
+band_scale rht_B1_BS (.scaled(rht_B1_scaled), .POT(POT_B1), .audio(rht_B1_smpl_out), .clk(clk));
+band_scale rht_B2_BS (.scaled(rht_B2_scaled), .POT(POT_B2), .audio(rht_B2_smpl_out), .clk(clk));
+band_scale rht_B3_BS (.scaled(rht_B3_scaled), .POT(POT_B3), .audio(rht_B3_smpl_out), .clk(clk));
+band_scale rht_HP_BS (.scaled(rht_HP_scaled), .POT(POT_HP), .audio(rht_HP_smpl_out), .clk(clk));
 
 //////////// Sum bands and scale by Volume //////////////////////
 assign sign_vol = {1'b0, VOLUME};
