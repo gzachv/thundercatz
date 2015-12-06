@@ -7,15 +7,15 @@ Report : timing
         -max_paths 1
 Design : Equalizer
 Version: J-2014.09-SP5
-Date   : Sun Dec  6 09:54:23 2015
+Date   : Sun Dec  6 10:13:50 2015
 ****************************************
 
 Operating Conditions: NCCOM   Library: tcbn40lpbwptc
 Wire Load Model Mode: segmented
 
-  Startpoint: iDigCore/iLP_FIR/rht_accum_reg[28]
+  Startpoint: iDigCore/iLP_FIR/rht_accum_reg[24]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: iCS/rht_reg[15]
+  Endpoint: iCS/rht_reg[14]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -26,147 +26,151 @@ Wire Load Model Mode: segmented
                                            tcbn40lpbwptc
   Equalizer_DW02_mult_9
                      ZeroWireload          tcbn40lpbwptc
-  Equalizer_DW01_add_71
+  Equalizer_DW01_add_92
                      ZeroWireload          tcbn40lpbwptc
-  Equalizer_DW01_add_82
+  Equalizer_DW01_add_124
                      ZeroWireload          tcbn40lpbwptc
-  Equalizer_DW01_add_83
+  Equalizer_DW01_add_119
                      ZeroWireload          tcbn40lpbwptc
   Equalizer_DW01_add_60
                      ZeroWireload          tcbn40lpbwptc
   Equalizer_DW02_mult_31
                      ZeroWireload          tcbn40lpbwptc
-  Equalizer_DW01_add_89
+  Equalizer_DW01_add_111
                      ZeroWireload          tcbn40lpbwptc
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  iDigCore/iLP_FIR/rht_accum_reg[28]/CP (DFCNQD1BWP)      0.00       0.00 r
-  iDigCore/iLP_FIR/rht_accum_reg[28]/Q (DFCNQD1BWP)       0.13       0.13 r
-  iDigCore/rht_LP_BS/mult_37/B[13] (Equalizer_DW02_mult_9)
-                                                          0.00       0.13 r
-  iDigCore/rht_LP_BS/mult_37/U10/ZN (INVD2BWP)            0.02       0.15 f
-  iDigCore/rht_LP_BS/mult_37/U48/ZN (CKND3BWP)            0.02       0.18 r
-  iDigCore/rht_LP_BS/mult_37/U104/Z (AN2XD1BWP)           0.05       0.23 r
-  iDigCore/rht_LP_BS/mult_37/U97/Z (CKXOR2D0BWP)          0.08       0.30 f
-  iDigCore/rht_LP_BS/mult_37/S2_2_12/CO (FA1D1BWP)        0.07       0.37 f
-  iDigCore/rht_LP_BS/mult_37/S2_3_12/CO (FA1D1BWP)        0.12       0.49 f
-  iDigCore/rht_LP_BS/mult_37/S2_4_12/CO (FA1D0BWP)        0.12       0.61 f
-  iDigCore/rht_LP_BS/mult_37/S2_5_12/CO (FA1D1BWP)        0.12       0.73 f
-  iDigCore/rht_LP_BS/mult_37/S2_6_12/CO (FA1D1BWP)        0.12       0.85 f
-  iDigCore/rht_LP_BS/mult_37/S2_7_12/CO (FA1D1BWP)        0.12       0.97 f
-  iDigCore/rht_LP_BS/mult_37/S2_8_12/CO (FA1D0BWP)        0.12       1.09 f
-  iDigCore/rht_LP_BS/mult_37/S2_9_12/CO (FA1D0BWP)        0.12       1.21 f
-  iDigCore/rht_LP_BS/mult_37/S2_10_12/CO (FA1D1BWP)       0.12       1.33 f
-  iDigCore/rht_LP_BS/mult_37/S2_11_12/S (FA1D1BWP)        0.11       1.44 f
-  iDigCore/rht_LP_BS/mult_37/U175/Z (XOR2D1BWP)           0.07       1.51 r
-  iDigCore/rht_LP_BS/mult_37/U50/Z (XOR2D1BWP)            0.08       1.59 f
-  iDigCore/rht_LP_BS/mult_37/FS_1/A[21] (Equalizer_DW01_add_71)
-                                                          0.00       1.59 f
-  iDigCore/rht_LP_BS/mult_37/FS_1/U19/ZN (INVD1BWP)       0.03       1.62 r
-  iDigCore/rht_LP_BS/mult_37/FS_1/U6/ZN (IND2D4BWP)       0.03       1.64 f
-  iDigCore/rht_LP_BS/mult_37/FS_1/U5/ZN (ND3D3BWP)        0.02       1.67 r
-  iDigCore/rht_LP_BS/mult_37/FS_1/U63/ZN (INVD2BWP)       0.02       1.68 f
-  iDigCore/rht_LP_BS/mult_37/FS_1/U62/ZN (OAI21D4BWP)     0.03       1.71 r
-  iDigCore/rht_LP_BS/mult_37/FS_1/U64/ZN (CKND2D1BWP)     0.02       1.73 f
-  iDigCore/rht_LP_BS/mult_37/FS_1/U97/Z (AO21D1BWP)       0.05       1.79 f
-  iDigCore/rht_LP_BS/mult_37/FS_1/U38/ZN (NR2XD1BWP)      0.03       1.82 r
-  iDigCore/rht_LP_BS/mult_37/FS_1/U58/ZN (IND3D2BWP)      0.03       1.85 f
-  iDigCore/rht_LP_BS/mult_37/FS_1/U44/ZN (ND2D2BWP)       0.03       1.88 r
-  iDigCore/rht_LP_BS/mult_37/FS_1/U138/ZN (ND2D2BWP)      0.02       1.90 f
-  iDigCore/rht_LP_BS/mult_37/FS_1/U81/Z (XOR3D4BWP)       0.08       1.97 r
-  iDigCore/rht_LP_BS/mult_37/FS_1/SUM[26] (Equalizer_DW01_add_71)
-                                                          0.00       1.97 r
-  iDigCore/rht_LP_BS/mult_37/PRODUCT[28] (Equalizer_DW02_mult_9)
-                                                          0.00       1.97 r
-  U1110/ZN (INVD4BWP)                                     0.02       1.99 f
-  U2564/ZN (OAI31D4BWP)                                   0.03       2.02 r
-  U1109/Z (BUFFD16BWP)                                    0.07       2.09 r
-  U1274/ZN (ND2D8BWP)                                     0.03       2.12 f
-  U1124/ZN (CKND12BWP)                                    0.03       2.15 r
-  U1243/ZN (IOA21D2BWP)                                   0.06       2.21 r
-  add_3_root_iDigCore/add_88_4/A[1] (Equalizer_DW01_add_82)
-                                                          0.00       2.21 r
-  add_3_root_iDigCore/add_88_4/U156/ZN (CKND2BWP)         0.02       2.22 f
-  add_3_root_iDigCore/add_88_4/U79/ZN (IND2D2BWP)         0.02       2.24 r
-  add_3_root_iDigCore/add_88_4/U8/ZN (CKND2BWP)           0.02       2.26 f
-  add_3_root_iDigCore/add_88_4/U5/Z (OR2XD1BWP)           0.05       2.31 f
-  add_3_root_iDigCore/add_88_4/U148/ZN (OAI21D1BWP)       0.04       2.35 r
-  add_3_root_iDigCore/add_88_4/U76/ZN (XNR2D2BWP)         0.08       2.43 f
-  add_3_root_iDigCore/add_88_4/SUM[3] (Equalizer_DW01_add_82)
-                                                          0.00       2.43 f
-  add_1_root_iDigCore/add_88_4/B[3] (Equalizer_DW01_add_83)
-                                                          0.00       2.43 f
-  add_1_root_iDigCore/add_88_4/U11/Z (OA22D1BWP)          0.06       2.49 f
-  add_1_root_iDigCore/add_88_4/U9/ZN (ND3D2BWP)           0.02       2.52 r
-  add_1_root_iDigCore/add_88_4/U27/ZN (ND2D2BWP)          0.03       2.55 f
-  add_1_root_iDigCore/add_88_4/U70/ZN (CKND2BWP)          0.02       2.57 r
-  add_1_root_iDigCore/add_88_4/U140/ZN (OAI21D1BWP)       0.02       2.59 f
-  add_1_root_iDigCore/add_88_4/U138/ZN (AOI21D1BWP)       0.04       2.63 r
-  add_1_root_iDigCore/add_88_4/U91/ZN (XNR2D2BWP)         0.08       2.72 f
-  add_1_root_iDigCore/add_88_4/SUM[7] (Equalizer_DW01_add_83)
-                                                          0.00       2.72 f
-  add_0_root_iDigCore/add_88_4/B[7] (Equalizer_DW01_add_60)
-                                                          0.00       2.72 f
-  add_0_root_iDigCore/add_88_4/U61/ZN (ND2D2BWP)          0.02       2.74 r
-  add_0_root_iDigCore/add_88_4/U176/ZN (OAI211D2BWP)      0.04       2.78 f
-  add_0_root_iDigCore/add_88_4/U175/ZN (ND2D2BWP)         0.02       2.81 r
-  add_0_root_iDigCore/add_88_4/U128/ZN (OAI21D2BWP)       0.03       2.84 f
-  add_0_root_iDigCore/add_88_4/U174/ZN (CKND2BWP)         0.02       2.86 r
-  add_0_root_iDigCore/add_88_4/U21/ZN (OAI21D2BWP)        0.02       2.88 f
-  add_0_root_iDigCore/add_88_4/U13/ZN (IOA21D1BWP)        0.06       2.94 f
-  add_0_root_iDigCore/add_88_4/U125/ZN (ND2D1BWP)         0.02       2.96 r
-  add_0_root_iDigCore/add_88_4/U162/ZN (ND2D1BWP)         0.02       2.98 f
-  add_0_root_iDigCore/add_88_4/U100/Z (XOR2D2BWP)         0.08       3.07 r
-  add_0_root_iDigCore/add_88_4/SUM[11] (Equalizer_DW01_add_60)
-                                                          0.00       3.07 r
-  iDigCore/mult_88/B[11] (Equalizer_DW02_mult_31)         0.00       3.07 r
-  iDigCore/mult_88/U210/Z (AN2XD1BWP)                     0.05       3.11 r
-  iDigCore/mult_88/U165/Z (XOR2D1BWP)                     0.09       3.20 f
-  iDigCore/mult_88/S2_2_9/CO (FA1D1BWP)                   0.06       3.26 f
-  iDigCore/mult_88/S2_3_9/CO (FA1D1BWP)                   0.12       3.38 f
-  iDigCore/mult_88/S2_4_9/CO (FA1D1BWP)                   0.12       3.50 f
-  iDigCore/mult_88/S2_5_9/CO (FA1D1BWP)                   0.12       3.62 f
-  iDigCore/mult_88/S2_6_9/CO (FA1D0BWP)                   0.12       3.74 f
-  iDigCore/mult_88/S2_7_9/CO (FA1D0BWP)                   0.12       3.86 f
-  iDigCore/mult_88/S2_8_9/CO (FA1D0BWP)                   0.12       3.98 f
-  iDigCore/mult_88/S2_9_9/CO (FA1D1BWP)                   0.12       4.10 f
-  iDigCore/mult_88/S2_10_9/CO (FA1D1BWP)                  0.12       4.22 f
-  iDigCore/mult_88/S2_11_9/S (FA1D1BWP)                   0.12       4.34 r
-  iDigCore/mult_88/U188/Z (XOR2D1BWP)                     0.08       4.42 f
-  iDigCore/mult_88/U148/Z (XOR2D1BWP)                     0.07       4.48 r
-  iDigCore/mult_88/FS_1/A[18] (Equalizer_DW01_add_89)     0.00       4.48 r
-  iDigCore/mult_88/FS_1/U12/ZN (INVD1BWP)                 0.02       4.50 f
-  iDigCore/mult_88/FS_1/U112/ZN (IND2D1BWP)               0.02       4.52 r
-  iDigCore/mult_88/FS_1/U68/ZN (CKND1BWP)                 0.02       4.54 f
-  iDigCore/mult_88/FS_1/U27/ZN (IND2D2BWP)                0.04       4.57 f
-  iDigCore/mult_88/FS_1/U89/ZN (IND2D1BWP)                0.05       4.62 f
-  iDigCore/mult_88/FS_1/U79/ZN (ND3D1BWP)                 0.02       4.65 r
-  iDigCore/mult_88/FS_1/U76/ZN (ND3D1BWP)                 0.04       4.69 f
-  iDigCore/mult_88/FS_1/U40/ZN (IND3D2BWP)                0.03       4.72 r
-  iDigCore/mult_88/FS_1/U25/ZN (AOI21D1BWP)               0.03       4.75 f
-  iDigCore/mult_88/FS_1/U123/ZN (XNR2D1BWP)               0.07       4.82 r
-  iDigCore/mult_88/FS_1/SUM[25] (Equalizer_DW01_add_89)
-                                                          0.00       4.82 r
-  iDigCore/mult_88/PRODUCT[27] (Equalizer_DW02_mult_31)
-                                                          0.00       4.82 r
-  U1240/Z (MUX2D1BWP)                                     0.05       4.87 r
-  iCS/rht_reg[15]/D (DFCNQD1BWP)                          0.00       4.87 r
-  data arrival time                                                  4.87
+  iDigCore/iLP_FIR/rht_accum_reg[24]/CP (DFCND1BWP)       0.00       0.00 r
+  iDigCore/iLP_FIR/rht_accum_reg[24]/Q (DFCND1BWP)        0.13       0.13 f
+  iDigCore/rht_LP_BS/mult_37/B[9] (Equalizer_DW02_mult_9)
+                                                          0.00       0.13 f
+  iDigCore/rht_LP_BS/mult_37/U422/Z (AN2D2BWP)            0.05       0.18 f
+  iDigCore/rht_LP_BS/mult_37/U474/ZN (INVD1BWP)           0.02       0.19 r
+  iDigCore/rht_LP_BS/mult_37/U473/ZN (ND2D1BWP)           0.02       0.22 f
+  iDigCore/rht_LP_BS/mult_37/U238/ZN (ND2D2BWP)           0.02       0.24 r
+  iDigCore/rht_LP_BS/mult_37/U231/Z (XOR3D2BWP)           0.13       0.37 f
+  iDigCore/rht_LP_BS/mult_37/S2_3_7/CO (FA1D1BWP)         0.07       0.44 f
+  iDigCore/rht_LP_BS/mult_37/S2_4_7/CO (FA1D1BWP)         0.12       0.56 f
+  iDigCore/rht_LP_BS/mult_37/S2_5_7/CO (FA1D1BWP)         0.12       0.68 f
+  iDigCore/rht_LP_BS/mult_37/U304/Z (XOR3D2BWP)           0.14       0.82 r
+  iDigCore/rht_LP_BS/mult_37/S2_7_6/S (FA1D2BWP)          0.09       0.91 f
+  iDigCore/rht_LP_BS/mult_37/U139/Z (XOR2D1BWP)           0.07       0.98 r
+  iDigCore/rht_LP_BS/mult_37/U137/ZN (INVD1BWP)           0.02       1.00 f
+  iDigCore/rht_LP_BS/mult_37/U128/ZN (ND2D1BWP)           0.02       1.01 r
+  iDigCore/rht_LP_BS/mult_37/U136/ZN (ND2D1BWP)           0.03       1.04 f
+  iDigCore/rht_LP_BS/mult_37/S2_9_4/S (FA1D1BWP)          0.07       1.11 r
+  iDigCore/rht_LP_BS/mult_37/S2_10_3/CO (FA1D1BWP)        0.06       1.17 r
+  iDigCore/rht_LP_BS/mult_37/S2_11_3/S (FA1D2BWP)         0.15       1.31 f
+  iDigCore/rht_LP_BS/mult_37/U230/ZN (ND2D2BWP)           0.02       1.34 r
+  iDigCore/rht_LP_BS/mult_37/U34/ZN (CKND2BWP)            0.02       1.35 f
+  iDigCore/rht_LP_BS/mult_37/S14_15_0/CO (FA1D4BWP)       0.12       1.47 f
+  iDigCore/rht_LP_BS/mult_37/FS_1/B[14] (Equalizer_DW01_add_92)
+                                                          0.00       1.47 f
+  iDigCore/rht_LP_BS/mult_37/FS_1/U55/ZN (NR2XD2BWP)      0.03       1.51 r
+  iDigCore/rht_LP_BS/mult_37/FS_1/U81/ZN (NR3D2BWP)       0.02       1.53 f
+  iDigCore/rht_LP_BS/mult_37/FS_1/U74/ZN (AOI21D2BWP)     0.04       1.57 r
+  iDigCore/rht_LP_BS/mult_37/FS_1/U19/ZN (ND2D2BWP)       0.03       1.60 f
+  iDigCore/rht_LP_BS/mult_37/FS_1/U18/ZN (INVD2BWP)       0.02       1.62 r
+  iDigCore/rht_LP_BS/mult_37/FS_1/U91/ZN (NR2XD1BWP)      0.02       1.64 f
+  iDigCore/rht_LP_BS/mult_37/FS_1/U43/ZN (NR2XD1BWP)      0.02       1.66 r
+  iDigCore/rht_LP_BS/mult_37/FS_1/U72/ZN (OAI21D2BWP)     0.02       1.69 f
+  iDigCore/rht_LP_BS/mult_37/FS_1/U71/Z (CKXOR2D2BWP)     0.07       1.76 f
+  iDigCore/rht_LP_BS/mult_37/FS_1/SUM[23] (Equalizer_DW01_add_92)
+                                                          0.00       1.76 f
+  iDigCore/rht_LP_BS/mult_37/PRODUCT[25] (Equalizer_DW02_mult_9)
+                                                          0.00       1.76 f
+  U1406/ZN (CKND6BWP)                                     0.03       1.79 r
+  U1432/ZN (CKND2D8BWP)                                   0.02       1.81 f
+  U1515/ZN (OAI31D4BWP)                                   0.06       1.87 r
+  U1505/ZN (OAI31D4BWP)                                   0.05       1.93 f
+  add_3_root_iDigCore/add_88_4/A[1] (Equalizer_DW01_add_124)
+                                                          0.00       1.93 f
+  add_3_root_iDigCore/add_88_4/U149/ZN (NR2XD2BWP)        0.04       1.97 r
+  add_3_root_iDigCore/add_88_4/U26/ZN (OAI21D2BWP)        0.03       1.99 f
+  add_3_root_iDigCore/add_88_4/U111/ZN (INR2XD1BWP)       0.02       2.01 r
+  add_3_root_iDigCore/add_88_4/U105/ZN (OAI21D1BWP)       0.02       2.04 f
+  add_3_root_iDigCore/add_88_4/U97/ZN (NR2XD1BWP)         0.02       2.06 r
+  add_3_root_iDigCore/add_88_4/U144/ZN (OAI21D1BWP)       0.02       2.08 f
+  add_3_root_iDigCore/add_88_4/U143/ZN (AOI21D1BWP)       0.04       2.12 r
+  add_3_root_iDigCore/add_88_4/U84/ZN (INVD1BWP)          0.02       2.14 f
+  add_3_root_iDigCore/add_88_4/U83/ZN (ND2D2BWP)          0.02       2.16 r
+  add_3_root_iDigCore/add_88_4/U68/ZN (CKND2D2BWP)        0.03       2.18 f
+  add_3_root_iDigCore/add_88_4/SUM[7] (Equalizer_DW01_add_124)
+                                                          0.00       2.18 f
+  add_1_root_iDigCore/add_88_4/B[7] (Equalizer_DW01_add_119)
+                                                          0.00       2.18 f
+  add_1_root_iDigCore/add_88_4/U6/ZN (CKND2D1BWP)         0.03       2.22 r
+  add_1_root_iDigCore/add_88_4/U200/ZN (AOI21D1BWP)       0.03       2.25 f
+  add_1_root_iDigCore/add_88_4/U149/ZN (INR2D2BWP)        0.04       2.29 f
+  add_1_root_iDigCore/add_88_4/U168/ZN (IND3D2BWP)        0.06       2.35 f
+  add_1_root_iDigCore/add_88_4/U166/ZN (AOI21D1BWP)       0.05       2.40 r
+  add_1_root_iDigCore/add_88_4/U7/ZN (INVD1BWP)           0.03       2.42 f
+  add_1_root_iDigCore/add_88_4/U95/ZN (ND2D2BWP)          0.02       2.44 r
+  add_1_root_iDigCore/add_88_4/U53/ZN (CKND2D3BWP)        0.03       2.47 f
+  add_1_root_iDigCore/add_88_4/SUM[10] (Equalizer_DW01_add_119)
+                                                          0.00       2.47 f
+  add_0_root_iDigCore/add_88_4/B[10] (Equalizer_DW01_add_60)
+                                                          0.00       2.47 f
+  add_0_root_iDigCore/add_88_4/U130/ZN (IND2D4BWP)        0.05       2.52 f
+  add_0_root_iDigCore/add_88_4/U42/ZN (ND2D3BWP)          0.02       2.54 r
+  add_0_root_iDigCore/add_88_4/U37/ZN (CKND2BWP)          0.01       2.55 f
+  add_0_root_iDigCore/add_88_4/U79/ZN (ND3D3BWP)          0.02       2.56 r
+  add_0_root_iDigCore/add_88_4/U83/ZN (ND3D3BWP)          0.03       2.59 f
+  add_0_root_iDigCore/add_88_4/U116/ZN (ND2D2BWP)         0.02       2.62 r
+  add_0_root_iDigCore/add_88_4/U27/ZN (CKND2D4BWP)        0.02       2.63 f
+  add_0_root_iDigCore/add_88_4/U80/ZN (ND2D2BWP)          0.02       2.65 r
+  add_0_root_iDigCore/add_88_4/U11/ZN (CKND2D3BWP)        0.02       2.67 f
+  add_0_root_iDigCore/add_88_4/U150/ZN (AOI21D1BWP)       0.03       2.70 r
+  add_0_root_iDigCore/add_88_4/U23/Z (XOR2D2BWP)          0.09       2.79 f
+  add_0_root_iDigCore/add_88_4/SUM[15] (Equalizer_DW01_add_60)
+                                                          0.00       2.79 f
+  iDigCore/mult_88/B[15] (Equalizer_DW02_mult_31)         0.00       2.79 f
+  iDigCore/mult_88/U310/Z (AN2D4BWP)                      0.04       2.84 f
+  iDigCore/mult_88/U93/ZN (ND2D2BWP)                      0.02       2.86 r
+  iDigCore/mult_88/U169/ZN (ND2D2BWP)                     0.02       2.88 f
+  iDigCore/mult_88/S2_2_13/CO (FA1D1BWP)                  0.06       2.94 f
+  iDigCore/mult_88/S2_3_13/CO (FA1D1BWP)                  0.12       3.06 f
+  iDigCore/mult_88/S2_4_13/CO (FA1D1BWP)                  0.12       3.18 f
+  iDigCore/mult_88/S2_5_13/CO (FA1D1BWP)                  0.12       3.30 f
+  iDigCore/mult_88/S2_6_13/CO (FA1D1BWP)                  0.12       3.42 f
+  iDigCore/mult_88/S2_7_13/CO (FA1D1BWP)                  0.12       3.54 f
+  iDigCore/mult_88/S2_8_13/CO (FA1D1BWP)                  0.12       3.66 f
+  iDigCore/mult_88/S2_9_13/CO (FA1D1BWP)                  0.12       3.78 f
+  iDigCore/mult_88/S2_10_13/CO (FA1D1BWP)                 0.12       3.90 f
+  iDigCore/mult_88/S2_11_13/S (FA1D1BWP)                  0.11       4.01 f
+  iDigCore/mult_88/U37/Z (XOR2D1BWP)                      0.07       4.08 r
+  iDigCore/mult_88/U271/Z (CKXOR2D2BWP)                   0.08       4.16 f
+  iDigCore/mult_88/FS_1/A[22] (Equalizer_DW01_add_111)
+                                                          0.00       4.16 f
+  iDigCore/mult_88/FS_1/U97/Z (OR2D4BWP)                  0.05       4.22 f
+  iDigCore/mult_88/FS_1/U15/ZN (IND2D1BWP)                0.02       4.24 r
+  iDigCore/mult_88/FS_1/U5/ZN (INVD1BWP)                  0.02       4.26 f
+  iDigCore/mult_88/FS_1/U104/ZN (AOI21D1BWP)              0.03       4.29 r
+  iDigCore/mult_88/FS_1/U81/ZN (CKND2D1BWP)               0.03       4.33 f
+  iDigCore/mult_88/FS_1/U83/ZN (ND2D2BWP)                 0.02       4.35 r
+  iDigCore/mult_88/FS_1/SUM[24] (Equalizer_DW01_add_111)
+                                                          0.00       4.35 r
+  iDigCore/mult_88/PRODUCT[26] (Equalizer_DW02_mult_31)
+                                                          0.00       4.35 r
+  U1274/ZN (CKND2D2BWP)                                   0.02       4.37 f
+  U1459/ZN (ND2D2BWP)                                     0.02       4.39 r
+  iCS/rht_reg[14]/D (DFCND2BWP)                           0.00       4.39 r
+  data arrival time                                                  4.39
 
-  clock clk (rise edge)                                   5.00       5.00
-  clock network delay (ideal)                             0.00       5.00
-  clock uncertainty                                      -0.10       4.90
-  iCS/rht_reg[15]/CP (DFCNQD1BWP)                         0.00       4.90 r
-  library setup time                                     -0.03       4.87
-  data required time                                                 4.87
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.00       3.33
+  clock uncertainty                                      -0.10       3.23
+  iCS/rht_reg[14]/CP (DFCND2BWP)                          0.00       3.23 r
+  library setup time                                     -0.03       3.21
+  data required time                                                 3.21
   --------------------------------------------------------------------------
-  data required time                                                 4.87
-  data arrival time                                                 -4.87
+  data required time                                                 3.21
+  data arrival time                                                 -4.39
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.00
+  slack (VIOLATED)                                                  -1.18
 
 
 1
