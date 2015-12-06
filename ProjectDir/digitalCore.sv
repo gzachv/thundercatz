@@ -41,6 +41,7 @@ logic signed [15:0] lft_LP_scaled, lft_B1_scaled,
 		    rht_LP_scaled, rht_B1_scaled,
 		    rht_B2_scaled, rht_B3_scaled, rht_HP_scaled;	// Scaled samples
 
+logic signed [28:0] lft_sum, rht_sum;
 logic signed [28:0] lft_sum_vol, rht_sum_vol;	// Sum of scaled bands, scaled by volume
 logic signed [12:0] sign_vol;			// A signed version of the volume pot val
 
@@ -83,10 +84,17 @@ band_scale rht_HP_BS (.scaled(rht_HP_scaled), .POT(POT_HP), .audio(rht_HP_smpl_o
 
 //////////// Sum bands and scale by Volume //////////////////////
 assign sign_vol = {1'b0, VOLUME};
-assign lft_sum_vol = sign_vol * (lft_LP_scaled + lft_B1_scaled + lft_B2_scaled + 
-			lft_B3_scaled + lft_HP_scaled);
-assign rht_sum_vol = sign_vol * (rht_LP_scaled + rht_B1_scaled + rht_B2_scaled +
-			rht_B3_scaled + rht_HP_scaled);
+
+// Floped to help with ciritcal path timing
+always_ff @(posedge clk) begin
+	lft_sum <= (lft_LP_scaled + lft_B1_scaled + lft_B2_scaled + 
+				lft_B3_scaled + lft_HP_scaled);
+	rht_sum <= (rht_LP_scaled + rht_B1_scaled + rht_B2_scaled +
+				rht_B3_scaled + rht_HP_scaled);
+end
+
+assign lft_sum_vol = sign_vol * lft_sum;
+assign rht_sum_vol = sign_vol * rht_sum;
 
 assign lft_out = {lft_sum_vol[27:12]};
 assign rht_out = {rht_sum_vol[27:12]};

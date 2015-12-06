@@ -30,6 +30,8 @@ assign POT_squared = POT*POT;
 
 // Peel off first 12 bits to scale FIR, make signed (0 to MSB)
 assign FIR_scale = {1'b0,{POT_squared[23:12]}};
+
+// Flopped for critical path improvement
 always_ff @(posedge clk)
 	FIR <= FIR_scale;
 

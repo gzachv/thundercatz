@@ -135,15 +135,15 @@ R7
 n@b3_@f@i@r
 vband_scale
 R0
-!s110 1449415125
+!s110 1449428143
 !i10b 1
-!s100 lGh`[[1JnfH8CB:J_?2kW2
-IS8^GV@8KV7ddGc@ZTa5140
+!s100 =K``nD15m>bLBn08JQchZ1
+I5=bVnzDXO8zXHVL<dBYZo3
 R2
 !s105 band_scale_sv_unit
 S1
 R3
-w1449415123
+w1449428131
 8C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/ProjectDir/band_scale.sv
 FC:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/ProjectDir/band_scale.sv
 L0 8
@@ -151,7 +151,7 @@ R5
 r1
 !s85 0
 31
-!s108 1449415125.000000
+!s108 1449428143.000000
 !s107 C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/ProjectDir/band_scale.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/ProjectDir/band_scale.sv|
 !s101 -O0
@@ -205,15 +205,15 @@ Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 n@c@s4272
 vdigitalCore
 R0
-!s110 1449415171
+!s110 1449428159
 !i10b 1
-!s100 C=>1hF53=Rh?A76?HAo1G0
-IATE6^IU<mKf_R4``I444<3
+!s100 B>0IZ`0XojiNMf3^4P_`53
+IX]H3[Q_hC6E3ezQHOKHCU0
 R2
 !s105 digitalCore_sv_unit
 S1
 R3
-w1449415169
+w1449428156
 8C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/ProjectDir/digitalCore.sv
 FC:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/ProjectDir/digitalCore.sv
 L0 7
@@ -221,7 +221,7 @@ R5
 r1
 !s85 0
 31
-!s108 1449415171.000000
+!s108 1449428159.000000
 !s107 C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/ProjectDir/digitalCore.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Gustavo/Google Drive/Fall 2015/ECE 551/Project/thundercatz/ProjectDir/digitalCore.sv|
 !s101 -O0
