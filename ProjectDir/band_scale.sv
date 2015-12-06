@@ -14,7 +14,7 @@ input signed [15:0] audio;	// Audio signal from FIR
 output signed [15:0] scaled;	// Result of audio scaled by POT
 
 ////////// Intermediate wire Declarations //////////////////////
-wire [23:0] POT_squared; 		// will hold POT^2
+wire [23:0] POT_squared; 	// will hold POT^2
 wire signed [12:0] FIR_scale;	// Signed 13 bit FIR scale 
 wire signed [28:0] scale_audio;	// Scale audio by POT value
 wire signed [3:0] sat;		// Top 4 bits detect saturation
