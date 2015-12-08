@@ -1,4 +1,4 @@
-//`include "tb_tasks.sv";
+`include "tb_tasks.sv";
 /****************************************************************
  Module to implement a 5 Channel Equalizer testbench.
  Author : Thundercatz			HDL : System Verilog		 	
@@ -62,7 +62,8 @@ ADC128S iA2D (	.clk(clk), .rst_n(rst_n), .SS_n(A2D_SS_n), .SCLK(A2D_SCLK),
 				
 initial begin
 
-findFreq(EXPECTED_FREQ);
+runTests(EXPECTED_FREQ, EXPECTED_AMP);
+
 $stop;
 
 end
@@ -73,15 +74,16 @@ end
 always
 	#1 clk = ~clk;
 
-///////////////////// Find Freq task ////////////////////////////
+///////////////////// Run Tests task ////////////////////////////
 //	This task can find the frequency of the signals at     //
-// aout_lft and aout_rht. The value given to findFreq as a     //
-// param is the expected value of the freq. This is expected   //
-// to be used by running gen_audio to generate an audio input  //
-// signal, setting analog.dat to only allow one channel. Then, //
-// see if the value calculated is equal to the given param.    //
+// aout_lft and aout_rht. The value given to runTests as       //
+// params are the expected values of the frequency and         //
+// amplitude. This is expected to be used by running gen_audio //
+// to generate an audio input signal, setting analog.dat to    //
+// only allow one channel. Then see if the value calculated is //
+// equal to the given param.                                   //
 /////////////////////////////////////////////////////////////////
-task findFreq (	input [15:0] expected_freq);
+task runTests (	input [15:0] expected_freq, input [15:0] expected_amp);
 
 ////////// Internal Variable Declarations ///////////////////////
 integer fptr;		// File handle for writing output
@@ -97,8 +99,6 @@ logic signed [15:0] lft_max, rht_max,
 			lft_min, rht_min;
 logic signed [15:0] lft_prev, rht_prev;
 logic [15:0] lft_freq, rht_freq;
-logic [15:0] freq_diff;
-logic [15:0] amp_diff;
 
 /////////////////// Open File for output ////////////////////////
 fptr = $fopen("audio_out.csv","w");
@@ -130,7 +130,7 @@ for (x = 0; x < 2045; x = x + 1) begin
 	@(posedge LRCLK);
 end
 
-/////////////////// Read the freq from data ////////////////////////
+/////////////////// Read the freq and amp from data /////////////
 for (x = 0; x < 2048; x = x + 1) begin
 	@(posedge LRCLK);
 	$fwrite( fptr,"%f,%f\n", aout_rht, aout_lft );
@@ -169,20 +169,11 @@ end
 // LRCLK period = 48.828 KHz
 rht_freq = 1/((rht_crossing2 - rht_crossing) * 0.00002048005 * 2);
 $display("Rht Freq = %d Hz, EXPECTED FREQ = %d Hz", rht_freq, expected_freq);
-$display("Rht Amp  = %d Hz, EXPECTED AMP = %d Hz", rht_max, EXPECTED_AMP);
+$display("Rht Amp  = %d Hz, EXPECTED AMP = %d Hz", rht_max, expected_amp);
 
-freq_diff = (expected_freq - rht_freq);
-if (freq_diff < 0) 
-	freq_diff = -freq_diff;
-
-amp_diff = (EXPECTED_AMP - rht_max);
-if (amp_diff < 0)
-	amp_diff = -amp_diff;
-
-if (freq_diff < 0.05*expected_freq && )
-	$display("************PASS*************");
-else
-	$display("*****FAIL*******FAIL*******FAIL******");
+//////////////// Test against expected values ///////////////////
+testFreq(expected_freq, rht_freq);
+testAmp(expected_amp, rht_max);
 
 /////////////////// Close output file ///////////////////////////
 $fclose(fptr);
@@ -192,3 +183,4 @@ $stop;
 endtask
 
 endmodule
+
