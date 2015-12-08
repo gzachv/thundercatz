@@ -36,7 +36,7 @@ set current_design Equalizer
 # 		Sets clock with period 5ns = 200MHz, 3.33ns = 300MHz			#
 #		50% duty, starts high at 0 falls at 1 time unit					#
 #########################################################################
-create_clock -name "clk" -period 5 -waveform {0 1} {clk}
+create_clock -name "clk" -period 3.3333 -waveform {0 1} {clk}
 set_dont_touch_network [find port clk]
 
 #########################################################################
@@ -89,7 +89,8 @@ ungroup -all -flatten
 #########################################################################
 # 		Second compliation												#
 #########################################################################
-compile -map_effort high
+compile_ultra 
+#compile -map_effort high
 
 #########################################################################
 # 		Generate timing and area reports								#

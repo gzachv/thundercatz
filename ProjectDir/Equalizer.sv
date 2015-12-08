@@ -27,7 +27,8 @@ wire valid;
 wire valid_fall,valid_rise;
 wire [15:0] lft_in,rht_in;
 wire [15:0] lft_out,rht_out,lft_out_sel,rht_out_sel;
-wire [11:0] LP_gain,B1_gain,B2_gain,B3_gain,HP_gain,volume;
+wire [23:0] LP_gain,B1_gain,B2_gain,B3_gain,HP_gain;
+wire [11:0] volume;
 wire lftQ_full, rhtQ_full;
 
 reg [10:0] del;

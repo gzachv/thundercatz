@@ -98,6 +98,7 @@ logic signed [15:0] lft_max, rht_max,
 logic signed [15:0] lft_prev, rht_prev;
 logic [15:0] lft_freq, rht_freq;
 logic [15:0] freq_diff;
+logic [15:0] amp_diff;
 
 /////////////////// Open File for output ////////////////////////
 fptr = $fopen("audio_out.csv","w");
@@ -174,7 +175,11 @@ freq_diff = (expected_freq - rht_freq);
 if (freq_diff < 0) 
 	freq_diff = -freq_diff;
 
-if (freq_diff < 0.1*expected_freq)
+amp_diff = (EXPECTED_AMP - rht_max);
+if (amp_diff < 0)
+	amp_diff = -amp_diff;
+
+if (freq_diff < 0.05*expected_freq && )
 	$display("************PASS*************");
 else
 	$display("*****FAIL*******FAIL*******FAIL******");

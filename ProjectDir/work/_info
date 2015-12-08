@@ -130,17 +130,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 =K``nD15m>bLBn08JQchZ1
-I0FZdYl6ERFDHJTz3^`2[82
+!s100 of[PV_TzW[1>8=3nOIXWK2
+I8;bOgJ`gkU[ObX>T4?>h72
 !s105 band_scale_sv_unit
 S1
 R2
-Z5 w1449429356
+w1449603529
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv
 L0 8
 R3
-!s108 1449601342.906220
+!s108 1449603535.409222
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv|
 !i113 0
@@ -185,7 +185,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/CS4272.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/CS4272.v|
 !i113 0
-Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@c@s4272
 vdigitalCore
 R0
@@ -194,17 +194,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 B>0IZ`0XojiNMf3^4P_`53
-I6K15[i=[Jh_[VXVQa[mXU0
+!s100 UDEf<G]WVIm:CUG6j8anz0
+IQ@n0UM0K4NA_cXZ`;jkJW1
 !s105 digitalCore_sv_unit
 S1
 R2
-R5
+w1449605731
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv
 L0 7
 R3
-!s108 1449601343.745089
+!s108 1449605805.838981
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv|
 !i113 0
@@ -219,7 +219,7 @@ r1
 !s100 kYgFML]4CYJ7V15LCTeTS0
 I?Qb^I9DOz1P_Zz16k>j;=0
 R2
-Z7 w1448338884
+Z6 w1448338884
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v
 L0 1
@@ -228,7 +228,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v|
 !i113 0
-R6
+R5
 ndual@port1024x16
 vdualPort1536x16
 R1
@@ -239,7 +239,7 @@ r1
 !s100 bNYM:I_zX`>fij9`a9IO02
 INW2]OM9nhn3HGH33jm9TS3
 R2
-R7
+R6
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v
 L0 1
@@ -248,7 +248,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v|
 !i113 0
-R6
+R5
 ndual@port1536x16
 vEqualizer
 R0
@@ -257,17 +257,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 >K>N_Q3J`^8bg7BLAR>h41
-IW5?a9]MffNFdNE2aNbi9c2
+!s100 `kUHSWP7UeUl02Tci@g=T0
+I0Ak[;YbZ=ceb^:G^BVEFg0
 !s105 Equalizer_sv_unit
 S1
 R2
-w1449182790
+w1449605514
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv
 L0 7
 R3
-!s108 1449601344.544449
+!s108 1449605806.599408
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv|
 !i113 0
@@ -408,7 +408,7 @@ r1
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/posedgeDetect.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/posedgeDetect.v|
 !i113 0
-R6
+R5
 nposedge@detect
 vreset_synch
 R1
@@ -428,7 +428,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/reset_synch.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/reset_synch.v|
 !i113 0
-R6
+R5
 vROM_B1
 R1
 r1
@@ -447,7 +447,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B1.v|
 !i113 0
-R6
+R5
 n@r@o@m_@b1
 vROM_B2
 R1
@@ -458,7 +458,7 @@ r1
 !s100 49AVDUoT1i0bibAz<<>Je3
 IP4Nn0QQXjD_zkAC?5:a6z0
 R2
-Z8 w1448338680
+Z7 w1448338680
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v
 L0 1
@@ -467,7 +467,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v|
 !i113 0
-R6
+R5
 n@r@o@m_@b2
 vROM_B3
 R1
@@ -478,7 +478,7 @@ r1
 !s100 CIF_6E>Lk0nEFeB6V8B730
 IK3DLmo`XmRI5z>0cl^5hY0
 R2
-R8
+R7
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v
 L0 1
@@ -487,7 +487,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v|
 !i113 0
-R6
+R5
 n@r@o@m_@b3
 vROM_HP
 R1
@@ -498,7 +498,7 @@ r1
 !s100 XG7O0ofO[Az;oITQ@V1>k2
 I2ofH>bIHK5ZAB^VfM>0[R1
 R2
-R8
+R7
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v
 L0 1
@@ -507,7 +507,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v|
 !i113 0
-R6
+R5
 n@r@o@m_@h@p
 vROM_LP
 R1
@@ -518,7 +518,7 @@ r1
 !s100 UPX2H1?LRoN05]00V8<^g0
 I@R39>?QbQJf=fibNBB3[I2
 R2
-R8
+R7
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v
 L0 1
@@ -527,7 +527,7 @@ R3
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v|
 !i113 0
-R6
+R5
 n@r@o@m_@l@p
 vslide_intf
 R0
@@ -536,17 +536,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 5Yo`<nClMQg<OVQ=>XjBC3
-IIf>3VjE6i0jMWe4hG54B[3
+!s100 0X8N:CX1z^iN;NUZ=b^1=1
+IJj]5C=[]:jK<MlakA8HG<3
 !s105 slide_intf_sv_unit
 S1
 R2
-w1449249648
+w1449605474
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv
 L0 8
 R3
-!s108 1449601347.850642
+!s108 1449605488.681672
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv|
 !i113 0

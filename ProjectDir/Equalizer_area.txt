@@ -3,7 +3,7 @@
 Report : area
 Design : Equalizer
 Version: J-2014.09-SP5
-Date   : Sun Dec  6 13:17:35 2015
+Date   : Tue Dec  8 14:40:25 2015
 ****************************************
 
 Library(s) Used:
@@ -11,20 +11,20 @@ Library(s) Used:
     tcbn40lpbwptc (File: /cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
 
 Number of ports:                           21
-Number of nets:                          4398
-Number of cells:                         2842
-Number of combinational cells:           1846
-Number of sequential cells:               915
+Number of nets:                         18563
+Number of cells:                        16631
+Number of combinational cells:          15805
+Number of sequential cells:               826
 Number of macros/black boxes:               0
-Number of buf/inv:                        817
-Number of references:                     199
+Number of buf/inv:                       2628
+Number of references:                     179
 
-Combinational area:              41370.033226
-Buf/Inv area:                     1639.461650
-Noncombinational area:            3808.828800
+Combinational area:              25312.342067
+Buf/Inv area:                     1806.159648
+Noncombinational area:            3369.769213
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                 45178.862026
+Total cell area:                 28682.111280
 Total area:                 undefined
 1

@@ -14,8 +14,9 @@ output signed [15:0]	lft_out,
 
 output lftQ_full, rhtQ_full;		// Signal the queue is full	
 
-input [11:0] 	POT_LP, POT_B1, POT_B2,
-		POT_B3, POT_HP, VOLUME; // Pot Values
+input [23:0] 	POT_LP, POT_B1, POT_B2,
+				POT_B3, POT_HP;
+input [11:0]	VOLUME; // Pot Values
 
 input signed [15:0]	lft_in,
 			rht_in;		// Raw Aduio input
@@ -83,7 +84,7 @@ band_scale rht_B3_BS (.scaled(rht_B3_scaled), .POT(POT_B3), .audio(rht_B3_smpl_o
 band_scale rht_HP_BS (.scaled(rht_HP_scaled), .POT(POT_HP), .audio(rht_HP_smpl_out), .clk(clk));
 
 //////////// Sum bands and scale by Volume //////////////////////
-assign sign_vol = {1'b0, VOLUME};
+assign sign_vol = {1'b0, VOLUME[11:0]};
 
 // Floped to help with ciritcal path timing
 always_ff @(posedge clk) begin

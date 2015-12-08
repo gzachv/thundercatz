@@ -9,13 +9,12 @@ module band_scale(scaled, POT, audio, clk);
 
 ////////// Variable Declaration for interface ///////////////////
 input clk;				// System clk
-input [11:0] POT;		// A2D reading from slide pot
+input [23:0] POT;		// A2D reading from slide pot
 input signed [15:0] audio;	// Audio signal from FIR
 
 output signed [15:0] scaled;	// Result of audio scaled by POT
 
 ////////// Intermediate wire Declarations //////////////////////
-wire [23:0] POT_squared; 	// will hold POT^2
 wire signed [12:0] FIR_scale;	// Signed 13 bit FIR scale
 reg signed [12:0] FIR;			// Delayed by FF for timing 
 wire signed [28:0] scale_audio;	// Scale audio by POT value
@@ -24,12 +23,8 @@ wire signed [15:0] result;	// Result if not in saturation
 wire sat_neg;			// Set iff in neg saturation
 wire sat_pos;			// Set iff in pos saturation
 
-///////////// unsigned 12x12 multiplier ////////////////////////
-// Square the value of POT
-assign POT_squared = POT*POT;
-
 // Peel off first 12 bits to scale FIR, make signed (0 to MSB)
-assign FIR_scale = {1'b0,{POT_squared[23:12]}};
+assign FIR_scale = {1'b0,{POT[23:12]}};
 
 // Flopped for critical path improvement
 always_ff @(posedge clk)

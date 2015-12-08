@@ -10,7 +10,8 @@ module slide_intf ( POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME,
 		    MISO, clk, rst_n );
 
 ////////// Variable Declaration for interface ///////////////////
-output logic [11:0] POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME;
+output logic [23:0] POT_LP, POT_B1, POT_B2, POT_B3, POT_HP;
+output logic [11:0] VOLUME;
 output logic a2d_SS_n, SCLK, MOSI;
 input MISO, clk, rst_n;
 
@@ -18,7 +19,8 @@ input MISO, clk, rst_n;
 logic strt_cnv, inc_chnnl;
 logic [2:0] chnnl;
 wire cnv_cmplt;
-wire [11:0] res;
+logic [23:0] res_squared;
+logic [11:0] res;
 logic potLP_en, potB1_en, potB2_en, potB3_en, potHP_en, volume_en;  
 
 /////////////////////////// A2D Instantiation ///////////////////
@@ -26,6 +28,9 @@ A2D_intf iA2D_intf ( .clk(clk), .rst_n(rst_n),
 		     .strt_cnv(strt_cnv), .chnnl(chnnl), 
 		     .cnv_cmplt(cnv_cmplt), .res(res), 
 		     .a2d_SS_n(a2d_SS_n), .SCLK(SCLK), .MOSI(MOSI), .MISO(MISO));
+
+////////////////// res squared //////////////////////////////////
+assign res_squared = res*res;
 
 ///////////////////// Channel Counter ///////////////////////////
 always_ff @(posedge clk, negedge rst_n) begin
@@ -45,7 +50,7 @@ always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n)
 		POT_LP <= 12'h000;
 	else if (potLP_en)
-		POT_LP <= res;
+		POT_LP <= res_squared;
 	else
 		POT_LP <= POT_LP;
 end
@@ -55,7 +60,7 @@ always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n)
 		POT_B1 <= 12'h000;
 	else if (potB1_en)
-		POT_B1 <= res;
+		POT_B1 <= res_squared;
 	else
 		POT_B1 <= POT_B1;
 end
@@ -65,7 +70,7 @@ always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n)
 		POT_B2 <= 12'h000;
 	else if (potB2_en)
-		POT_B2 <= res;
+		POT_B2 <= res_squared;
 	else
 		POT_B2 <= POT_B2;
 end
@@ -75,7 +80,7 @@ always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n)
 		POT_B3 <= 12'h000;
 	else if (potB3_en)
-		POT_B3 <= res;
+		POT_B3 <= res_squared;
 	else
 		POT_B3 <= POT_B3;
 end
@@ -85,7 +90,7 @@ always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n)
 		POT_HP <= 12'h000;
 	else if (potHP_en)
-		POT_HP <= res;
+		POT_HP <= res_squared;
 	else
 		POT_HP <= POT_HP;
 end
