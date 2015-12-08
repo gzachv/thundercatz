@@ -9,8 +9,9 @@ module Equalizer_tb();
 // Variable Declarations //
 //////////////////////////
 
-localparam EXPECTED_FREQ = 320; 
-// Enter as expected freq from gen_audio script, remember to set analog.dat
+localparam EXPECTED_FREQ = 32;
+localparam EXPECTED_AMP  = 3200;
+// Enter as expected freq, amp from gen_audio script, remember to set analog.dat
 
 reg clk, RST_n;
 
@@ -35,6 +36,7 @@ logic	RSTn;			// CODEC reset, active low
 logic rst_n;
 assign rst_n = RST_n;		// rst_n should be a synchronized version of RST_n
 
+logic status;
 
 //////////////////////
 // Instantiate DUT //
@@ -163,10 +165,10 @@ for (x = 0; x < 2048; x = x + 1) begin
 	
 end
 
-// 1024 samples per LRCLK period, 2ns per clk cycle, 
-// taken from consequtive cross so calculating 1/2 period (Hence 2 at end)
-rht_freq = 1/((rht_crossing2 - rht_crossing) * 1024 * 0.000000002 * 2);
-$display("Rht Freq = %dHz, EXPECTED FREQ = %d", rht_freq, expected_freq);
+// LRCLK period = 48.828 KHz
+rht_freq = 1/((rht_crossing2 - rht_crossing) * 0.00002048005 * 2);
+$display("Rht Freq = %d Hz, EXPECTED FREQ = %d Hz", rht_freq, expected_freq);
+$display("Rht Amp  = %d Hz, EXPECTED AMP = %d Hz", rht_max, EXPECTED_AMP);
 
 freq_diff = (expected_freq - rht_freq);
 if (freq_diff < 0) 
