@@ -47,19 +47,19 @@ logic signed [28:0] lft_sum_vol, rht_sum_vol;	// Sum of scaled bands, scaled by 
 logic signed [12:0] sign_vol;			// A signed version of the volume pot val
 
 /////////////////////// Queue instantiation /////////////////////
-slowQueue iLftSlowQ (	.sequencing(lft_slow_seq), .smpl_out(lft_slow_smpl_out), .isFull(lftQ_full), 
+slowQueue iLftSlowQ (	.sequencing(lft_slow_seq), .smpl_out(lft_slow_smpl_out), 
 			.wrt_smpl(valid), .new_smpl(lft_in), 
 			.clk(clk), .rst_n(rst_n) );
 
-fastQueue iLftFastQ (	.sequencing(lft_fast_seq), .smpl_out(lft_fast_smpl_out), 
+fastQueue iLftFastQ (	.sequencing(lft_fast_seq), .smpl_out(lft_fast_smpl_out), .isFull(lftQ_full), 
 			.wrt_smpl(valid), .new_smpl(lft_in), 
 			.clk(clk), .rst_n(rst_n) );
 
-slowQueue iRhtSlowQ (	.sequencing(rht_slow_seq), .smpl_out(rht_slow_smpl_out), .isFull(rhtQ_full),
+slowQueue iRhtSlowQ (	.sequencing(rht_slow_seq), .smpl_out(rht_slow_smpl_out),
 			.wrt_smpl(valid), .new_smpl(rht_in), 
 			.clk(clk), .rst_n(rst_n) );
 
-fastQueue iRhtFastQ (	.sequencing(rht_fast_seq), .smpl_out(rht_fast_smpl_out), 
+fastQueue iRhtFastQ (	.sequencing(rht_fast_seq), .smpl_out(rht_fast_smpl_out), .isFull(rhtQ_full), 
 			.wrt_smpl(valid), .new_smpl(rht_in), 
 			.clk(clk), .rst_n(rst_n) );
 

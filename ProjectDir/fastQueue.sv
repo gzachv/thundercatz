@@ -4,7 +4,7 @@
  Student ID: 903 015 5247	
  Date : 11/13/2015 							
 ****************************************************************/ 
-module fastQueue(sequencing, smpl_out, wrt_smpl, new_smpl, clk, rst_n);
+module fastQueue(sequencing, smpl_out, isFull, wrt_smpl, new_smpl, clk, rst_n);
 
 ////////// Variable Declaration for interface ///////////////////
 input clk, rst_n;		// system reset and clk
@@ -14,6 +14,7 @@ input wrt_smpl;			// Triggers a new sample into queue and
 
 output reg [15:0] smpl_out;	// Data being read out
 output logic sequencing; 	// High the entire time the 1021 samples
+output logic	isFull;		// Signal the queue is in a full state
 
 ////////// Intermediate wire Declarations ///////////////////////
 reg[10:0] new_ptr,	// Pointer to the location new data should be added
@@ -21,7 +22,6 @@ reg[10:0] new_ptr,	// Pointer to the location new data should be added
 	  read_ptr,	// Pointer to loc to be read (starts at old goes old + 1020)
 	  end_ptr;	// Marks the end point of the valid data in queue
 logic	qWr_en;		// Queue write enable, active high
-logic	isFull;		// Signal the queue is in a full state
 logic	inc_ptr;	// Signal new ptr to increment
 
 /////////////// Instantiate memory module ///////////////////////

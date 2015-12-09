@@ -4,7 +4,7 @@
  Student ID: 903 015 5247	
  Date : 11/13/2015 							
 ****************************************************************/ 
-module slowQueue(sequencing, smpl_out, isFull, wrt_smpl, new_smpl, clk, rst_n);
+module slowQueue(sequencing, smpl_out, wrt_smpl, new_smpl, clk, rst_n);
 
 ////////// Variable Declaration for interface ///////////////////
 input clk, rst_n;		// system reset and clk
@@ -14,7 +14,6 @@ input wrt_smpl;			// Triggers a new sample into queue and
 
 output reg [15:0] smpl_out;	// Data being read out
 output logic sequencing; 	// High the entire time the 1021 samples
-output logic isFull;		// Signal the queue is in a full state
 
 ////////// Intermediate wire Declarations ///////////////////////
 reg[9:0]new_ptr,	// Pointer to the location new data should be added
@@ -23,6 +22,7 @@ reg[9:0]new_ptr,	// Pointer to the location new data should be added
 	end_ptr;	// Marks the end point of the valid data in queue
 logic	qWr_en;		// Queue write enable, active high
 logic	inc_ptr;	// Signal new ptr to increment
+logic isFull;		// Signal the queue is in a full state
 
 /////////////// Instantiate memory module ///////////////////////
 dualPort1024x16 queue (	.clk(clk), .we(qWr_en), 

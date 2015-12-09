@@ -49,7 +49,7 @@ slide_intf iSLD (  .POT_LP(LP_gain), .POT_B1(B1_gain), .POT_B2(B2_gain),
 ///////////////////////////////////////
 // Instantiate Your CODEC Interface //
 /////////////////////////////////////
-codec_intf iCS ( .clk(clk), .rst_n(rst_n), .lft_in(lft_in), .rht_in(rht_in),
+codec_intf iCintf ( .clk(clk), .rst_n(rst_n), .lft_in(lft_in), .rht_in(rht_in),
 		 .lft_out(lft_out), .rht_out(rht_out),
                  .valid(valid), .RSTn(RSTn), .MCLK(MCLK), .SCLK(SCL),
 		 .LRCLK(LRCLK), .SDin(SDin), .SDout(SDout) );

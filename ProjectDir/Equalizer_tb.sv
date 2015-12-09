@@ -126,12 +126,12 @@ lft_freq = 0;
 rht_freq = 0;
 
 //////////////// Wait for Queue to fill /////////////////////////
-for (x = 0; x < 2045; x = x + 1) begin
-	@(posedge LRCLK);
-end
+@(posedge AMP_ON)
 
 /////////////////// Read the freq and amp from data /////////////
-for (x = 0; x < 2048; x = x + 1) begin
+lft_prev = aout_lft;
+rht_prev = aout_rht;
+for (x = 0; x < 140; x = x + 1) begin
 	@(posedge LRCLK);
 	$fwrite( fptr,"%f,%f\n", aout_rht, aout_lft );
 
@@ -169,7 +169,7 @@ end
 // LRCLK period = 48.828 KHz
 rht_freq = 1/((rht_crossing2 - rht_crossing) * 0.00002048005 * 2);
 $display("Rht Freq = %d Hz, EXPECTED FREQ = %d Hz", rht_freq, expected_freq);
-$display("Rht Amp  = %d Hz, EXPECTED AMP = %d Hz", rht_max, expected_amp);
+$display("Rht Amp  = %d, EXPECTED AMP = %d", rht_max, expected_amp);
 
 //////////////// Test against expected values ///////////////////
 testFreq(expected_freq, rht_freq);
