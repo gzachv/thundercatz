@@ -9,7 +9,7 @@ module Equalizer_tb();
 // Variable Declarations //
 //////////////////////////
 
-localparam EXPECTED_FREQ = 32;
+localparam EXPECTED_FREQ = 160;
 localparam EXPECTED_AMP  = 3200;
 // Enter as expected freq, amp from gen_audio script, remember to set analog.dat
 
@@ -131,7 +131,7 @@ rht_freq = 0;
 /////////////////// Read the freq and amp from data /////////////
 lft_prev = aout_lft;
 rht_prev = aout_rht;
-for (x = 0; x < 140; x = x + 1) begin
+for (x = 0; x < 2000; x = x + 1) begin
 	@(posedge LRCLK);
 	$fwrite( fptr,"%f,%f\n", aout_rht, aout_lft );
 

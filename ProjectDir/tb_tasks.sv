@@ -5,10 +5,10 @@
 // given to testFreq as params are the expected and actual     //
 // values of the frequency.                                    //
 /////////////////////////////////////////////////////////////////
-task testFreq(input [15:0] expected_freq, actual_freq);
+task testFreq(input signed [15:0] expected_freq, actual_freq);
 
 ////////// Internal Variable Declarations ///////////////////////
-logic [15:0] freq_diff;
+logic signed [15:0] freq_diff;
 
 freq_diff = (expected_freq - actual_freq);
 if (freq_diff < 0) 
@@ -32,10 +32,10 @@ endtask
 // given to testAmp as params are the expected and actual      //
 // values of the amplitude.                                    //
 /////////////////////////////////////////////////////////////////
-task testAmp(input [15:0] expected_amp, actual_amp);
+task testAmp(input signed [15:0] expected_amp, actual_amp);
 
 ////////// Internal Variable Declarations ///////////////////////
-logic [15:0] amp_diff;
+logic signed [15:0] amp_diff;
 
 amp_diff = (expected_amp - actual_amp);
 if (amp_diff < 0)
