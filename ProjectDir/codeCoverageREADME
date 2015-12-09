@@ -1,0 +1,13 @@
+Code Coverage Read me:
+
+Thundercatz
+ECE551
+
+We ran code coverage on our entire test bench. The resulting reports are included in this deliverable. 
+
+The code coverage results presented in this deliverable report. The first time we ran code coverage
+ (results in code_coverage_results.png and coverage_report.txt) we saw that the branch coverage for the band scale
+module was at 50%. On further inspection, we saw that the saturation was not being tested by our testbench. 
+
+To fix this lack of coverage, we ran our testbench with a variety of other analog_in files. We made sure to max out
+all of the analog.dat channels. This assured that the saturation values would be hit by the testbench. 
