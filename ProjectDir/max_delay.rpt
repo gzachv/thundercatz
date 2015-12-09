@@ -7,15 +7,15 @@ Report : timing
         -max_paths 1
 Design : Equalizer
 Version: J-2014.09-SP5
-Date   : Tue Dec  8 14:40:25 2015
+Date   : Tue Dec  8 18:48:45 2015
 ****************************************
 
 Operating Conditions: NCCOM   Library: tcbn40lpbwptc
 Wire Load Model Mode: segmented
 
-  Startpoint: iDigCore/rht_B1_BS/FIR_reg[3]
+  Startpoint: iDigCore/iB2_FIR/lft_accum_reg[3]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: iDigCore/lft_sum_reg[17]
+  Endpoint: iDigCore/iB2_FIR/lft_accum_reg[30]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -29,58 +29,64 @@ Wire Load Model Mode: segmented
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  iDigCore/rht_B1_BS/FIR_reg[3]/CP (DFQD2BWP)             0.00       0.00 r
-  iDigCore/rht_B1_BS/FIR_reg[3]/Q (DFQD2BWP)              0.15       0.15 f
-  U4061/ZN (INVD2BWP)                                     0.04       0.19 r
-  U3973/Z (CKBD1BWP)                                      0.06       0.25 r
-  U8577/ZN (CKND0BWP)                                     0.04       0.29 f
-  U1248/ZN (XNR2D1BWP)                                    0.09       0.38 r
-  U1790/Z (CKBD12BWP)                                     0.06       0.44 r
-  U8578/ZN (ND2D8BWP)                                     0.06       0.50 f
-  U2545/ZN (OAI22D1BWP)                                   0.06       0.56 r
-  mult_x_158/U225/S (CMPE42D1BWP)                         0.29       0.86 f
-  mult_x_158/U224/CO (CMPE42D1BWP)                        0.26       1.11 f
-  U4558/ZN (CKND2D0BWP)                                   0.05       1.16 r
-  U4555/ZN (OAI21D0BWP)                                   0.08       1.24 f
-  U8632/ZN (AOI21D2BWP)                                   0.06       1.29 r
-  U8633/ZN (OAI21D2BWP)                                   0.05       1.35 f
-  U2464/ZN (ND2D2BWP)                                     0.03       1.37 r
-  U1180/ZN (OAI21D1BWP)                                   0.03       1.40 f
-  U2044/CO (FA1D1BWP)                                     0.07       1.47 f
-  U2039/CO (FA1D1BWP)                                     0.07       1.54 f
-  U8639/CO (FA1D2BWP)                                     0.08       1.62 f
-  U1441/ZN (INVD1BWP)                                     0.06       1.67 r
-  U2544/ZN (ND2D8BWP)                                     0.06       1.73 f
-  U3046/ZN (IOA21D1BWP)                                   0.07       1.80 f
-  DP_OP_261J1_122_4391/U48/S (CMPE42D1BWP)                0.25       2.05 f
-  U2015/CO (FA1D1BWP)                                     0.13       2.18 f
-  U2011/CO (FA1D1BWP)                                     0.07       2.25 f
-  U2009/CO (FA1D1BWP)                                     0.07       2.32 f
-  U2006/CO (FA1D1BWP)                                     0.07       2.38 f
-  U2003/CO (FA1D1BWP)                                     0.07       2.45 f
-  U1999/CO (FA1D1BWP)                                     0.07       2.52 f
-  U1993/CO (FA1D1BWP)                                     0.07       2.58 f
-  U1989/CO (FA1D1BWP)                                     0.07       2.65 f
-  U1987/CO (FA1D1BWP)                                     0.07       2.72 f
-  U1982/CO (FA1D1BWP)                                     0.07       2.79 f
-  U1980/CO (FA1D1BWP)                                     0.07       2.85 f
-  U1975/CO (FA1D1BWP)                                     0.07       2.92 f
-  U1971/CO (FA1D1BWP)                                     0.07       2.99 f
-  U1968/CO (FA1D1BWP)                                     0.07       3.05 f
-  U1964/CO (FA1D1BWP)                                     0.07       3.13 f
-  U1956/ZN (XNR2D0BWP)                                    0.08       3.20 r
-  iDigCore/lft_sum_reg[17]/D (DFQD1BWP)                   0.00       3.20 r
-  data arrival time                                                  3.20
+  iDigCore/iB2_FIR/lft_accum_reg[3]/CP (DFCNQD1BWP)       0.00       0.00 r
+  iDigCore/iB2_FIR/lft_accum_reg[3]/Q (DFCNQD1BWP)        0.13       0.13 f
+  U5572/ZN (CKND0BWP)                                     0.04       0.17 r
+  U2947/ZN (NR2D0BWP)                                     0.05       0.22 f
+  U5570/ZN (AOI21D0BWP)                                   0.07       0.29 r
+  U6774/S (FA1D0BWP)                                      0.11       0.40 f
+  U13887/CO (FA1D0BWP)                                    0.14       0.53 f
+  U6776/ZN (NR2XD0BWP)                                    0.06       0.59 r
+  U3735/ZN (MOAI22D0BWP)                                  0.05       0.64 f
+  U13879/CO (FA1D0BWP)                                    0.11       0.75 f
+  U2377/ZN (OAI22D2BWP)                                   0.05       0.81 r
+  U2052/ZN (MAOI222D1BWP)                                 0.09       0.89 f
+  U6777/ZN (MAOI222D1BWP)                                 0.13       1.03 r
+  U6778/ZN (INR2XD1BWP)                                   0.08       1.11 r
+  U6779/ZN (OAI22D1BWP)                                   0.04       1.15 f
+  U15690/CO (FA1D0BWP)                                    0.11       1.26 f
+  U6780/ZN (OAI22D1BWP)                                   0.06       1.33 r
+  U1174/ZN (INVD1BWP)                                     0.04       1.37 f
+  U6781/ZN (OAI22D2BWP)                                   0.06       1.43 r
+  U6782/Z (AN2XD1BWP)                                     0.07       1.49 r
+  U6783/ZN (OAI22D2BWP)                                   0.04       1.53 f
+  U6784/ZN (OAI22D2BWP)                                   0.06       1.59 r
+  U6785/ZN (ND2D1BWP)                                     0.04       1.63 f
+  U6787/ZN (ND2D1BWP)                                     0.03       1.66 r
+  U6789/ZN (ND2D2BWP)                                     0.03       1.69 f
+  U1961/CON (FCICOND1BWP)                                 0.10       1.79 r
+  U6790/ZN (MAOI222D1BWP)                                 0.11       1.90 f
+  U9621/ZN (OAI22D2BWP)                                   0.08       1.99 r
+  U13103/Z (AN2XD1BWP)                                    0.07       2.05 r
+  U13104/ZN (OAI22D2BWP)                                  0.03       2.08 f
+  U13107/ZN (OAI22D1BWP)                                  0.07       2.16 r
+  U1484/Z (CKAN2D1BWP)                                    0.08       2.24 r
+  U13111/ZN (OAI22D1BWP)                                  0.04       2.28 f
+  U13112/ZN (MAOI222D1BWP)                                0.11       2.39 r
+  U3637/ZN (MAOI222D1BWP)                                 0.10       2.49 f
+  U3676/ZN (MAOI222D1BWP)                                 0.12       2.61 r
+  U13117/ZN (MAOI222D1BWP)                                0.10       2.71 f
+  U13125/ZN (CKND0BWP)                                    0.05       2.76 r
+  U1471/ZN (ND2D1BWP)                                     0.03       2.80 f
+  U1407/ZN (CKND2D0BWP)                                   0.05       2.85 r
+  U1405/ZN (OAI22D1BWP)                                   0.06       2.90 f
+  U2376/ZN (OAI22D2BWP)                                   0.05       2.95 r
+  U1399/ZN (CKND2D0BWP)                                   0.07       3.01 f
+  U13552/ZN (OAI21D1BWP)                                  0.05       3.06 r
+  U5864/Z (XOR2D0BWP)                                     0.08       3.14 f
+  U13558/ZN (MOAI22D0BWP)                                 0.05       3.19 r
+  iDigCore/iB2_FIR/lft_accum_reg[30]/D (DFCNQD1BWP)       0.00       3.19 r
+  data arrival time                                                  3.19
 
   clock clk (rise edge)                                   3.33       3.33
   clock network delay (ideal)                             0.00       3.33
   clock uncertainty                                      -0.10       3.23
-  iDigCore/lft_sum_reg[17]/CP (DFQD1BWP)                  0.00       3.23 r
-  library setup time                                     -0.03       3.20
-  data required time                                                 3.20
+  iDigCore/iB2_FIR/lft_accum_reg[30]/CP (DFCNQD1BWP)      0.00       3.23 r
+  library setup time                                     -0.04       3.19
+  data required time                                                 3.19
   --------------------------------------------------------------------------
-  data required time                                                 3.20
-  data arrival time                                                 -3.20
+  data required time                                                 3.19
+  data arrival time                                                 -3.19
   --------------------------------------------------------------------------
   slack (MET)                                                        0.00
 

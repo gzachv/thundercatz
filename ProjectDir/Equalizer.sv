@@ -67,7 +67,7 @@ digitalCore iDigCore (	.lft_out(lft_out), .rht_out(rht_out),
 ////////////////////////////////////////////////////////////
 // Instantiate LED effect driver (optional extra credit) //
 //////////////////////////////////////////////////////////
-assign LED = 8'h02;// Tied low for now
+LED_intf iLED (.LEDs(LED), .volume(volume));
 	  
 ////////////////////////////////////////////////
 // Implement logic for delaying Amp_on until //
