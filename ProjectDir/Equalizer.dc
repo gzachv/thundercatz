@@ -91,8 +91,7 @@ ungroup -all -flatten
 #########################################################################
 # 		Second compliation												#
 #########################################################################
-compile_ultra -no_autoungroup
-#compile -map_effort high
+compile_ultra
 
 #########################################################################
 # 		Generate timing and area reports								#
