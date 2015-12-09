@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement a meta stable posedge detector.
  Author : ThunderCatz 		HDL : Verilog		 
- Student ID: 903 015 5247	
  Date : 11/09/2015 							
 ****************************************************************/ 
 

@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement the circular queue opperating at 48.828kHz.
- Authors : ThunderCatz 		HDL : System Verilog		 
- Student ID: 903 015 5247	
+ Authors : ThunderCatz 		HDL : System Verilog		 	
  Date : 11/13/2015 							
 ****************************************************************/ 
 module fastQueue(sequencing, smpl_out, isFull, wrt_smpl, new_smpl, clk, rst_n);

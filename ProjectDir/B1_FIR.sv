@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement the FIR engine for B1 band.
  Authors : ThunderCatz 		HDL : System Verilog		 
- Student ID: 903 015 5247	
  Date : 11/24/2015 							
 ****************************************************************/ 
 module B1_FIR(lft_smpl_out, rht_smpl_out, sequencing, lft_smpl_in, rht_smpl_in, clk, rst_n);

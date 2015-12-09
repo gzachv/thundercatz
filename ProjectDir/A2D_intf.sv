@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement the A2D interface.
  Authors : ThunderCatz 		HDL : System Verilog		 
- Student ID: 903 015 5247	
  Date : 11/10/2015 							
 ****************************************************************/ 
 

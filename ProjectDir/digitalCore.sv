@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement the Digital Core.
- Authors : ThunderCatz 		HDL : System Verilog		 
- Student ID: 903 015 5247	
+ Authors : ThunderCatz 		HDL : System Verilog		 	
  Date : 11/24/2015 							
 ****************************************************************/ 
 module digitalCore( lft_out, rht_out, lftQ_full, rhtQ_full,
@@ -29,8 +28,8 @@ input clk, rst_n;			// System clk and reset
 wire	lft_slow_seq, lft_fast_seq,
 	rht_slow_seq, rht_fast_seq;	// Sequencing signals from queues
 
-wire signed [15:0]	lft_slow_smpl_out, lft_fast_smpl_out,
-			rht_slow_smpl_out, rht_fast_smpl_out;	// Queue sample outs
+wire signed [15:0] lft_slow_smpl_out, lft_fast_smpl_out,
+  		   rht_slow_smpl_out, rht_fast_smpl_out;	// Queue sample outs
 
 logic signed [15:0] lft_LP_smpl_out, lft_B1_smpl_out,
 		    lft_B2_smpl_out, lft_B3_smpl_out, lft_HP_smpl_out,
@@ -64,11 +63,21 @@ fastQueue iRhtFastQ (	.sequencing(rht_fast_seq), .smpl_out(rht_fast_smpl_out), .
 			.clk(clk), .rst_n(rst_n) );
 
 /////////////////////// FIR instantiation ///////////////////////
-LP_FIR iLP_FIR (.lft_smpl_out(lft_LP_smpl_out), .rht_smpl_out(rht_LP_smpl_out), .sequencing(lft_slow_seq | rht_slow_seq), .lft_smpl_in(lft_slow_smpl_out), .rht_smpl_in(rht_slow_smpl_out), .clk(clk), .rst_n(rst_n));
-B1_FIR iB1_FIR (.lft_smpl_out(lft_B1_smpl_out), .rht_smpl_out(rht_B1_smpl_out), .sequencing(lft_slow_seq | rht_slow_seq), .lft_smpl_in(lft_slow_smpl_out), .rht_smpl_in(rht_slow_smpl_out), .clk(clk), .rst_n(rst_n));
-B2_FIR iB2_FIR (.lft_smpl_out(lft_B2_smpl_out), .rht_smpl_out(rht_B2_smpl_out), .sequencing(lft_slow_seq | rht_slow_seq), .lft_smpl_in(lft_slow_smpl_out), .rht_smpl_in(rht_slow_smpl_out), .clk(clk), .rst_n(rst_n));
-B3_FIR iB3_FIR (.lft_smpl_out(lft_B3_smpl_out), .rht_smpl_out(rht_B3_smpl_out), .sequencing(lft_fast_seq | rht_fast_seq), .lft_smpl_in(lft_fast_smpl_out), .rht_smpl_in(rht_fast_smpl_out), .clk(clk), .rst_n(rst_n));
-HP_FIR iHP_FIR (.lft_smpl_out(lft_HP_smpl_out), .rht_smpl_out(rht_HP_smpl_out), .sequencing(lft_fast_seq | rht_fast_seq), .lft_smpl_in(lft_fast_smpl_out), .rht_smpl_in(rht_fast_smpl_out), .clk(clk), .rst_n(rst_n));
+LP_FIR iLP_FIR ( .lft_smpl_out(lft_LP_smpl_out), .rht_smpl_out(rht_LP_smpl_out), 
+		 .sequencing(lft_slow_seq | rht_slow_seq), .lft_smpl_in(lft_slow_smpl_out), .rht_smpl_in(rht_slow_smpl_out),
+		 .clk(clk), .rst_n(rst_n));
+B1_FIR iB1_FIR ( .lft_smpl_out(lft_B1_smpl_out), .rht_smpl_out(rht_B1_smpl_out), 
+		 .sequencing(lft_slow_seq | rht_slow_seq), .lft_smpl_in(lft_slow_smpl_out), .rht_smpl_in(rht_slow_smpl_out),
+		 .clk(clk), .rst_n(rst_n));
+B2_FIR iB2_FIR ( .lft_smpl_out(lft_B2_smpl_out), .rht_smpl_out(rht_B2_smpl_out),
+		 .sequencing(lft_slow_seq | rht_slow_seq), .lft_smpl_in(lft_slow_smpl_out), .rht_smpl_in(rht_slow_smpl_out),
+		 .clk(clk), .rst_n(rst_n));
+B3_FIR iB3_FIR ( .lft_smpl_out(lft_B3_smpl_out), .rht_smpl_out(rht_B3_smpl_out),
+		 .sequencing(lft_fast_seq | rht_fast_seq), .lft_smpl_in(lft_fast_smpl_out), .rht_smpl_in(rht_fast_smpl_out),
+		 .clk(clk), .rst_n(rst_n));
+HP_FIR iHP_FIR ( .lft_smpl_out(lft_HP_smpl_out), .rht_smpl_out(rht_HP_smpl_out),
+		 .sequencing(lft_fast_seq | rht_fast_seq), .lft_smpl_in(lft_fast_smpl_out), .rht_smpl_in(rht_fast_smpl_out),
+		 .clk(clk), .rst_n(rst_n));
 
 ////////////////// Band Scale instantiation /////////////////////
 band_scale lft_LP_BS (.scaled(lft_LP_scaled), .POT(POT_LP), .audio(lft_LP_smpl_out), .clk(clk));

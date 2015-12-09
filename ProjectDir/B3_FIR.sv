@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement the FIR engine for B3 band.
- Authors : ThunderCatz 		HDL : System Verilog		 
- Student ID: 903 015 5247	
+ Authors : ThunderCatz 		HDL : System Verilog		 	
  Date : 11/24/2015 							
 ****************************************************************/ 
 module B3_FIR(lft_smpl_out, rht_smpl_out, sequencing, lft_smpl_in, rht_smpl_in, clk, rst_n);

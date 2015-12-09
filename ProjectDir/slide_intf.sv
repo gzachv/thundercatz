@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement the pot sliders interface.
- Authors : ThunderCatz 		HDL : System Verilog		 
- Student ID: 903 015 5247	
+ Authors : ThunderCatz 		HDL : System Verilog		 	
  Date : 11/10/2015 							
 ****************************************************************/ 
 

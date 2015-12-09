@@ -1,37 +1,36 @@
 /****************************************************************
  Module to implement the SPI master controller.
  Author : Thundercatz		HDL : System Verilog		 
- Student ID: 903 015 5247	
  Date : 11/09/2015 							
 ****************************************************************/ 
 
 module SPI_mstr(done, rd_data, SCLK, SS_n, MOSI, MISO, wrt, cmd, clk, rst_n);
 
 ////////// Variable Declaration for interface ///////////////////
-output logic done,		// Indicates the SPI transaction completed
-			 SCLK,		// Serial Clock
-			 SS_n,		// Active low slave select
-			 MOSI;		// Master out slave in
+output logic	done,		// Indicates the SPI transaction completed
+		SCLK,		// Serial Clock
+		SS_n,		// Active low slave select
+		MOSI;		// Master out slave in
 
 output logic [15:0] rd_data;	// Data SPI mstr read from the slave
 
-input wrt,				// Signal to SPI mstr to start a transaction
-	  MISO,				// Master in, slave out
-	  clk, rst_n;		// System clock and active low reset
+input	wrt,			// Signal to SPI mstr to start a transaction
+	MISO,			// Master in, slave out
+	clk, rst_n;		// System clock and active low reset
 input [15:0] cmd;		// The data the master will send
 
 ////////// Intermediate wire Declarations ///////////////////////
-logic update,			// Signal to trigger clks to update
-	  shift,			// Signal a shift in the master Shft reg 
-	  rst_cnt,			// Reset the clk count, done count
-	  set_done,			// Set the done signal
-	  clr_done;			// Clear the done signal
-logic [4:0] sclk_cnt,	// Counter for each posedge clk
-			bit_cnt;	// Count each bit of a transaction
-logic [15:0] shft_reg;	// Master shift reg
+logic	update,			// Signal to trigger clks to update
+	shift,			// Signal a shift in the master Shft reg 
+	rst_cnt,		// Reset the clk count, done count
+	set_done,		// Set the done signal
+	clr_done;		// Clear the done signal
+logic [4:0]	sclk_cnt,	// Counter for each posedge clk
+		bit_cnt;	// Count each bit of a transaction
+logic [15:0] shft_reg;		// Master shift reg
 
-localparam DELAY = 5'h1E; // Clock count to get shift delay of
-						  // 2 System cycles after posedge SCLK
+localparam DELAY = 5'h1E; 	// Clock count to get shift delay of
+			  	// 2 System cycles after posedge SCLK
 
 /////////////////////// Bits Counter  ///////////////////////////
 always_ff @(posedge clk, negedge rst_n) begin

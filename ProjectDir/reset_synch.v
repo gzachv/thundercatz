@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement syncing a pushbutton reset on the DE0-nano.
- Author : Gustavo Zach Vargas 		HDL : Verilog		 
- Student ID: 903 015 5247	
+ Author : Gustavo Zach Vargas 		HDL : Verilog		 	
  Date : 9/24/2015 							
 ****************************************************************/ 
 

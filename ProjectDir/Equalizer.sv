@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement a 5 Channel Equalizer.
  Author : Thundercatz			HDL : System Verilog		 
- Student ID: 903 015 5247	
  Date : 11/30/2015 							
 ****************************************************************/ 
 module Equalizer( clk, RST_n, LED, A2D_SS_n, A2D_MOSI, 
@@ -22,7 +21,7 @@ input SDout;			// from CODEC SDout pin (serial data in to core)
 output AMP_ON;			// signal to turn amp on
 output RSTn;			// active low reset to CODEC
 
-wire rst_n;				// internal global active low reset
+wire rst_n;			// internal global active low reset
 wire valid;
 wire valid_fall,valid_rise;
 wire [15:0] lft_in,rht_in;

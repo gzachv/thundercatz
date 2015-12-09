@@ -1,14 +1,13 @@
 /****************************************************************
  Module to implement the band scaling for an equilizer.
- Author : Gustavo Zach Vargas 		HDL : System Verilog		 
- Student ID: 903 015 5247	
+ Author : ThunderCatz 		HDL : System Verilog		 
  Date : 9/24/2015 							
 ****************************************************************/ 
 
 module band_scale(scaled, POT, audio, clk);
 
 ////////// Variable Declaration for interface ///////////////////
-input clk;				// System clk
+input clk;			// System clk
 input [23:0] POT;		// A2D reading from slide pot
 input signed [15:0] audio;	// Audio signal from FIR
 
@@ -16,7 +15,7 @@ output signed [15:0] scaled;	// Result of audio scaled by POT
 
 ////////// Intermediate wire Declarations //////////////////////
 wire signed [12:0] FIR_scale;	// Signed 13 bit FIR scale
-reg signed [12:0] FIR;			// Delayed by FF for timing 
+reg signed [12:0] FIR;		// Delayed by FF for timing 
 wire signed [28:0] scale_audio;	// Scale audio by POT value
 wire signed [3:0] sat;		// Top 4 bits detect saturation
 wire signed [15:0] result;	// Result if not in saturation

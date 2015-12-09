@@ -1,7 +1,6 @@
 /****************************************************************
  Module to implement the clock initializations for the CODEC.
- Author : Thundercatz			HDL : System Verilog		 
- Student ID: 903 015 5247	
+ Author : Thundercatz			HDL : System Verilog		 	
  Date : 10/09/2015 							
 ****************************************************************/ 
 
