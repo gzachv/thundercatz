@@ -25,7 +25,7 @@ w1449007613
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/A2D_intf.sv
 L0 8
 Z3 OL;L;10.4;61
-!s108 1449601341.179968
+!s108 1449620325.487507
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/A2D_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/A2D_intf.sv|
 !i113 0
@@ -48,7 +48,7 @@ w1447000652
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ADC128S.sv
 L0 1
 R3
-!s108 1449601341.664486
+!s108 1449620325.845917
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ADC128S.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ADC128S.sv|
 !i113 0
@@ -71,7 +71,7 @@ w1449188770
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv
 L0 7
 R3
-!s108 1449601341.980806
+!s108 1449620326.171431
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B1_FIR.sv|
 !i113 0
@@ -94,7 +94,7 @@ w1449188761
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv
 L0 7
 R3
-!s108 1449601342.324498
+!s108 1449620326.456978
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B2_FIR.sv|
 !i113 0
@@ -117,7 +117,7 @@ w1449188751
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv
 L0 7
 R3
-!s108 1449601342.614995
+!s108 1449620326.760255
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/B3_FIR.sv|
 !i113 0
@@ -140,7 +140,7 @@ w1449603529
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv
 L0 8
 R3
-!s108 1449603535.409222
+!s108 1449620327.057218
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/band_scale.sv|
 !i113 0
@@ -162,7 +162,7 @@ w1449008189
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv
 L0 8
 R3
-!s108 1449601343.193330
+!s108 1449620327.355898
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/codec_intf.sv|
 !i113 0
@@ -181,7 +181,7 @@ w1448207482
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/CS4272.v
 L0 11
 R3
-!s108 1449601343.464016
+!s108 1449620328.256184
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/CS4272.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/CS4272.v|
 !i113 0
@@ -194,17 +194,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 UDEf<G]WVIm:CUG6j8anz0
-IQ@n0UM0K4NA_cXZ`;jkJW1
+!s100 5G?SAFd;_Bgi?SHZCKh2<2
+I<1^]QTU;30AfWDQG@K5Cd0
 !s105 digitalCore_sv_unit
 S1
 R2
-w1449605731
+Z6 w1449620941
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv
 L0 7
 R3
-!s108 1449605805.838981
+!s108 1449621166.545173
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/digitalCore.sv|
 !i113 0
@@ -219,12 +219,12 @@ r1
 !s100 kYgFML]4CYJ7V15LCTeTS0
 I?Qb^I9DOz1P_Zz16k>j;=0
 R2
-Z6 w1448338884
+Z7 w1448338884
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v
 L0 1
 R3
-!s108 1449601344.028534
+!s108 1449620328.913255
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1024x16.v|
 !i113 0
@@ -239,12 +239,12 @@ r1
 !s100 bNYM:I_zX`>fij9`a9IO02
 INW2]OM9nhn3HGH33jm9TS3
 R2
-R6
+R7
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v
 L0 1
 R3
-!s108 1449601344.276639
+!s108 1449620329.186131
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/dualPort1536x16.v|
 !i113 0
@@ -257,17 +257,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 `kUHSWP7UeUl02Tci@g=T0
-I0Ak[;YbZ=ceb^:G^BVEFg0
+!s100 ZR9bAdR^[CUjL91z=_?jG3
+I`=z7Qo^<LN>BQc;ICf^OM2
 !s105 Equalizer_sv_unit
 S1
 R2
-w1449605514
+R6
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv
 L0 7
 R3
-!s108 1449605806.599408
+!s108 1449621166.943269
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer.sv|
 !i113 0
@@ -275,50 +275,51 @@ R4
 n@equalizer
 vEqualizer_tb
 R0
+DXx4 work 20 Equalizer_tb_sv_unit 0 22 HGll3>EPK^]e?a5h@aZz70
 R1
 r1
 !s85 0
 31
 !i10b 1
-!s100 JJQ4i`bQT5F5YSTk]QP>41
-InSn9o:3k^Gn?5b]RW5:[N0
+!s100 d0mUnCnGW0P_GSoB[5h212
+IJ<S8dekXoY^b>=fJGLT0a3
 !s105 Equalizer_tb_sv_unit
 S1
 R2
-w1449602493
-8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
-F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
+Z8 w1449621301
+Z9 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
+Z10 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
 L0 7
 R3
-!s108 1449602502.526773
-!s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer_tb.sv|
+Z11 !s108 1449621346.006930
+Z12 !s107 tb_tasks.sv|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer_tb.sv|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/Equalizer_tb.sv|
 !i113 0
 R4
 n@equalizer_tb
 XEqualizer_tb_sv_unit
-DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Vm@Q5g=9:`8H3aH6:=cijS0
+R0
+VHGll3>EPK^]e?a5h@aZz70
 r1
 !s85 0
 31
 !i10b 1
-!s100 mmnS5DTSRKTMBcEi6=4=W0
-Im@Q5g=9:`8H3aH6:=cijS0
+!s100 4:nUeEc^[Ll]ac??<O0?K1
+IHGll3>EPK^]e?a5h@aZz70
 !i103 1
 S1
-dI:/ece551/thundercatz/ProjectDir
-w1449360751
-8I:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
-FI:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv
+R2
+R8
+R9
+R10
 Ftb_tasks.sv
-L1 15
-OE;L;10.3c;59
-!s108 1449360755.925000
-!s107 tb_tasks.sv|I:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/thundercatz/ProjectDir/Equalizer_tb.sv|
+L0 8
+R3
+R11
+R12
+R13
 !i113 0
-o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
 n@equalizer_tb_sv_unit
 vfastQueue
 R0
@@ -327,17 +328,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 O[W5P@zTnhoSE9zmoeG<<2
-IZKB:CB7D^QL4iK6T:OGN70
+!s100 o61Bi7==6TlP;X[7MPo763
+I`502E67d@afeRY0=GG0aY2
 !s105 fastQueue_sv_unit
 S1
 R2
-w1449008409
+R6
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv
 L0 7
 R3
-!s108 1449601345.115651
+!s108 1449621167.582734
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/fastQueue.sv|
 !i113 0
@@ -360,7 +361,7 @@ w1449188744
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv
 L0 7
 R3
-!s108 1449601345.390370
+!s108 1449620330.388597
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/HP_FIR.sv|
 !i113 0
@@ -383,14 +384,14 @@ w1449188534
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/LP_FIR.sv
 L0 7
 R3
-!s108 1449601345.674930
+!s108 1449620330.762234
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/LP_FIR.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/LP_FIR.sv|
 !i113 0
 R4
 n@l@p_@f@i@r
 vposedgeDetect
-!s110 1449601346
+!s110 1449620331
 !i10b 1
 !s100 ZSd5nVk4UzWfGnJ;T4Wej2
 Ikckd6V6aM5UM?cWhiTQRK3
@@ -404,7 +405,7 @@ R3
 r1
 !s85 0
 31
-!s108 1449601345.949912
+!s108 1449620331.046419
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/posedgeDetect.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/posedgeDetect.v|
 !i113 0
@@ -424,7 +425,7 @@ w1446486658
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/reset_synch.v
 L0 8
 R3
-!s108 1449601346.251333
+!s108 1449620331.307704
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/reset_synch.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/reset_synch.v|
 !i113 0
@@ -443,7 +444,7 @@ w1449004442
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B1.v
 L0 1
 R3
-!s108 1449601346.511042
+!s108 1449620331.596849
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B1.v|
 !i113 0
@@ -458,12 +459,12 @@ r1
 !s100 49AVDUoT1i0bibAz<<>Je3
 IP4Nn0QQXjD_zkAC?5:a6z0
 R2
-Z7 w1448338680
+Z14 w1448338680
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v
 L0 1
 R3
-!s108 1449601346.788664
+!s108 1449620331.867456
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B2.v|
 !i113 0
@@ -478,12 +479,12 @@ r1
 !s100 CIF_6E>Lk0nEFeB6V8B730
 IK3DLmo`XmRI5z>0cl^5hY0
 R2
-R7
+R14
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v
 L0 1
 R3
-!s108 1449601347.047342
+!s108 1449620332.136792
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_B3.v|
 !i113 0
@@ -498,12 +499,12 @@ r1
 !s100 XG7O0ofO[Az;oITQ@V1>k2
 I2ofH>bIHK5ZAB^VfM>0[R1
 R2
-R7
+R14
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v
 L0 1
 R3
-!s108 1449601347.290736
+!s108 1449620332.432186
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_HP.v|
 !i113 0
@@ -518,12 +519,12 @@ r1
 !s100 UPX2H1?LRoN05]00V8<^g0
 I@R39>?QbQJf=fibNBB3[I2
 R2
-R7
+R14
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v
 L0 1
 R3
-!s108 1449601347.537289
+!s108 1449620332.715898
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/ROM_LP.v|
 !i113 0
@@ -546,7 +547,7 @@ w1449605474
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv
 L0 8
 R3
-!s108 1449605488.681672
+!s108 1449620333.011893
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slide_intf.sv|
 !i113 0
@@ -558,17 +559,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 HF<gVCU`>U8:;ZB6RoW9C1
-IWz?;RI_O;bGeAZmeJ[lWG1
+!s100 Jh5PbI1F_6j84abVRX2Qg1
+IFQg_<XCK4cMjnM8Nc2=OZ1
 !s105 slowQueue_sv_unit
 S1
 R2
-w1449077954
+w1449620942
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv
 L0 7
 R3
-!s108 1449601348.131960
+!s108 1449621167.906127
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/slowQueue.sv|
 !i113 0
@@ -591,7 +592,7 @@ w1442691962
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_ADC128S.sv
 L0 1
 R3
-!s108 1449601348.413187
+!s108 1449620334.071220
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_ADC128S.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_ADC128S.sv|
 !i113 0
@@ -614,7 +615,7 @@ w1447197131
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv
 L0 8
 R3
-!s108 1449601348.678731
+!s108 1449620334.535912
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/SPI_mstr.sv|
 !i113 0
@@ -622,23 +623,23 @@ R4
 n@s@p@i_mstr
 Xtb_tasks_sv_unit
 R0
-!s110 1449601349
+!s110 1449621168
 !i10b 1
-!s100 OO6:kj4jDZ]RA3e;6z=Mo1
-I>g_6=bfG[J0d9GS[`;YRG0
-V>g_6=bfG[J0d9GS[`;YRG0
+!s100 P]mOl^eB^U_?NIiQQP4Nj1
+I4PL]BZPEA]YblFkY3UdD81
+V4PL]BZPEA]YblFkY3UdD81
 !i103 1
 S1
 R2
-w1449362334
+w1449621089
 8/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/tb_tasks.sv
 F/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/tb_tasks.sv
-L0 15
+L0 8
 R3
 r1
 !s85 0
 31
-!s108 1449601348.946916
+!s108 1449621168.276317
 !s107 /userspace/g/gzvargas/ece551/thundercatz/ProjectDir/tb_tasks.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/g/gzvargas/ece551/thundercatz/ProjectDir/tb_tasks.sv|
 !i113 0
