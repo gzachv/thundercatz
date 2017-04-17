@@ -1,1 +1,1 @@
-# thundercatz
+# thundercatz Team Project VHDL
